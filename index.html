@@ -10,15 +10,35 @@
     body {
       text-align: center;
     }
+
+    main {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      align-items: center;
+      background-color: royalblue;
+      height: 100vh;
+      color: white;
+    }
+
+    div.imgContainer {
+      width: 500px;
+      height: 500px;
+    }
     img {
       max-width: 100%;
       display: block;
+      border-radius: 50%;
     }
   </style>
 </head>
 <body>
-  <h1>Welcome to my website!</h1>
-  <img src="./assets/cats.jpeg" alt="">
-  <h2>Coming Soon!</h2>
+  <main>
+    <h1>Welcome to my website!</h1>
+    <div class="imgContainer">
+      <img src="./assets/cats.jpeg" alt="cute pic of my cats">
+    </div>
+    <h2>Coming Soon!</h2>
+  </main>
 </body>
 </html>
