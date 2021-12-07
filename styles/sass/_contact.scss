@@ -1,0 +1,61 @@
+// contact styles
+
+.contactForm {
+  display: flex;
+  margin: 1em;
+
+  .textContainer {
+    width: 40%;
+    padding: 1em;
+   
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+    margin: 0 1em;
+
+    input, 
+    textarea {
+      border-radius: 5px;
+      width: 90%;
+      padding: .3em;
+      margin: 0 .2em;
+    }
+
+    input:nth-of-type(2){
+      margin: .4em .2em;
+    }
+
+    textarea {
+      resize: none;
+    }
+
+    button {
+      width: 25%;
+      letter-spacing: 2px;
+      color: $secondaryColor;
+      background-color: $baseColor;
+      border: 2px double $secondaryColorOpaque;
+      border-radius: 5px;
+      padding: .5em;
+      margin: 1em;
+      transition: 1s;
+    }
+
+    button:hover,
+    button:focus,
+    button:active {
+      background-color: $baseColorOpaque;
+      border: 2px double $secondaryColor;
+      border-radius: 5px;
+    }
+  }
+}
+
+.contactSocials {
+  @include socials;
+}

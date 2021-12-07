@@ -1,0 +1,56 @@
+// header styles
+header {
+  height: 100vh;
+}
+
+.headerBar {
+  @include heading;
+  display: flex;
+  justify-content: space-between;
+  padding-top: .3em;
+
+  ul{
+    display: flex;
+    padding-top: .3em;
+
+    li{
+      padding: 0 1em;
+    }
+  }
+}
+
+h1 {
+  position: absolute;
+  top: 80px;
+  left: 10%;
+  z-index: 9;
+}
+
+.raise {
+  position: absolute;
+  top: -20px;
+}
+
+.raise.fontChange {
+  right: 0;
+}
+
+.lower{
+  display: block;
+  position: absolute;
+  bottom: -520px;
+  left: 20%;
+}
+
+.lower.fontChange {
+  right: -20%;
+  bottom: -550px;
+}
+
+
+div.imgContainer {
+  position: relative;
+  width: 600px;
+  height: 600px;
+  margin: 6em auto;
+}

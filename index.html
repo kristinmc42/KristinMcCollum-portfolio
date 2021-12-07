@@ -4,41 +4,110 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Kristin McCollum</title>
+  <!-- import google fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Playfair+Display:wght@400;600;700&display=swap"
+    rel="stylesheet">
+  <!-- fontawesome kit -->
+  <script src="https://kit.fontawesome.com/7bfd8027d9.js" crossorigin="anonymous"></script>
+  <!-- stylesheet -->
+  <link rel="stylesheet" href="./styles/style.css">
+  <title>Kristin McCollum 🔹</title>
 
-  <style>
-    body {
-      text-align: center;
-    }
-
-    main {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-evenly;
-      align-items: center;
-      background-color: royalblue;
-      height: 100vh;
-      color: white;
-    }
-
-    div.imgContainer {
-      width: 500px;
-      height: 500px;
-    }
-    img {
-      max-width: 100%;
-      display: block;
-      border-radius: 50%;
-    }
-  </style>
+  
 </head>
 <body>
-  <main>
-    <h1>Welcome to my website!</h1>
-    <div class="imgContainer">
-      <img src="./assets/cats.jpeg" alt="cute pic of my cats">
-    </div>
-    <h2>Coming Soon!</h2>
-  </main>
+  <a href="#mainContent" class="skipLink">Skip to main content.</a>
+  <div class="outerWrapper">
+    <header>
+      <div class="headerBar innerWrapper">
+        <p>Kristin McCollum</p>
+        <nav>
+          <ul>
+            <li><a href="#about">About me</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="intro">
+        <h1><span class="raise">Front End</span>  <span class="fontChange raise">Web </span>Developer <span class="lower">based in</span><span class="fontChange lower">Toronto</span></h1>
+        <div class="imgContainer">
+          <img src="./assets/cats.jpeg" alt="cute pic of my cats">
+        </div>
+      </div>
+    </header>
+    <main id="mainContent">
+      <section class="about innerWrapper" id="about">
+        <h2 class="heading">About</h2>
+        <p><span class="fontChange">Hello!</span>  I
+        am <span class="fontChange">Kristin McCollum</span> , a front end developer that enjoys writing <span class="fontChange">clean code</span>  and <span class="fontChange">solving problems</span>. 
+        My background as a stage manager in theatre and opera honed my enthusiasm for <span class="fontChange">working collaboratively</span>. </p>
+        <p>Whether coordinating all of the moving pieces in a live production or building all of the components to bring an app to life, I bring an <span class="fontChange">empathetic</span>  approach to my work, along with a <span class="fontChange">keen eye for detail.</span> </p>
+        <p>When I'm not building <span class="fontChange">responsive and accessible websites</span>, I like to lose myself in a <span class="fontChange">good book</span>, play board games or go for long walks while listening to a favourite playlist.</p>
+        <nav>
+          <ul class="aboutSocials">
+            <li><a href="https://github.com/kristinmc42" target="_blank"><i class="fa-brands fa-github"></i></a></li>
+            <li><a href="https://www.linkedin.com/in/kristin-mccollum-dev" target="_blank"><i
+                  class="fa-brands fa-linkedin-in"></i></a></li>
+            <li><a href="https://twitter.com/KristinMc42" target="_blank"><i class="fa-brands fa-twitter"></i></a></li>
+          </ul>
+        </nav>
+      </section>
+
+      <section class="projects innerWrapper">
+        <h2 class="heading">Projects</h2>
+        <ul>
+
+
+          <li>
+            <img src="./assets/mockupSongSelector.png" alt="mockup of an ipad and an iphone 11 with Song Selector site on them">
+            <div class="textContainer"></div>
+          </li>
+          <li>
+            <img src="" alt="">
+            <div class="textContainer"></div>
+          </li>
+          <li>
+            <img src="" alt="">
+            <div class="textContainer"></div>
+          </li>
+          <li>
+            <img src="" alt="">
+            <div class="textContainer"></div>
+          </li>
+        </ul>
+      </section>
+      <section class="contact innerWrapper" id="contact">
+        <h2 class="heading">Contact</h2>
+        <div class="contactForm">
+          <div class="textContainer">
+            <p>If you have <span class="fontChange">any questions</span>  about me or <span class="fontChange">my projects</span>, or if you would like to tell me <span class="fontChange">what book you're reading</span> right now, please <span class="fontChange">drop me a line!</span></p>
+            <nav>
+              <ul class="contactSocials">
+                <li><a href="https://github.com/kristinmc42"  target="_blank"><i class="fa-brands fa-github"></i></a></li>
+                <li><a href="https://www.linkedin.com/in/kristin-mccollum-dev"  target="_blank"><i class="fa-brands fa-linkedin-in"></i></a></li>
+                <li><a href="https://twitter.com/KristinMc42"  target="_blank"><i class="fa-brands fa-twitter"></i></a></li>
+              </ul>
+            </nav>
+          </div>
+          <form action="">
+            <label for="name" class="srOnly">Please enter your name</label>
+            <input type="text" id="name" placeholder="Your name *" required>
+            <label for="email" class="srOnly">Please enter your email address</label>
+            <input type="email" id ="email" placeholder="Your email *" required>
+            <label for="message" class="srOnly">Please leave me a message</label>
+            <textarea name="message" id="message" cols="30" rows="10" placeholder="Hi Kristin! Let's grab a tea and chat about web development or our favourite books!"></textarea>
+            <button type="submit">Send</button>
+          </form>
+        </div>
+      </section>
+    </main>
+  </div>
+  <footer>
+    <p>Designed by Kristin McCollum</p>
+  </footer>
 </body>
 </html>

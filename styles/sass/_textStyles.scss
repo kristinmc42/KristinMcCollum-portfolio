@@ -1,0 +1,48 @@
+html {
+  font-size: 125%;
+  color: $textColor;
+  font-family: 'Open Sans', sans-serif;
+  line-height: 1.5rem;
+}
+
+
+
+
+.fontChange{
+  font-family: 'Playfair Display', serif;
+  font-size: 1.6rem;
+}
+
+a {
+  color: $textColor;
+  text-decoration: none;
+}
+
+p {
+  font-size: 1.3rem;
+  line-height: 1.9rem;
+}
+
+
+
+// header text
+h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 3.6rem;
+}
+
+h1 .fontChange {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  font-size: 3.2rem;
+}
+
+// about text
+.about p{
+  line-height: 2.2rem;
+}
+
+// footer text
+footer p{
+  font-size: 1rem;
+}

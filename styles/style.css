@@ -1,0 +1,506 @@
+html {
+  line-height: 1.15;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+}
+
+article, aside, footer, header, nav, section {
+  display: block;
+}
+
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+figcaption, figure, main {
+  display: block;
+}
+
+figure {
+  margin: 1em 40px;
+}
+
+hr {
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+  height: 0;
+  overflow: visible;
+}
+
+pre {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+a {
+  background-color: transparent;
+  -webkit-text-decoration-skip: objects;
+}
+
+abbr[title] {
+  border-bottom: none;
+  text-decoration: underline;
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted;
+}
+
+b, strong {
+  font-weight: inherit;
+}
+
+b, strong {
+  font-weight: bolder;
+}
+
+code, kbd, samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+dfn {
+  font-style: italic;
+}
+
+mark {
+  background-color: #ff0;
+  color: #000;
+}
+
+small {
+  font-size: 80%;
+}
+
+sub, sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+audio, video {
+  display: inline-block;
+}
+
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+img {
+  border-style: none;
+}
+
+svg:not(:root) {
+  overflow: hidden;
+}
+
+button, input, optgroup, select, textarea {
+  font-family: sans-serif;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+}
+
+button, input {
+  overflow: visible;
+}
+
+button, select {
+  text-transform: none;
+}
+
+button, html [type=button], [type=reset], [type=submit] {
+  -webkit-appearance: button;
+}
+
+button::-moz-focus-inner, [type=button]::-moz-focus-inner, [type=reset]::-moz-focus-inner, [type=submit]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+button:-moz-focusring, [type=button]:-moz-focusring, [type=reset]:-moz-focusring, [type=submit]:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+fieldset {
+  padding: 0.35em 0.75em 0.625em;
+}
+
+legend {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  color: inherit;
+  display: table;
+  max-width: 100%;
+  padding: 0;
+  white-space: normal;
+}
+
+progress {
+  display: inline-block;
+  vertical-align: baseline;
+}
+
+textarea {
+  overflow: auto;
+}
+
+[type=checkbox], [type=radio] {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0;
+}
+
+[type=number]::-webkit-inner-spin-button, [type=number]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+[type=search] {
+  -webkit-appearance: textfield;
+  outline-offset: -2px;
+}
+
+[type=search]::-webkit-search-cancel-button, [type=search]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  font: inherit;
+}
+
+details, menu {
+  display: block;
+}
+
+summary {
+  display: list-item;
+}
+
+canvas {
+  display: inline-block;
+}
+
+template {
+  display: none;
+}
+
+[hidden] {
+  display: none;
+}
+
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: "";
+  clear: both;
+  height: 0;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.srOnly {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  -webkit-clip-path: inset(100%);
+          clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+html {
+  font-size: 125%;
+  color: #595959;
+  font-family: "Open Sans", sans-serif;
+  line-height: 1.5rem;
+}
+
+.fontChange {
+  font-family: "Playfair Display", serif;
+  font-size: 1.6rem;
+}
+
+a {
+  color: #595959;
+  text-decoration: none;
+}
+
+p {
+  font-size: 1.3rem;
+  line-height: 1.9rem;
+}
+
+h1 {
+  font-family: "Playfair Display", serif;
+  font-size: 3.6rem;
+}
+
+h1 .fontChange {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  font-size: 3.2rem;
+}
+
+.about p {
+  line-height: 2.2rem;
+}
+
+footer p {
+  font-size: 1rem;
+}
+
+header {
+  height: 100vh;
+}
+
+.headerBar {
+  text-align: left;
+  border-bottom: 2px solid #595959;
+  padding-left: 1em;
+  padding-bottom: 0.3em;
+  margin: 0.5em 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-top: 0.3em;
+}
+.headerBar ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-top: 0.3em;
+}
+.headerBar ul li {
+  padding: 0 1em;
+}
+
+h1 {
+  position: absolute;
+  top: 80px;
+  left: 10%;
+  z-index: 9;
+}
+
+.raise {
+  position: absolute;
+  top: -20px;
+}
+
+.raise.fontChange {
+  right: 0;
+}
+
+.lower {
+  display: block;
+  position: absolute;
+  bottom: -520px;
+  left: 20%;
+}
+
+.lower.fontChange {
+  right: -20%;
+  bottom: -550px;
+}
+
+div.imgContainer {
+  position: relative;
+  width: 600px;
+  height: 600px;
+  margin: 6em auto;
+}
+
+.contactForm {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 1em;
+}
+.contactForm .textContainer {
+  width: 40%;
+  padding: 1em;
+}
+.contactForm form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 60%;
+  margin: 0 1em;
+}
+.contactForm form input,
+.contactForm form textarea {
+  border-radius: 5px;
+  width: 90%;
+  padding: 0.3em;
+  margin: 0 0.2em;
+}
+.contactForm form input:nth-of-type(2) {
+  margin: 0.4em 0.2em;
+}
+.contactForm form textarea {
+  resize: none;
+}
+.contactForm form button {
+  width: 25%;
+  letter-spacing: 2px;
+  color: #f4f0ec;
+  background-color: #3660df;
+  border: 2px double rgba(244, 240, 236, 0);
+  border-radius: 5px;
+  padding: 0.5em;
+  margin: 1em;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+.contactForm form button:hover,
+.contactForm form button:focus,
+.contactForm form button:active {
+  background-color: rgba(54, 96, 223, 0.6);
+  border: 2px double #f4f0ec;
+  border-radius: 5px;
+}
+
+.contactSocials {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.contactSocials li {
+  font-size: 2rem;
+  padding: 0.8em;
+  margin: 0 auto;
+}
+
+body {
+  text-align: center;
+  background-color: #3660df;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+ul {
+  list-style: none;
+}
+
+h2, p, ul, li, a {
+  margin: 0;
+  padding: 0;
+}
+
+.skipLink {
+  position: absolute;
+  left: -1000px;
+  top: 5px;
+  z-index: 999;
+  background: white;
+  color: black;
+}
+
+.skipLink:focus {
+  left: 0;
+}
+
+.outerWrapper,
+.innerWrapper {
+  max-width: 1280px;
+  width: 90%;
+  margin: 0 auto;
+  background-color: #f4f0ec;
+}
+
+main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.heading {
+  text-align: left;
+  border-bottom: 2px solid #595959;
+  padding-left: 1em;
+  padding-bottom: 0.3em;
+  margin: 0.5em 0;
+}
+
+.about {
+  height: 100vh;
+}
+.about p:nth-of-type(1) {
+  padding-top: 3em;
+}
+.about p {
+  padding: 0.5em 4em;
+}
+
+.aboutSocials {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0 30%;
+}
+.aboutSocials li {
+  font-size: 2rem;
+  padding: 0.8em;
+  margin: 0 auto;
+}
+
+footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 6vh;
+  color: #f4f0ec;
+}
