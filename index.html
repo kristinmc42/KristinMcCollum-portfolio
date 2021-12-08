@@ -33,9 +33,13 @@
         </nav>
       </div>
       <div class="intro">
-        <h1><span class="raise">Front End</span>  <span class="fontChange raise">Web </span>Developer <span class="lower">based in</span><span class="fontChange lower">Toronto</span></h1>
+        <h1><span class="raise">Front End 
+            <span class="fontChange">Web Developer </span></span> 
+            <span class="lower">based in
+            <span class="fontChange">Toronto</span></span>
+        </h1>
         <div class="imgContainer">
-          <img src="./assets/cats.jpeg" alt="cute pic of my cats">
+          <img src="./assets/paintingBG.jpeg" alt="cute pic of my cats">
         </div>
       </div>
     </header>
@@ -59,31 +63,92 @@
 
       <section class="projects innerWrapper">
         <h2 class="heading">Projects</h2>
-        <ul>
+        <ul class="projectList">
 
 
           <li>
-            <img src="./assets/mockupSongSelector.png" alt="mockup of an ipad and an iphone 11 with Song Selector site on them">
-            <div class="textContainer"></div>
+            <div class="imageContainer">
+              <img src="./assets/ybsMockup.png" alt="laptop open on a white desk in a white room, with YBS Galactic Tours website on the screen and a glass of water and cell phone beside it">
+            </div>
+            <div class="textContainer">
+              <h3>YBS Galactic Tours</h3>
+              <p>Book a faster than light speed travel package from one of YBS's upcoming line of space tours. NASA's APIs make sure your launch date is asteroid free! A React based group project built with Melissa Richards, Isabella Wang and Sean Sipus.</p>
+              <ul class="languages">
+                <li><i class="fab fa-react"></i></li>
+                <li><i class="fab fa-css3-alt"></i></li>
+                <li><i class="fab fa-html5"></i></li>
+                <li><img src="https://img.icons8.com/ios/50/000000/api-settings.png" /></li>
+              </ul>
+              <ul class="siteLinks">
+                <li><a href="https://ybs-galactic-tours.netlify.app/" target="_blank">Live Site</a></li>
+                <li><a href="https://github.com/Yeeting-Billionaires-Into-Space/YBSGalacticTours" target="_blank">GitHub</a></li>
+              </ul>
+            </div>
           </li>
           <li>
-            <img src="" alt="">
-            <div class="textContainer"></div>
+            <div class="textContainer">
+              <h3>Song Selector</h3>
+              <p>Wanting to switch up your playlist? Let this app find  some hits by your favourite artists and introduce you to some new ones. Built with React and the Last.fm API.  </p>
+              <ul class="languages">
+                <li><i class="fab fa-react"></i></li>
+                <li><i class="fab fa-css3-alt"></i></li>
+                <li><i class="fab fa-html5"></i></li>
+                <li><img src="https://img.icons8.com/ios/50/000000/api-settings.png" /></li>
+              </ul>
+              <ul class="siteLinks">
+                <li><a href="https://song-seeker.netlify.app/" target="_blank">Live Site</a></li>
+                <li><a href="https://github.com/kristinmc42/kristin-mccollum-project3" target="_blank">GitHub</a></li>
+              </ul>
+            </div>
+            <div class="imageContainer">
+              <img src="./assets/songSelectorMockup.png" alt="the hands of a couple in a restaurant, holding two phones with Song Selector app on the screen ">
+            </div>
           </li>
           <li>
-            <img src="" alt="">
-            <div class="textContainer"></div>
+            <div class="imageContainer">
+              <img src="./assets/imperialGlamourMockup.png" alt="woman in a high-end vintage store looking at an iMac with the Imperial Glamour webiste on the screen ">
+            </div>
+            <div class="textContainer">
+              <h3>Imperial Glamour</h3>
+              <p>Glam it up. Search by product type, category, price or brand to discover your next must have beauty product. A pair programming project which uses the Makeup API. Built with Ryan Van den Eeckhout  </p>
+              <ul class="languages">
+                <li><i class="fab fa-sass"></i></li>
+                <li><i class="fab fa-css3-alt"></i></li>
+                <li><i class="fab fa-html5"></i></li>
+                <li><i class="fab fa-js"></i></li>
+                <li><img src="https://img.icons8.com/ios/50/000000/api-settings.png" /></li>
+              </ul>
+              <ul class="siteLinks">
+                <li><a href="https://imperial-glamour.netlify.app/" target="_blank">Live Site</a></li>
+                <li><a href="https://github.com/projectGlamour/kristinMcRyanVdeProject2" target="_blank">GitHub</a></li>
+              </ul>
+            </div>
           </li>
           <li>
-            <img src="" alt="">
-            <div class="textContainer"></div>
+            <div class="textContainer">
+              <h3>All About Sophie</h3>
+              <p>A pixel-perfect multi-page, functional and responsive  website converted from a PSD.</p>
+              <ul class="languages">
+                <li><i class="fab fa-sass"></i></li>
+                <li><i class="fab fa-css3-alt"></i></li>
+                <li><i class="fab fa-html5"></i></li>
+              </ul>
+              <ul class="siteLinks">
+                <li><a href="https://sophie-psd.netlify.app/" target="_blank">Live Site</a></li>
+                <li><a href="https://github.com/kristinmc42/kristin-mccollum-project-one" target="_blank">GitHub</a></li>
+              </ul>
+            </div>
+            <div class="imageContainer">
+              <img src="./assets/sophieMockup.png" alt="hands of person at a wooden table holding a tablet with All About Sophie website on the screen with a coffee and notebook to the side">
+            </div>
           </li>
+        
         </ul>
       </section>
       <section class="contact innerWrapper" id="contact">
         <h2 class="heading">Contact</h2>
         <div class="contactForm">
-          <div class="textContainer">
+          <div class="contactTextContainer">
             <p>If you have <span class="fontChange">any questions</span>  about me or <span class="fontChange">my projects</span>, or if you would like to tell me <span class="fontChange">what book you're reading</span> right now, please <span class="fontChange">drop me a line!</span></p>
             <nav>
               <ul class="contactSocials">
@@ -108,6 +173,9 @@
   </div>
   <footer>
     <p>Designed by Kristin McCollum</p>
+    <p>Credits</p>
+    <!-- <a href="https://icons8.com/icon/21888/rest-api">Rest API icon by Icons8</a> -->
+   <!-- <a href="https://www.behance.net/shawonrahman3">Portfolio design inspired by Sharuk Rahman Shawon</a>  -->
   </footer>
 </body>
 </html>

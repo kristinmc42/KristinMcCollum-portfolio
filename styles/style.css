@@ -237,7 +237,8 @@ html {
   line-height: 1.5rem;
 }
 
-.fontChange {
+.fontChange,
+h3 {
   font-family: "Playfair Display", serif;
   font-size: 1.6rem;
 }
@@ -265,6 +266,10 @@ h1 .fontChange {
 
 .about p {
   line-height: 2.2rem;
+}
+
+.projects p {
+  font-size: 1.1rem;
 }
 
 footer p {
@@ -299,39 +304,35 @@ header {
   padding: 0 1em;
 }
 
-h1 {
+h1,
+.raise,
+.lower {
   position: absolute;
-  top: 80px;
-  left: 10%;
   z-index: 9;
+  width: 100%;
+  max-width: 1200px;
 }
 
 .raise {
-  position: absolute;
-  top: -20px;
-}
-
-.raise.fontChange {
-  right: 0;
+  top: -100px;
+  left: 2%;
 }
 
 .lower {
-  display: block;
-  position: absolute;
-  bottom: -520px;
-  left: 20%;
-}
-
-.lower.fontChange {
-  right: -20%;
-  bottom: -550px;
+  display: inline-block;
+  bottom: -495px;
+  left: 3%;
 }
 
 div.imgContainer {
   position: relative;
-  width: 600px;
-  height: 600px;
+  width: 300px;
+  background-color: #3660df;
   margin: 6em auto;
+}
+
+img {
+  width: 100%;
 }
 
 .contactForm {
@@ -340,7 +341,7 @@ div.imgContainer {
   display: flex;
   margin: 1em;
 }
-.contactForm .textContainer {
+.contactForm .contactTextContainer {
   width: 40%;
   padding: 1em;
 }
@@ -403,6 +404,65 @@ div.imgContainer {
   font-size: 2rem;
   padding: 0.8em;
   margin: 0 auto;
+}
+
+.projectList,
+.projectList li {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(1fr);
+  gap: 40px;
+}
+.projectList li,
+.projectList li li {
+  grid-template-columns: 1fr 1fr;
+  outline: 1px dotted red;
+}
+
+.textContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  text-align: left;
+}
+
+.textContainer:nth-child(odd) {
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.languages,
+.siteLinks {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+.languages li,
+.siteLinks li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.languages a,
+.siteLinks a {
+  background-color: #3660df;
+  color: #f4f0ec;
+  border-radius: 5px;
+  padding: 0.2em;
 }
 
 body {
@@ -489,6 +549,10 @@ main {
   font-size: 2rem;
   padding: 0.8em;
   margin: 0 auto;
+}
+
+.projects {
+  margin-top: 1em;
 }
 
 footer {

@@ -19,38 +19,46 @@ header {
   }
 }
 
-h1 {
+h1,
+.raise, 
+// .top, 
+.lower {
   position: absolute;
-  top: 80px;
-  left: 10%;
+ 
+
   z-index: 9;
+  width: 100%;
+  max-width: 1200px;
+ 
 }
 
 .raise {
-  position: absolute;
-  top: -20px;
+ top: -100px;
+ left: 2%;
 }
 
-.raise.fontChange {
-  right: 0;
-}
 
 .lower{
-  display: block;
-  position: absolute;
-  bottom: -520px;
-  left: 20%;
+  display: inline-block;
+ 
+  bottom: -495px;
+  left: 3%;
 }
 
-.lower.fontChange {
-  right: -20%;
-  bottom: -550px;
-}
+// .lower.fontChange {
+ 
+//   right: -20%;
+//   bottom: -550px;
+// }
 
 
 div.imgContainer {
   position: relative;
-  width: 600px;
-  height: 600px;
+  width: 300px;
+  background-color: $baseColor;
   margin: 6em auto;
+}
+
+img {
+  width: 100%;
 }

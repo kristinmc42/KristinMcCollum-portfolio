@@ -24,6 +24,7 @@
 @import "textStyles";
 @import "header";
 @import "contact";
+@import "projects";
 
 
 
@@ -80,7 +81,7 @@ main {
   align-items: center;
 }
 
-// section headings
+// section headers
 .heading{
   @include heading;
 }
@@ -103,7 +104,9 @@ main {
 }
 
 // projects styles
-
+.projects {
+  margin-top: 1em;
+}
 
 
 
@@ -118,4 +121,6 @@ footer {
   align-items: center;
   height: 6vh;
   color: $secondaryColor;
+
+  
 }

@@ -8,7 +8,8 @@ html {
 
 
 
-.fontChange{
+.fontChange,
+h3 {
   font-family: 'Playfair Display', serif;
   font-size: 1.6rem;
 }
@@ -40,6 +41,11 @@ h1 .fontChange {
 // about text
 .about p{
   line-height: 2.2rem;
+}
+
+// projects text
+.projects p{
+  font-size: 1.1rem;
 }
 
 // footer text

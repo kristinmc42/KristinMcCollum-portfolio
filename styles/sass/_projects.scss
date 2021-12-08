@@ -1,0 +1,45 @@
+// Project styles
+
+
+.projectList,
+.projectList li {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(1fr);
+  gap: 40px;
+
+  li {
+    grid-template-columns: 1fr 1fr;
+    outline: 1px dotted red;
+  }
+}
+
+.textContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: flex-end;
+  text-align: left;
+}
+.textContainer:nth-child(odd) {
+  align-items: flex-start;
+}
+
+
+
+
+.languages,
+.siteLinks {
+  display: flex;
+  justify-content: flex-start;
+
+  li {
+    display: flex;
+  }
+  a{
+    background-color: $baseColor;
+    color: $secondaryColor;
+    border-radius: 5px;
+    padding: .2em;
+  }
+}
