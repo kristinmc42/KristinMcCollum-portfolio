@@ -89,7 +89,6 @@ main {
 
 // about styles
 .about {
-  height: 100vh;
   p:nth-of-type(1) {
     padding-top: 3em;
   }
@@ -100,7 +99,7 @@ main {
 
 .aboutSocials {
   @include socials;
-  margin: 0 30%;
+  margin: 5% 30%;
 }
 
 // projects styles

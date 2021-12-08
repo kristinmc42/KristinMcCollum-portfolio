@@ -271,7 +271,7 @@ h1 .fontChange,
 }
 
 .about p {
-  line-height: 2.2rem;
+  line-height: 3rem;
 }
 
 .projects p {
@@ -548,9 +548,6 @@ main {
   margin: 0.5em 0;
 }
 
-.about {
-  height: 100vh;
-}
 .about p:nth-of-type(1) {
   padding-top: 3em;
 }
@@ -562,7 +559,7 @@ main {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin: 0 30%;
+  margin: 5% 30%;
 }
 .aboutSocials li {
   font-size: 2rem;
