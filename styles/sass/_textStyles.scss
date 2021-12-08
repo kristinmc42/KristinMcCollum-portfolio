@@ -32,10 +32,16 @@ h1 {
   font-size: 3.6rem;
 }
 
-h1 .fontChange {
+h1 .fontChange,
+.intro h2 span {
   font-family: 'Open Sans', sans-serif;
   font-weight: 400;
   font-size: 3.2rem;
+}
+
+.intro h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 3.4rem;
 }
 
 // about text

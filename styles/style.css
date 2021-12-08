@@ -258,10 +258,16 @@ h1 {
   font-size: 3.6rem;
 }
 
-h1 .fontChange {
+h1 .fontChange,
+.intro h2 span {
   font-family: "Open Sans", sans-serif;
   font-weight: 400;
   font-size: 3.2rem;
+}
+
+.intro h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 3.4rem;
 }
 
 .about p {
@@ -304,34 +310,47 @@ header {
   padding: 0 1em;
 }
 
-h1,
-.raise,
-.lower {
-  position: absolute;
-  z-index: 9;
-  width: 100%;
-  max-width: 1200px;
+h1 {
+  max-width: 800px;
+  margin-top: 1em;
+}
+h1 .fontChange {
+  position: relative;
+  top: 30px;
+  z-index: 11;
 }
 
-.raise {
-  top: -100px;
-  left: 2%;
+.intro > h2 {
+  position: relative;
+  z-index: 12;
+  margin-left: 32%;
+}
+.intro > h2 span {
+  display: block;
+  padding-top: 0.4em;
+  margin-left: 70px;
 }
 
-.lower {
-  display: inline-block;
-  bottom: -495px;
-  left: 3%;
+div.background {
+  position: relative;
+  z-index: 5;
+  width: 400px;
+  height: 500px;
+  background-color: #3660df;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  margin: 0 auto;
 }
 
 div.imgContainer {
   position: relative;
+  z-index: 8;
   width: 300px;
-  background-color: #3660df;
-  margin: 6em auto;
+  margin: 4em auto;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
 }
-
-img {
+div.imgContainer img {
   width: 100%;
 }
 
