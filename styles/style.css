@@ -237,12 +237,6 @@ html {
   line-height: 1.5rem;
 }
 
-.fontChange,
-h3 {
-  font-family: "Playfair Display", serif;
-  font-size: 1.6rem;
-}
-
 a {
   color: #595959;
   text-decoration: none;
@@ -251,6 +245,18 @@ a {
 p {
   font-size: 1.3rem;
   line-height: 1.9rem;
+}
+
+.fontChange,
+h3 {
+  font-family: "Playfair Display", serif;
+  font-size: 1.6rem;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.fontChange:hover {
+  text-shadow: 0 0.015em #101010, 0 -0.015em #101010, 0.01em 0 #101010, -0.01em 0 #101010;
 }
 
 h1 {
@@ -277,13 +283,16 @@ h1 .fontChange,
 .projects p {
   font-size: 1.1rem;
 }
+.projects a {
+  font-weight: 900;
+}
 
 footer p {
   font-size: 1rem;
 }
 
 header {
-  height: 100vh;
+  min-height: 100vh;
 }
 
 .headerBar {
@@ -318,7 +327,7 @@ h1 {
 h1 .fontChange {
   position: relative;
   display: block;
-  top: 30px;
+  top: 38px;
   left: -10%;
   z-index: 11;
 }
@@ -330,7 +339,7 @@ h1 .fontChange {
 }
 .intro > h2 span {
   display: block;
-  padding-top: 0.4em;
+  padding-top: 0.5em;
   margin-left: 70px;
 }
 
@@ -400,20 +409,22 @@ div.imgContainer img {
 .contactForm form button {
   width: 25%;
   letter-spacing: 2px;
+  font-weight: 900;
   color: #f4f0ec;
   background-color: #3660df;
-  border: 2px double rgba(244, 240, 236, 0);
+  border: 5px double rgba(244, 240, 236, 0);
   border-radius: 5px;
   padding: 0.5em;
   margin: 1em;
-  -webkit-transition: 1s;
-  transition: 1s;
+  -webkit-transition: all 0.7s;
+  transition: all 0.7s;
 }
 .contactForm form button:hover,
 .contactForm form button:focus,
 .contactForm form button:active {
-  background-color: rgba(54, 96, 223, 0.6);
-  border: 2px double #f4f0ec;
+  color: #595959;
+  background-color: rgba(54, 96, 223, 0.2);
+  border: 5px double #595959;
   border-radius: 5px;
 }
 
@@ -426,6 +437,10 @@ div.imgContainer img {
   font-size: 2rem;
   padding: 0.8em;
   margin: 0 auto;
+}
+.contactSocials li a:hover,
+.contactSocials li a:focus {
+  color: #3660df;
 }
 
 .projectList,
@@ -490,9 +505,20 @@ div.imgContainer img {
 .siteLinks a {
   background-color: #3660df;
   color: #f4f0ec;
+  border: 5px double rgba(89, 89, 89, 0);
   border-radius: 5px;
   padding: 0.2em;
   margin: 0 0.5em;
+  -webkit-transition: all 0.7s;
+  transition: all 0.7s;
+}
+.languages a:hover,
+.languages a:focus,
+.siteLinks a:hover,
+.siteLinks a:focus {
+  background-color: rgba(54, 96, 223, 0.2);
+  color: #595959;
+  border: 5px double #595959;
 }
 .languages i,
 .siteLinks i {
@@ -519,7 +545,7 @@ div.imgContainer img {
   opacity: 0;
   border: none;
   outline: none;
-  background-color: rgba(54, 96, 223, 0.6);
+  background-color: rgba(54, 96, 223, 0.2);
   color: #f4f0ec;
   cursor: pointer;
   width: 83px;
@@ -607,23 +633,27 @@ main {
   margin: 1em 0;
 }
 
-.about p:nth-of-type(1) {
-  padding-top: 3em;
-}
 .about p {
   padding: 0.5em 4em;
+}
+.about p:nth-of-type(1) {
+  padding-top: 1.8em;
 }
 
 .aboutSocials {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin: 5% 30%;
+  margin: 3% 30%;
 }
 .aboutSocials li {
   font-size: 2rem;
   padding: 0.8em;
   margin: 0 auto;
+}
+.aboutSocials li a:hover,
+.aboutSocials li a:focus {
+  color: #3660df;
 }
 
 .projects {

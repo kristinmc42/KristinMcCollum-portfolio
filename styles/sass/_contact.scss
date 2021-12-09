@@ -38,20 +38,22 @@
     button {
       width: 25%;
       letter-spacing: 2px;
+      font-weight: 900;
       color: $secondaryColor;
       background-color: $baseColor;
-      border: 2px double $secondaryColorOpaque;
+      border: 5px double $secondaryColorOpaque;
       border-radius: 5px;
       padding: .5em;
       margin: 1em;
-      transition: 1s;
+      transition: all .7s;
     }
 
     button:hover,
     button:focus,
     button:active {
+      color: $textColor;
       background-color: $baseColorOpaque;
-      border: 2px double $secondaryColor;
+      border: 5px double $textColor;
       border-radius: 5px;
     }
   }

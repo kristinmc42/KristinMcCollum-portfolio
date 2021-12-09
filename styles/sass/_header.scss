@@ -1,6 +1,6 @@
 // header styles
 header {
-  height: 100vh;
+  min-height: 100vh;
 }
 
 .headerBar {
@@ -27,7 +27,7 @@ h1 {
   .fontChange {
    position: relative;
    display: block;
-   top: 30px;
+   top: 38px;
    left: -10%;
    z-index: 11;
   }
@@ -42,7 +42,7 @@ h1 {
     span {
       display: block;
     
-      padding-top: 0.4em;
+      padding-top: 0.5em;
       margin-left: 70px;
      
     }

@@ -87,7 +87,7 @@
           <li>
             <div class="textContainer">
               <h3>Song Selector</h3>
-              <p>Wanting to switch up your playlist? Let this app find  some hits by your favourite artists and introduce you to some new ones. Built with React and the Last.fm API.  </p>
+              <p>Wanting to switch up your playlist? Let this app find  some hits by your favourite artists and introduce you to some new ones. Built with React, it utilizes data from the Last.fm API.  </p>
               <ul class="languages">
                 <li><i class="fab fa-react"></i></li>
                 <li><i class="fab fa-css3-alt"></i></li>
@@ -148,7 +148,8 @@
         <h2 class="heading">Contact</h2>
         <div class="contactForm">
           <div class="contactTextContainer">
-            <p>If you have <span class="fontChange">any questions</span>  about me or <span class="fontChange">my projects</span>, or if you would like to tell me <span class="fontChange">what book you're reading</span> right now, please <span class="fontChange">drop me a line!</span></p>
+            <p>If you have <span class="fontChange">any questions</span>  about me or <span class="fontChange">my projects</span>, or if you would like to tell me <span class="fontChange">what book you're reading</span> right now, please </p> 
+            <a href="mailto:mccollum.k.j@gmail.com" class="fontChange" >drop me a line here!</a>
             <nav>
               <ul class="contactSocials">
                 <li><a href="https://github.com/kristinmc42"  target="_blank"><i class="fa-brands fa-github"></i></a></li>
@@ -157,13 +158,13 @@
               </ul>
             </nav>
           </div>
-          <form action="">
+          <form action="https://formspree.io/f/meqnqeak" method="POST" >
             <label for="name" class="srOnly">Please enter your name</label>
-            <input type="text" id="name" placeholder="Your name *" required>
+            <input type="text" name="name" id="name" placeholder="Your name *" required>
             <label for="email" class="srOnly">Please enter your email address</label>
-            <input type="email" id ="email" placeholder="Your email *" required>
+            <input type="email" name="email" id ="email" placeholder="Your email *" required>
             <label for="message" class="srOnly">Please leave me a message</label>
-            <textarea name="message" id="message" cols="30" rows="10" placeholder="Hi Kristin! Let's grab a tea and chat about web development or our favourite books!"></textarea>
+            <textarea name="message" name="message" id="message" cols="30" rows="10" placeholder="Hi Kristin! Let's grab a tea and chat about web development or our favourite books!"></textarea>
             <button type="submit">Send</button>
           </form>
         </div>
@@ -180,7 +181,7 @@
 
 
 
-
+  <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase.js"></script>
   <script src="app.js"></script>
 </body>
 </html>

@@ -47,10 +47,19 @@
   a{
     background-color: $baseColor;
     color: $secondaryColor;
+    border: 5px double  $textColorOpaque;
     border-radius: 5px;
     padding: .2em;
     margin: 0 .5em;
+    transition: all .7s;
   }
+  a:hover,
+  a:focus {
+    background-color: $baseColorOpaque;
+    color: $textColor;
+    border: 5px double  $textColor;
+  }
+
   i {
      margin: 0 .2em;
   }

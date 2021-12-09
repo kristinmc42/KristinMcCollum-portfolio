@@ -15,7 +15,13 @@
     font-size: 2rem;
     padding: .8em;
     margin: 0 auto;
+
+    a:hover,
+    a:focus {
+      color: $baseColor;
+    }
   }
+
 }
 
 // import partials
@@ -90,17 +96,19 @@ main {
 
 // about styles
 .about {
-  p:nth-of-type(1) {
-    padding-top: 3em;
-  }
+ 
   p{
     padding: .5em 4em;
   }
+  p:nth-of-type(1) {
+    padding-top: 1.8em;
+  }
 }
+
 
 .aboutSocials {
   @include socials;
-  margin: 5% 30%;
+  margin: 3% 30%;
 }
 
 // projects styles

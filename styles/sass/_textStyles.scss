@@ -5,15 +5,6 @@ html {
   line-height: 1.5rem;
 }
 
-
-
-
-.fontChange,
-h3 {
-  font-family: 'Playfair Display', serif;
-  font-size: 1.6rem;
-}
-
 a {
   color: $textColor;
   text-decoration: none;
@@ -22,6 +13,17 @@ a {
 p {
   font-size: 1.3rem;
   line-height: 1.9rem;
+}
+
+.fontChange,
+h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.6rem;
+  transition: .5s;
+}
+
+.fontChange:hover {
+  text-shadow: 0 0.015em #101010,0 -0.015em #101010,0.01em 0 #101010,-0.01em 0 #101010;
 }
 
 
@@ -50,8 +52,13 @@ h1 .fontChange,
 }
 
 // projects text
-.projects p{
-  font-size: 1.1rem;
+.projects {
+  p {
+    font-size: 1.1rem;
+  }
+  a{
+    font-weight: 900;
+  }
 }
 
 // footer text
