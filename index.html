@@ -26,13 +26,27 @@
     <header>
       <div class="headerBar innerWrapper">
         <p>Kristin McCollum</p>
-        <nav>
+        <nav class="headerNav">
           <ul>
             <li><a href="#about">About me</a></li>
             <li><a href="#projects">Projects</a></li>
             <li><a href="#contact">Contact</a></li>
           </ul>
         </nav>
+        
+        <button class="hamburger" id="hamburgerButton" aria-label="for hidden nav">
+          <i class="fas fa-bars"></i>
+        </button>
+        <nav id="hamburger" class="hamburger" aria-label="hidden nav">
+          <!-- hamburger menu -->
+          <ul class="hamburger">
+            <li><a href="#about">About me</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+       
+      
       </div>
       <div class="intro">
         <h1>Front End <span class="fontChange">Web Developer </span></h1>

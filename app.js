@@ -27,7 +27,7 @@ document.addEventListener("scroll", () => {
   }
 })
 
-// form submit
+// FORM SUBMIT
 // form submitted via formspree.io
 // clear form on submit
 
@@ -35,7 +35,34 @@ document.addEventListener("scroll", () => {
 const formEl = document.getElementById("commentForm");
 
 
-//add event listener on page reload to clear the form
+//on page reload, clear the form
 window.onload = () => {
   formEl.reset();
 }
+
+
+// HAMBURGER MENU
+// when user clicks on hamburger menu icon, show hidden menu
+// when user clicks on x hide menu
+
+//add event listener
+const listenForHamburgerMenuButton = () => {
+  const navEl = document.getElementById("hamburger");
+  const buttonEl = document.getElementById("hamburgerButton");
+
+  buttonEl.addEventListener('click', function(event){
+   // check that the icon was clicked
+    if (event.target.tagName === "I"){
+      // if the icon is the bars(hamburger), show the nav
+      // if the icon is the times, hide the nav
+      if (event.target.className === 'fas fa-bars'){
+        navEl.style.display = 'block';
+      }else {
+        navEl.style.display = 'none';
+      }
+      event.target.classList.toggle('fa-bars');
+      event.target.classList.toggle('fa-times');
+    }
+  })
+}
+listenForHamburgerMenuButton();
