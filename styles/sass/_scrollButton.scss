@@ -1,0 +1,30 @@
+// scroll button
+
+.scroll {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  z-index: 99;
+  opacity: 0;
+  border: none;
+  outline: none;
+  background-color: $baseColorOpaque;
+  color: $secondaryColor;
+  cursor: pointer;
+  width: 83px;
+  height: 83px;
+  padding: 15px;
+  border-radius: 50%;
+  font-size: 1.1rem;
+  transform: translateY(100px);
+  transition: all .5s ease;
+}
+
+.scroll:hover {
+  background-color: $textColor;
+}
+
+.showButton {
+  opacity: 1;
+  transform: translateY(0);
+}

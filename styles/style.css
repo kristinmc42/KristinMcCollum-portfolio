@@ -511,6 +511,38 @@ div.imgContainer img {
   font-size: 1rem;
 }
 
+.scroll {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  z-index: 99;
+  opacity: 0;
+  border: none;
+  outline: none;
+  background-color: rgba(54, 96, 223, 0.6);
+  color: #f4f0ec;
+  cursor: pointer;
+  width: 83px;
+  height: 83px;
+  padding: 15px;
+  border-radius: 50%;
+  font-size: 1.1rem;
+  -webkit-transform: translateY(100px);
+          transform: translateY(100px);
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.scroll:hover {
+  background-color: #595959;
+}
+
+.showButton {
+  opacity: 1;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+
 body {
   text-align: center;
   background-color: #3660df;
