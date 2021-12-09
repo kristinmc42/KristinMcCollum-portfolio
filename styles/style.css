@@ -288,7 +288,11 @@ h1 .fontChange,
 }
 
 footer p {
+  line-height: 1rem;
   font-size: 1rem;
+}
+footer p:nth-of-type(2) {
+  font-size: 0.7rem;
 }
 
 header {
@@ -443,6 +447,10 @@ div.imgContainer img {
   color: #3660df;
 }
 
+.projects {
+  margin-top: 1em;
+}
+
 .projectList,
 .projectList li {
   display: grid;
@@ -569,6 +577,24 @@ div.imgContainer img {
           transform: translateY(0);
 }
 
+.skills.innerWrapper {
+  margin: 3em 0 5em 0;
+}
+
+.skillList {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 1rem;
+  margin: 0 3em;
+}
+.skillList li img, .skillList li i {
+  display: block;
+  text-align: center;
+  margin: 0 auto;
+  font-size: 2rem;
+  color: #595959;
+}
+
 body {
   text-align: center;
   background-color: #3660df;
@@ -656,14 +682,14 @@ main {
   color: #3660df;
 }
 
-.projects {
-  margin-top: 1em;
-}
-
 footer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -672,4 +698,7 @@ footer {
           align-items: center;
   height: 6vh;
   color: #f4f0ec;
+}
+footer p:nth-of-type(2) {
+  margin-top: 0.4em;
 }

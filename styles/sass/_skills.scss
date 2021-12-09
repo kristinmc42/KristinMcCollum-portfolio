@@ -1,0 +1,24 @@
+// skills styles
+
+.skills.innerWrapper {
+  margin: 3em 0 5em 0;
+  
+
+}
+
+.skillList {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 1rem;
+  margin: 0 3em;
+
+  li {
+    img, i{
+      display: block;
+      text-align: center;
+      margin: 0 auto;
+      font-size: 2rem;
+      color: $textColor;
+    }
+  }
+}
