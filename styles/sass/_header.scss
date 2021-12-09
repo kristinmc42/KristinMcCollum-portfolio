@@ -7,7 +7,7 @@ header {
   @include heading;
   display: flex;
   justify-content: space-between;
-  padding-top: .3em;
+  padding-top: 1em;
 
   ul{
     display: flex;
@@ -22,10 +22,13 @@ header {
 h1 {
   max-width: 800px;
   margin-top: 1em;
+  margin-left: 1em;
 
   .fontChange {
    position: relative;
+   display: block;
    top: 30px;
+   left: -10%;
    z-index: 11;
   }
 }

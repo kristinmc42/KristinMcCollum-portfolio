@@ -291,14 +291,14 @@ header {
   border-bottom: 2px solid #595959;
   padding-left: 1em;
   padding-bottom: 0.3em;
-  margin: 0.5em 0;
+  margin: 1em 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding-top: 0.3em;
+  padding-top: 1em;
 }
 .headerBar ul {
   display: -webkit-box;
@@ -313,10 +313,13 @@ header {
 h1 {
   max-width: 800px;
   margin-top: 1em;
+  margin-left: 1em;
 }
 h1 .fontChange {
   position: relative;
+  display: block;
   top: 30px;
+  left: -10%;
   z-index: 11;
 }
 
@@ -430,12 +433,11 @@ div.imgContainer img {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: repeat(1fr);
-  gap: 40px;
+  gap: 60px;
 }
 .projectList li,
 .projectList li li {
   grid-template-columns: 1fr 1fr;
-  outline: 1px dotted red;
 }
 
 .textContainer {
@@ -446,19 +448,25 @@ div.imgContainer img {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
   text-align: left;
+}
+.textContainer h3 {
+  margin: 0;
 }
 
 .textContainer:nth-child(odd) {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
+}
+
+.imageContainer {
+  padding: 1em 0;
 }
 
 .languages,
@@ -475,6 +483,8 @@ div.imgContainer img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  font-size: 2rem;
+  gap: 10px;
 }
 .languages a,
 .siteLinks a {
@@ -482,6 +492,23 @@ div.imgContainer img {
   color: #f4f0ec;
   border-radius: 5px;
   padding: 0.2em;
+  margin: 0 0.5em;
+}
+.languages i,
+.siteLinks i {
+  margin: 0 0.2em;
+}
+.languages img,
+.siteLinks img {
+  width: 85%;
+}
+
+.languages {
+  padding-top: 1em;
+}
+
+.siteLinks li {
+  font-size: 1rem;
 }
 
 body {
@@ -545,7 +572,7 @@ main {
   border-bottom: 2px solid #595959;
   padding-left: 1em;
   padding-bottom: 0.3em;
-  margin: 0.5em 0;
+  margin: 1em 0;
 }
 
 .about p:nth-of-type(1) {
