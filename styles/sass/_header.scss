@@ -37,6 +37,7 @@ nav.hamburger {
   padding: 0 1em;
   background-color: $secondaryColor;
   border: 2px solid $baseColor;
+
   ul{
     display: flex;
     flex-direction: column;
@@ -85,14 +86,11 @@ nav.hamburger {
 
 // intro div with header and image
 .intro {
-  margin-top: 5em;
-  margin-bottom: 3em;
-  
+  margin: 3em 0;
 }
 
 h1 {
   max-width: 800px;
-  margin-top: 1em;
   margin-left: 1em;
 
   .fontChange {
@@ -108,7 +106,7 @@ h1 {
   position: relative;
   z-index: 12;
   margin-left: 32%;
-
+  top: 1em;
     span {
       display: block;
     
@@ -123,7 +121,7 @@ h1 {
   position: relative;
   z-index: 5;
   width: 400px;
-  height: 500px;
+  height: 400px;
   background-color: $baseColor;
   transform: rotate(45deg);
   margin: 0 auto;
@@ -133,8 +131,8 @@ h1 {
 .imgContainer {
   position: relative;
   z-index: 8;
-  width: 300px;
-  margin: 4em auto;
+  max-width: 300px;
+  margin: 6em auto;
   transform: rotate(-45deg);
 
   img {
@@ -145,17 +143,30 @@ h1 {
 
 // media queries
 
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 900px){
   .headerNav ul li {
     padding: 0 .5em;
   }
 }
 
 // stack name and nav
-@media only screen and (max-width: 685px) {
+@media only screen and (max-width: 685px){
   .headerBar {
     flex-direction: column;
     align-items: center;
+  }
+}
+
+@media only screen and (max-width: 535px){
+  .imgContainer{
+    max-width: 250px;
+  }
+  .background{
+    width: 300px;
+    height: 300px;
+  }
+  .intro > h2 {
+    margin-left: -1%;
   }
 }
 

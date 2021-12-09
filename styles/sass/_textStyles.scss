@@ -31,19 +31,22 @@ h3 {
 // header text
 h1 {
   font-family: 'Playfair Display', serif;
-  font-size: 3.6rem;
+  font-size: clamp(3rem, 5vw, 3.6rem);
+  line-height: clamp(3rem, 5vw, 3.6rem);
 }
 
 h1 .fontChange,
 .intro h2 span {
   font-family: 'Open Sans', sans-serif;
   font-weight: 400;
-  font-size: 3.2rem;
+  font-size: clamp(2.4rem, 5vw, 3rem);
+  line-height: clamp(2.4rem, 5vw, 3rem);
 }
 
 .intro h2 {
   font-family: 'Playfair Display', serif;
-  font-size: 3.4rem;
+  font-size: clamp(3rem, 2vw, 3.4rem);
+  line-height: clamp(3rem, 2vw, 3.4rem);
 }
 
 // about text

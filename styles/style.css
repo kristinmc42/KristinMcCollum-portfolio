@@ -261,19 +261,22 @@ h3 {
 
 h1 {
   font-family: "Playfair Display", serif;
-  font-size: 3.6rem;
+  font-size: clamp(3rem, 5vw, 3.6rem);
+  line-height: clamp(3rem, 5vw, 3.6rem);
 }
 
 h1 .fontChange,
 .intro h2 span {
   font-family: "Open Sans", sans-serif;
   font-weight: 400;
-  font-size: 3.2rem;
+  font-size: clamp(2.4rem, 5vw, 3rem);
+  line-height: clamp(2.4rem, 5vw, 3rem);
 }
 
 .intro h2 {
   font-family: "Playfair Display", serif;
-  font-size: 3.4rem;
+  font-size: clamp(3rem, 2vw, 3.4rem);
+  line-height: clamp(3rem, 2vw, 3.4rem);
 }
 
 .about p {
@@ -386,13 +389,11 @@ button.hamburger i.fa-times:hover {
 }
 
 .intro {
-  margin-top: 5em;
-  margin-bottom: 3em;
+  margin: 3em 0;
 }
 
 h1 {
   max-width: 800px;
-  margin-top: 1em;
   margin-left: 1em;
 }
 h1 .fontChange {
@@ -407,6 +408,7 @@ h1 .fontChange {
   position: relative;
   z-index: 12;
   margin-left: 32%;
+  top: 1em;
 }
 .intro > h2 span {
   display: block;
@@ -418,7 +420,7 @@ h1 .fontChange {
   position: relative;
   z-index: 5;
   width: 400px;
-  height: 500px;
+  height: 400px;
   background-color: #3660df;
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
@@ -428,8 +430,8 @@ h1 .fontChange {
 .imgContainer {
   position: relative;
   z-index: 8;
-  width: 300px;
-  margin: 4em auto;
+  max-width: 300px;
+  margin: 6em auto;
   -webkit-transform: rotate(-45deg);
           transform: rotate(-45deg);
 }
@@ -451,6 +453,20 @@ h1 .fontChange {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+  }
+}
+@media only screen and (max-width: 535px) {
+  .imgContainer {
+    max-width: 250px;
+  }
+
+  .background {
+    width: 300px;
+    height: 300px;
+  }
+
+  .intro > h2 {
+    margin-left: -1%;
   }
 }
 @media only screen and (max-width: 408px) {
