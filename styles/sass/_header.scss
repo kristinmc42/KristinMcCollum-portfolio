@@ -1,6 +1,7 @@
 // header styles
 header {
   min-height: 100vh;
+  overflow: hidden;
 }
 
 .headerBar {
@@ -17,6 +18,12 @@ header {
       padding: 0 1em;
     }
   }
+}
+
+.intro {
+  margin-top: 5em;
+  margin-bottom: 3em;
+  
 }
 
 h1 {
@@ -49,7 +56,7 @@ h1 {
 }
 
 
-div.background {
+.background {
   position: relative;
   z-index: 5;
   width: 400px;
@@ -59,7 +66,7 @@ div.background {
   margin: 0 auto;
 }
 
-div.imgContainer {
+.imgContainer {
   position: relative;
   z-index: 8;
   width: 300px;
@@ -68,5 +75,14 @@ div.imgContainer {
 
   img {
     width: 100%;
+  }
+}
+
+
+// media queries
+
+@media only screen and (max-width: 900px) {
+  .headerBar ul li {
+    padding: 0 .5em;
   }
 }

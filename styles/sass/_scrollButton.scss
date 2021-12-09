@@ -8,20 +8,24 @@
   opacity: 0;
   border: none;
   outline: none;
-  background-color: $baseColorOpaque;
+  background-color: $textColorSemiOpaque;
   color: $secondaryColor;
   cursor: pointer;
-  width: 83px;
-  height: 83px;
+  width: 87px;
+  height: 87px;
   padding: 15px;
+  border: 3px solid $baseColor;
   border-radius: 50%;
   font-size: 1.1rem;
+  font-weight: 900;
   transform: translateY(100px);
   transition: all .5s ease;
 }
 
-.scroll:hover {
+.scroll:hover,
+.scroll:focus {
   background-color: $textColor;
+  border: 3px solid $secondaryColor;
 }
 
 .showButton {

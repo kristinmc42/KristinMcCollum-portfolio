@@ -1,6 +1,7 @@
 // Project styles
-.projects {
+.projects.innerWrapper {
   margin-top: 1em;
+  margin-bottom: 2em;
 }
 
 .projectList,
@@ -25,7 +26,7 @@
   text-align: left;
 
   h3 {
-    margin: 0;
+    margin: 0 0 .5em 0;
   }
 }
 .textContainer:nth-child(odd) {
@@ -52,7 +53,7 @@
     border: 5px double  $textColorOpaque;
     border-radius: 5px;
     padding: .2em;
-    margin: 0 .5em;
+    margin: .7em .5em;
     transition: all .7s;
   }
   a:hover,
@@ -75,4 +76,23 @@
 }
 .siteLinks li {
   font-size: 1rem;
+}
+
+// media queries
+@media only screen and (max-width: 900px){
+  .projectList {
+    gap: 40px;
+    li {
+      grid-template-columns: 1fr;
+    }
+    
+  }
+
+  .imageContainer:nth-of-type(even) {
+    order: -1;
+  }
+  .textContainer {
+    align-items: flex-start;
+    padding: 0 2em;
+  }
 }

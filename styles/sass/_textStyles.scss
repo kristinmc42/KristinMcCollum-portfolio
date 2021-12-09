@@ -47,8 +47,14 @@ h1 .fontChange,
 }
 
 // about text
-.about p{
-  line-height: 3rem;
+.about {
+  p{
+    font-size: clamp(.9rem, 3vw, 1.3rem);
+    line-height: clamp(1rem, 10vw, 3rem);
+  }
+  .fontChange {
+    font-size: clamp(1.1rem, 3vw, 1.6rem);
+  }
 }
 
 // projects text
