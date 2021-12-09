@@ -1,4 +1,4 @@
-
+// scroll to top feature
 // get button
 const scrollButton = document.getElementById("scrollButton");
 
@@ -26,3 +26,16 @@ document.addEventListener("scroll", () => {
     scrollButton.classList.remove("showButton");
   }
 })
+
+// form submit
+// form submitted via formspree.io
+// clear form on submit
+
+// get form element
+const formEl = document.getElementById("commentForm");
+
+
+//add event listener on page reload to clear the form
+window.onload = () => {
+  formEl.reset();
+}
