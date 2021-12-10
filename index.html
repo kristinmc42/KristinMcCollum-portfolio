@@ -26,25 +26,35 @@
     <header>
       <div class="headerBar innerWrapper">
         <p>Kristin McCollum</p>
-        <nav class="headerNav">
-          <ul>
-            <li><a href="#about">About me</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
-        </nav>
-        
-        <button class="hamburger" id="hamburgerButton" aria-label="for hidden nav">
-          <i class="fas fa-bars"></i>
-        </button>
-        <!-- hamburger menu -->
-        <nav id="hamburgerNav" class="hamburger" aria-label="hidden nav">
-          <ul class="hamburger">
-            <li><a href="#about">About me</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
-        </nav>
+        <div class="navContainer">
+          <nav class="headerNav">
+            <ul>
+              <li><a href="#about">About me</a></li>
+              <li><a href="#projects">Projects</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </nav>
+          
+          <!-- hamburger menu -->
+          <button class="hamburger" id="hamburgerButton" aria-label="for hidden nav">
+            <i class="fas fa-bars"></i>
+          </button>
+          <nav id="hamburgerNav" class="hamburger" aria-label="hidden nav">
+            <ul class="hamburger">
+              <li><a href="#about">About me</a></li>
+              <li><a href="#projects">Projects</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </nav>
+
+          <!-- switch for dark and light mode -->
+         <div class="themeSwitchWrapper">
+           <label class="themeSwitch" for="checkbox">
+             <input type="checkbox" id="checkbox" aria-label="switch between light and dark mode"/>
+             <div class="slider round"></div>
+           </label>
+         </div>
+        </div>
        
       
       </div>
@@ -86,14 +96,13 @@
           <li><i class="fab fa-js"></i>JavaScript</li>
           <li><i class="fab fa-react"></i>React</li>
           <li><i class="devicon-jquery-plain"></i>JQuery</li>
-          <li><img src="https://img.icons8.com/ios/50/000000/api-settings.png" alt="rest API icon"/>REST API</li>
+          <li><i class="fa-solid fa-gear"></i>REST API</li>
           <li><i class="devicon-firebase-plain"></i>Firebase</li>
           <li><i class="fab fa-github"></i>GitHub</li>
           <li><i class="devicon-vscode-plain"></i>VSCode</li>
           <li><i class="fas fa-terminal"></i>Terminal</li>
           <li><i class="fas fa-universal-access"></i>Accessiblity</li>
-          <li><img
-            src="https://img.icons8.com/external-dreamstale-lineal-dreamstale/32/000000/external-responsive-computers-dreamstale-lineal-dreamstale-3.png" alt="responsive design icon"/>Responsive Design</li>
+          <li><i class="fa-solid fa-laptop-code"></i>Responsive Design</li>
         </ul>
 
       </section>
@@ -113,7 +122,7 @@
                 <li><i class="fab fa-react"></i></li>
                 <li><i class="fab fa-css3-alt"></i></li>
                 <li><i class="fab fa-html5"></i></li>
-                <li><img src="https://img.icons8.com/ios/50/000000/api-settings.png" alt="rest API icon"/></li>
+                <li><i class="fa-solid fa-gear"></i></li>
               </ul>
               <ul class="siteLinks">
                 <li><a href="https://ybs-galactic-tours.netlify.app/" target="_blank">Live Site</a></li>
@@ -129,7 +138,7 @@
                 <li><i class="fab fa-react"></i></li>
                 <li><i class="fab fa-css3-alt"></i></li>
                 <li><i class="fab fa-html5"></i></li>
-                <li><img src="https://img.icons8.com/ios/50/000000/api-settings.png" alt="rest API icon"/></li>
+                <li><i class="fa-solid fa-gear"></i></li>
               </ul>
               <ul class="siteLinks">
                 <li><a href="https://song-selector.netlify.app/" target="_blank">Live Site</a></li>
@@ -152,7 +161,7 @@
                 <li><i class="fab fa-css3-alt"></i></li>
                 <li><i class="fab fa-html5"></i></li>
                 <li><i class="fab fa-js"></i></li>
-                <li><img src="https://img.icons8.com/ios/50/000000/api-settings.png" alt="rest API icon"/></li>
+                <li><i class="fa-solid fa-gear"></i></li>
               </ul>
               <ul class="siteLinks">
                 <li><a href="https://imperial-glamour.netlify.app/" target="_blank">Live Site</a></li>

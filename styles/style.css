@@ -327,6 +327,12 @@ header {
   padding-top: 1em;
 }
 
+.navContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 .headerNav ul {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -841,6 +847,113 @@ h1 .fontChange {
     font-size: 1.5rem;
   }
 }
+.themeSwitchWrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.themeSwitch {
+  display: inline-block;
+  height: 38px;
+  position: relative;
+  width: 60px;
+}
+
+.themeSwitch input {
+  display: none;
+}
+
+.slider {
+  background-color: #f4f0ec;
+  bottom: 0;
+  cursor: pointer;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.slider:before {
+  background-color: #595959;
+  bottom: 4px;
+  content: "";
+  height: 26px;
+  left: 4px;
+  position: absolute;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  width: 26px;
+}
+
+input:checked + .slider {
+  background-color: #121212;
+  border: 3px double #f4f0ec;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(19px);
+          transform: translateX(19px);
+}
+
+.slider.round {
+  border-radius: 34px;
+  border: 3px double #595959;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+.darkMode {
+  color: #f4f0ec;
+}
+.darkMode .outerWrapper,
+.darkMode .innerWrapper {
+  background-color: #121212;
+}
+.darkMode a, .darkMode i,
+.darkMode .skills i,
+.darkMode .languages img {
+  color: #f4f0ec;
+}
+.darkMode .aboutSocials a:hover,
+.darkMode .contactSocials a:hover {
+  color: #3660df;
+}
+.darkMode .aboutSocials a:hover i,
+.darkMode .contactSocials a:hover i {
+  color: #3660df;
+}
+.darkMode form input,
+.darkMode form textarea {
+  background-color: #f4f0ec;
+}
+.darkMode form button:hover,
+.darkMode form button:focus,
+.darkMode form button:active {
+  color: #f4f0ec;
+  background-color: rgba(54, 96, 223, 0.2);
+  border: 5px double #f4f0ec;
+  border-radius: 5px;
+}
+.darkMode .languages a:hover,
+.darkMode .languages a:focus,
+.darkMode .siteLinks a:hover,
+.darkMode .siteLinks a:focus {
+  background-color: rgba(54, 96, 223, 0.2);
+  color: #f4f0ec;
+  border: 5px double #f4f0ec;
+}
+.darkMode .fontChange:hover {
+  text-shadow: 0 0.015em #e3dbdb, 0 -0.015em #e3dbdb, 0.01em 0 #e3dbdb, -0.01em 0 #e3dbdb;
+}
+
 body {
   text-align: center;
   background-color: #3660df;
@@ -865,8 +978,8 @@ h2, p, ul, li, a {
   left: -1000px;
   top: 5px;
   z-index: 999;
-  background: white;
-  color: black;
+  background: #f4f0ec;
+  color: #080808;
 }
 
 .skipLink:focus {

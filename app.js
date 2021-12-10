@@ -87,15 +87,25 @@ app.showHamburgerMenu = () => {
       }
     }
   })
-
-  
-  
 }
+
+// listen for toggle from light to dark mode
+app.listenForDarkModeToggle = () => {
+  const toggle = document.getElementById("checkbox");
+  console.log(toggle)
+  toggle.addEventListener("change", () => {
+    console.log("toggled")
+    document.body.classList.toggle("darkMode");
+  })
+}
+
+
 
 app.init = () => {
   app.listenForScroll();
   app.formSubmit();
   app.showHamburgerMenu();
+  app.listenForDarkModeToggle();
 }
 
 app.init();
