@@ -6,7 +6,7 @@
 
 .skillList {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(137px, 1fr));
   gap: 1rem;
   margin: 0 3em;
 
@@ -25,5 +25,31 @@
 @media only screen and (max-width: 900px) {
   .skills.innerWrapper {
     margin: 1em 0 3em 0;
+  }
+  .skillList {
+    margin: 0 1.6em;
+  }
 }
+
+@media only screen and (max-width: 700px) {
+  .skillList {
+    margin: 0 .7em;
+  }
+}
+
+@media only screen and (max-width: 445px) {
+  .skills.innerWrapper {
+    margin: 0;
+    width: 100%;
+  }
+  .skillList {
+    margin: 0;
+    gap: 0;
+    li {
+      font-size: .8rem;
+      img, i {
+        font-size: 1.5rem;
+      }
+    }
+  }
 }

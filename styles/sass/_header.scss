@@ -149,7 +149,7 @@ h1 {
   }
 }
 
-// stack name and nav
+// stack name and nav in header
 @media only screen and (max-width: 685px){
   .headerBar {
     flex-direction: column;
@@ -157,6 +157,7 @@ h1 {
   }
 }
 
+// reducing size of image and background div
 @media only screen and (max-width: 535px){
   .imgContainer{
     max-width: 250px;

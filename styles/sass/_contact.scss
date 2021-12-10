@@ -61,6 +61,8 @@
 
 .contactSocials {
   @include socials;
+  margin-top: 1.8em;
+  margin-bottom: 1em;
 }
 
 // media queries
@@ -78,5 +80,22 @@
     form {
       width: 90%;
     }
+  }
+}
+@media only screen and (max-width: 535px) {
+  .contactContainer {
+    margin: 0;
+    .contactTextContainer,
+    form {
+      padding: .2em;
+      width: 100%;
+      margin: 0;
+
+      button {
+        margin: 1em 0;
+        width: 37%;
+      }
+    }
+    
   }
 }

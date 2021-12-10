@@ -13,7 +13,6 @@
   
   li {
     font-size: 2rem;
-    padding: .8em;
     margin: 0 auto;
 
     a:hover,
@@ -109,7 +108,8 @@ main {
 
 .aboutSocials {
   @include socials;
-  margin: 3% 30%;
+  margin: 3% auto;
+  max-width: 500px;
 }
 
 
@@ -137,5 +137,8 @@ footer {
     p:nth-of-type(1){
       padding-top: .6em;
     }
+  }
+  .aboutSocials {
+    margin: 7% auto;
   }
 }

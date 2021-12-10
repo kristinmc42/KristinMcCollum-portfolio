@@ -11,14 +11,14 @@ a {
 }
 
 p {
-  font-size: 1.3rem;
+  font-size: clamp(1rem ,2vw, 1.3rem);
   line-height: 1.9rem;
 }
 
 .fontChange,
 h3 {
   font-family: 'Playfair Display', serif;
-  font-size: 1.6rem;
+  font-size: clamp(1.3rem ,2vw, 1.6rem);
   transition: .5s;
 }
 
@@ -73,8 +73,8 @@ h1 .fontChange,
 // footer text
 footer {
   p {
-    line-height: 1rem;
-    font-size: 1rem;
+    line-height: clamp(.9rem, 2vw, 1rem);
+    font-size: clamp(.9rem, 2vw, 1rem);
   }
   p:nth-of-type(2) {
     font-size: .7rem;
