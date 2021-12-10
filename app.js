@@ -53,7 +53,7 @@ app.showHamburgerMenu = () => {
   // when user clicks on hamburger menu icon, show hidden menu
   // when user clicks on x hide menu
   // get hamburger nav and button
-  const navEl = document.getElementById("hamburger");
+  const navEl = document.getElementById("hamburgerNav");
   const buttonEl = document.getElementById("hamburgerButton");
   
   //add event listener
@@ -70,7 +70,26 @@ app.showHamburgerMenu = () => {
       event.target.classList.toggle('fa-bars');
       event.target.classList.toggle('fa-times');
     }
+    
+    // if user exxpands window while hamburger menu still open
+    window.onresize = () => {
+      // get window width
+      const width = window.innerWidth;
+
+      if (width > 408){
+        navEl.style.display = 'none';
+      } else {
+        if (event.target.className === 'fas fa-bars'){
+          navEl.style.display = 'none';
+        } else {
+          navEl.style.display = 'block';
+        }
+      }
+    }
   })
+
+  
+  
 }
 
 app.init = () => {
