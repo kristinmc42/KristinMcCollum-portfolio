@@ -522,7 +522,11 @@ h1 .fontChange {
 }
 .contactContainer .contactTextContainer {
   width: 40%;
-  padding: 1em;
+  padding: 0 1em 1em 1em;
+  text-align: left;
+}
+.contactContainer .contactTextContainer .contactSocials {
+  text-align: center;
 }
 .contactContainer form {
   display: -webkit-box;
@@ -616,6 +620,9 @@ h1 .fontChange {
   .contactContainer .contactTextContainer {
     width: 90%;
   }
+  .contactContainer .contactTextContainer a.fontChange {
+    display: inline-block;
+  }
   .contactContainer form {
     width: 90%;
   }
@@ -666,7 +673,7 @@ h1 .fontChange {
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
-  text-align: left;
+  text-align: right;
 }
 .textContainer h3 {
   margin: 0 0 0.5em 0;
@@ -676,6 +683,7 @@ h1 .fontChange {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
+  text-align: left;
 }
 
 .imageContainer {
@@ -753,6 +761,7 @@ h1 .fontChange {
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: flex-start;
+    text-align: left;
     padding: 0 2em;
   }
 }
@@ -1038,11 +1047,30 @@ main {
   margin: 1em 0;
 }
 
+.about .paragraphContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
+}
 .about p {
-  padding: 0.5em 4em;
+  padding: 0.5em 2em;
+  text-align: left;
+  width: 80%;
 }
 .about p:nth-of-type(1) {
   padding-top: 1.8em;
+}
+.about p:nth-of-type(2) {
+  text-align: right;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
 }
 
 .aboutSocials {
@@ -1100,5 +1128,10 @@ footer p:nth-of-type(2) {
 
   .aboutSocials {
     margin: 7% auto;
+  }
+}
+@media only screen and (max-width: 700px) {
+  .about p {
+    width: 90%;
   }
 }

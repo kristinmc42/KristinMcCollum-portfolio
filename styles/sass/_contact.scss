@@ -7,8 +7,12 @@
 
   .contactTextContainer {
     width: 40%;
-    padding: 1em;
-   
+    padding: 0 1em 1em 1em;
+    text-align: left;
+
+    .contactSocials {
+      text-align: center;
+    }
   }
 
   form {
@@ -75,6 +79,10 @@
 
     .contactTextContainer {
       width: 90%;
+      
+      a.fontChange {
+        display: inline-block;
+      }
     }
 
     form {
