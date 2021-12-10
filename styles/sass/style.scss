@@ -15,9 +15,17 @@
     font-size: 2rem;
     margin: 0 auto;
 
+    span {
+      display: block;
+      opacity: 0;
+    }
+
     a:hover,
     a:focus {
       color: $baseColor;
+      span{
+        opacity: 1; 
+      }
     }
   }
 
@@ -110,6 +118,7 @@ main {
   @include socials;
   margin: 3% auto;
   max-width: 500px;
+  
 }
 
 

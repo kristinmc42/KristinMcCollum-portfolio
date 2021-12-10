@@ -59,6 +59,10 @@ h1 .fontChange,
     font-size: clamp(1.1rem, 3vw, 1.6rem);
   }
 }
+.aboutSocials span,
+.contactSocials span{
+  font-size: 1rem;
+}
 
 // projects text
 .projects {
