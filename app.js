@@ -1,55 +1,62 @@
+const app = {};
+
+
+
 // scroll to top feature
-// get button
-const scrollButton = document.getElementById("scrollButton");
+app.listenForScroll = () => {
+  // get button
+  const scrollButton = document.getElementById("scrollButton");
 
-const rootElement = document.documentElement;
-
-
-// add event listener for button click
-scrollButton.addEventListener("click", () => {
-  // function for scrolling to top
-  rootElement.scrollTo({
-    top: 0,
-    behavior: "smooth"
+  // get root of document
+  const rootElement = document.documentElement;
+  
+  // add event listener for button click
+  scrollButton.addEventListener("click", () => {
+    // function for scrolling to top
+    rootElement.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    })
   })
-})
+  
+  // add event listener for scroll
+  document.addEventListener("scroll", () => {
+    const scrollTotal = rootElement.scrollHeight - rootElement.clientHeight;
+  
+    if ((rootElement.scrollTop / scrollTotal) > 0.15){
+      // show button
+      scrollButton.classList.add("showButton");
+    }else {
+      // hide button
+      scrollButton.classList.remove("showButton");
+    }
+  })
+}
 
-// add event listener for scroll
-document.addEventListener("scroll", () => {
-  const scrollTotal = rootElement.scrollHeight - rootElement.clientHeight;
-
-  if ((rootElement.scrollTop / scrollTotal) > 0.20){
-    // show button
-    scrollButton.classList.add("showButton");
-  }else {
-    // hide button
-    scrollButton.classList.remove("showButton");
+// form submit
+app.formSubmit = () => {
+  // form submitted via formspree.io
+  // clear form on submit
+  
+  // get form element
+  const formEl = document.getElementById("commentForm");
+  
+  //on page reload, clear the form
+  window.onload = () => {
+    formEl.reset();
   }
-})
-
-// FORM SUBMIT
-// form submitted via formspree.io
-// clear form on submit
-
-// get form element
-const formEl = document.getElementById("commentForm");
-
-
-//on page reload, clear the form
-window.onload = () => {
-  formEl.reset();
 }
 
 
-// HAMBURGER MENU
-// when user clicks on hamburger menu icon, show hidden menu
-// when user clicks on x hide menu
-
-//add event listener
-const listenForHamburgerMenuButton = () => {
+// hamburger menu
+app.showHamburgerMenu = () => {
+  // when user clicks on hamburger menu icon, show hidden menu
+  // when user clicks on x hide menu
+  // get hamburger nav and button
   const navEl = document.getElementById("hamburger");
   const buttonEl = document.getElementById("hamburgerButton");
-
+  
+  //add event listener
   buttonEl.addEventListener('click', function(event){
    // check that the icon was clicked
     if (event.target.tagName === "I"){
@@ -65,4 +72,11 @@ const listenForHamburgerMenuButton = () => {
     }
   })
 }
-listenForHamburgerMenuButton();
+
+app.init = () => {
+  app.listenForScroll();
+  app.formSubmit();
+  app.showHamburgerMenu();
+}
+
+app.init();

@@ -79,20 +79,37 @@
 }
 
 // media queries
+// stack images over text containers
 @media only screen and (max-width: 900px){
   .projectList {
     gap: 40px;
     li {
       grid-template-columns: 1fr;
     }
-    
   }
-
   .imageContainer:nth-of-type(even) {
     order: -1;
   }
+
+  // align all text content to the left
   .textContainer {
     align-items: flex-start;
     padding: 0 2em;
+  }
+}
+
+// reduce font size on site link buttons
+@media only screen and (max-width: 535px) {
+  .textContainer {
+    padding: 0 0 0 .3em;
+  }
+  .languages i{
+    margin: 0 0.1em;
+  }
+  .siteLinks {
+    margin-top: .2em;
+    a {
+      font-size: .8rem;
+    }
   }
 }

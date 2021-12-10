@@ -723,6 +723,22 @@ h1 .fontChange {
     padding: 0 2em;
   }
 }
+@media only screen and (max-width: 535px) {
+  .textContainer {
+    padding: 0 0 0 0.3em;
+  }
+
+  .languages i {
+    margin: 0 0.1em;
+  }
+
+  .siteLinks {
+    margin-top: 0.2em;
+  }
+  .siteLinks a {
+    font-size: 0.8rem;
+  }
+}
 .scroll {
   position: fixed;
   bottom: 30px;
