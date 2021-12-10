@@ -76,7 +76,7 @@ app.showHamburgerMenu = () => {
       // get window width
       const width = window.innerWidth;
 
-      if (width > 408){
+      if (width > 482){
         navEl.style.display = 'none';
       } else {
         if (event.target.className === 'fas fa-bars'){

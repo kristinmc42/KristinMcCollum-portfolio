@@ -44,7 +44,7 @@ nav.hamburger {
   ul{
     display: flex;
     flex-direction: column;
-    padding: .7em 2em 1em 0;
+    padding: 3em 1em 1em 1.5em;
 
     li {
       padding: .2em;
@@ -65,12 +65,12 @@ nav.hamburger {
     right: 1000px;
     border: none;
     background-color: $secondaryColor;
-    padding: 20px;
+    padding: 0 20px;
     i {
       position: absolute;
       z-index: 999;
       top: 8px;
-      left: 8px;
+      left: -4px;
       color: $textColor;
       font-size: 2rem;
      
@@ -173,7 +173,7 @@ h1 {
 }
 
 // switch to hamburger menu
-@media only screen and (max-width: 408px){
+@media only screen and (max-width: 482px){
   // stack my name and shift left
   .headerBar {
     padding-left: 0;
@@ -183,7 +183,7 @@ h1 {
   button.hamburger {
     opacity: 1;
     top: 16px;
-    right: 60px;
+    right: 112px;
     i {font-size: 1.7rem;}
   }
 
@@ -192,5 +192,15 @@ h1 {
     opacity: 0;
     position: absolute;
     left: -100px;
+  }
+}
+
+@media only screen and (max-width: 372px){
+  .headerBar {
+    p {width: 30%}
+  }
+  button.hamburger {
+    top: 31px;
+    right: 105px;
   }
 }
