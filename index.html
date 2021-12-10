@@ -23,10 +23,13 @@
 <body>
   <a href="#mainContent" class="skipLink">Skip to main content.</a>
   <div class="outerWrapper">
+
+    <!-- header -->
     <header>
       <div class="headerBar innerWrapper">
         <p>Kristin McCollum</p>
         <div class="navContainer">
+          <!-- main nav -->
           <nav class="headerNav">
             <ul>
               <li><a href="#about">About me</a></li>
@@ -55,9 +58,8 @@
            </label>
          </div>
         </div>
-       
-      
       </div>
+      <!-- intro with image and title -->
       <div class="intro">
         <h1>Front End <span class="fontChange">Web Developer </span></h1>
         <div class="background">
@@ -66,10 +68,12 @@
           </div>
         </div>
         <h2>based in <span class="fontChange">Toronto</span></h2>
-        
       </div>
     </header>
+
+    <!-- start of main content -->
     <main id="mainContent">
+      <!-- about section -->
       <section class="about innerWrapper" id="about">
         <h2 class="heading">About</h2>
         <p><span class="fontChange">Hello!</span>  I
@@ -77,6 +81,8 @@
         My background as a stage manager in theatre and opera honed my enthusiasm for <span class="fontChange">working collaboratively</span>. </p>
         <p>Whether coordinating all of the moving pieces in a live production or building all of the components to bring an app to life, I bring an <span class="fontChange">empathetic</span>  approach to my work, along with a <span class="fontChange">keen eye for detail.</span> </p>
         <p>When I'm not building <span class="fontChange">responsive and accessible websites</span>, I like to lose myself in a <span class="fontChange">good book</span>, play board games or go for long walks while listening to a favourite playlist.</p>
+
+        <!-- nav with socials icons -->
         <nav>
           <ul class="aboutSocials">
             <li><a href="https://github.com/kristinmc42" target="_blank"><i class="fa-brands fa-github"></i><span>GitHub</span> </a></li>
@@ -87,6 +93,7 @@
         </nav>
       </section>
 
+      <!-- skills section -->
       <section class="skills innerWrapper">
         <h2 class="heading">Skills</h2>
         <ul class="skillList">
@@ -104,13 +111,13 @@
           <li><i class="fas fa-universal-access"></i>Accessiblity</li>
           <li><i class="fa-solid fa-laptop-code"></i>Responsive Design</li>
         </ul>
-
       </section>
 
-
+      <!-- projects section -->
       <section id="projects" class="projects innerWrapper">
         <h2 class="heading">Projects</h2>
         <ul class="projectList">
+          <!-- one -->
           <li>
             <div class="imageContainer">
               <img src="./assets/ybsMockupCompressed.jpg" alt="laptop open on a white desk in a white room, with YBS Galactic Tours website on the screen">
@@ -130,6 +137,7 @@
               </ul>
             </div>
           </li>
+          <!-- two -->
           <li>
             <div class="textContainer">
               <h3>Song Selector</h3>
@@ -149,6 +157,7 @@
               <img src="./assets/songSelectorMockupCompressed.jpg" alt="the hands of a couple in a restaurant, holding two phones with Song Selector app on the screen ">
             </div>
           </li>
+          <!-- three -->
           <li>
             <div class="imageContainer">
               <img src="./assets/imperialGlamourMockupCompressed.jpg" alt="woman in a vintage store looking at an iMac with the Imperial Glamour website on the screen ">
@@ -169,6 +178,7 @@
               </ul>
             </div>
           </li>
+          <!-- four -->
           <li>
             <div class="textContainer">
               <h3>All About Sophie</h3>
@@ -187,15 +197,20 @@
               <img src="./assets/sophieMockupCompressed.jpg" alt="person sitting at wooden table, holding a tablet with All About Sophie website on the screen">
             </div>
           </li>
-        
         </ul>
       </section>
+
+      <!-- contact section -->
       <section class="contact innerWrapper" id="contact">
         <h2 class="heading">Contact</h2>
         <div class="contactContainer">
+
+          <!-- text container -->
           <div class="contactTextContainer">
             <p>If you have <span class="fontChange">any questions</span>  about me or <span class="fontChange">my projects</span>, or if you would like to tell me <span class="fontChange">what book you're reading</span> right now, please </p> 
             <a href="mailto:mccollum.k.j@gmail.com" class="fontChange" >drop me a line here!</a>
+
+            <!-- nav with contact socials -->
             <nav>
               <ul class="contactSocials">
                 <li><a href="https://github.com/kristinmc42" target="_blank"><i class="fa-brands fa-github"></i><span>GitHub</span> </a>
@@ -207,6 +222,8 @@
               </ul>
             </nav>
           </div>
+
+          <!-- contact form -->
           <form action="https://formspree.io/f/meqnqeak" method="POST" id="commentForm">
             <label for="name" class="srOnly">Please enter your name</label>
             <input type="text" name="name" id="name" placeholder="Your name *" required>
@@ -218,18 +235,20 @@
           </form>
         </div>
       </section>
+
+      <!-- scroll to top button -->
       <button class="scroll" id="scrollButton" title="Go to top">Top ⬆</button>
     </main>
   </div>
+
+  <!-- footer -->
   <footer>
     <p>Designed by Kristin McCollum</p>
-    <!-- <p>Credits</p> -->
-    <!-- <a href="https://icons8.com/icon/21888/rest-api">Rest API icon by Icons8</a> -->
-   <!-- <a href="https://www.behance.net/shawonrahman3">Portfolio design inspired by Sharuk Rahman Shawon</a>  -->
   </footer>
 
 
 
+  <!-- js file -->
   <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase.js"></script>
   <script src="app.js"></script>
 </body>
