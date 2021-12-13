@@ -1,3 +1,5 @@
+// general text styles
+
 html {
   font-size: 125%;
   color: $textColor;
@@ -15,10 +17,9 @@ p {
   line-height: 1.9rem;
 }
 
-.fontChange,
-h3 {
-  font-family: 'Playfair Display', serif;
+.fontChange {
   font-size: clamp(1.3rem ,2vw, 1.6rem);
+  font-weight: 700;
   transition: .5s;
 }
 
@@ -29,6 +30,10 @@ h3 {
 
 
 // header text
+.headerBar p {
+  font-weight: 700;
+}
+
 h1 {
   font-family: 'Playfair Display', serif;
   font-size: clamp(3rem, 5vw, 3.6rem);
@@ -43,11 +48,15 @@ h1 .fontChange,
   line-height: clamp(2.4rem, 5vw, 3rem);
 }
 
-.intro h2 {
+h2 {
   font-family: 'Playfair Display', serif;
+  letter-spacing: .2rem;
+}
+.intro h2 {
   font-size: clamp(3rem, 2vw, 3.4rem);
   line-height: clamp(3rem, 2vw, 3.4rem);
 }
+
 
 // about text
 .about {
@@ -65,6 +74,12 @@ h1 .fontChange,
 }
 
 // projects text
+h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(1.3rem ,2vw, 1.6rem);
+  letter-spacing: .2rem;
+}
+
 .projects {
   p {
     font-size: 1.1rem;
@@ -73,6 +88,7 @@ h1 .fontChange,
     font-weight: 900;
   }
 }
+
 
 // footer text
 footer {

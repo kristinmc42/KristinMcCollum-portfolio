@@ -3,7 +3,7 @@
 @mixin heading {
   text-align: left;
   border-bottom: 2px solid $textColor;
-  padding-left: 1em;
+  padding-left: .5em;
   padding-bottom: .3em;
   margin: 1em 0
 }

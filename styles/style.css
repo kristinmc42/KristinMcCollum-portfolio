@@ -247,16 +247,19 @@ p {
   line-height: 1.9rem;
 }
 
-.fontChange,
-h3 {
-  font-family: "Playfair Display", serif;
+.fontChange {
   font-size: clamp(1.3rem ,2vw, 1.6rem);
+  font-weight: 700;
   -webkit-transition: 0.5s;
   transition: 0.5s;
 }
 
 .fontChange:hover {
   text-shadow: 0 0.015em #101010, 0 -0.015em #101010, 0.01em 0 #101010, -0.01em 0 #101010;
+}
+
+.headerBar p {
+  font-weight: 700;
 }
 
 h1 {
@@ -273,8 +276,12 @@ h1 .fontChange,
   line-height: clamp(2.4rem, 5vw, 3rem);
 }
 
-.intro h2 {
+h2 {
   font-family: "Playfair Display", serif;
+  letter-spacing: 0.2rem;
+}
+
+.intro h2 {
   font-size: clamp(3rem, 2vw, 3.4rem);
   line-height: clamp(3rem, 2vw, 3.4rem);
 }
@@ -290,6 +297,12 @@ h1 .fontChange,
 .aboutSocials span,
 .contactSocials span {
   font-size: 1rem;
+}
+
+h3 {
+  font-family: "Playfair Display", serif;
+  font-size: clamp(1.3rem ,2vw, 1.6rem);
+  letter-spacing: 0.2rem;
 }
 
 .projects p {
@@ -315,7 +328,7 @@ header {
 .headerBar {
   text-align: left;
   border-bottom: 2px solid #595959;
-  padding-left: 1em;
+  padding-left: 0.5em;
   padding-bottom: 0.3em;
   margin: 1em 0;
   display: -webkit-box;
@@ -524,6 +537,9 @@ h1 .fontChange {
   width: 40%;
   padding: 0 1em 1em 1em;
   text-align: left;
+}
+.contactContainer .contactTextContainer .colorChange {
+  color: #3660df;
 }
 .contactContainer .contactTextContainer .contactSocials {
   text-align: center;
@@ -1042,7 +1058,7 @@ main {
 .heading {
   text-align: left;
   border-bottom: 2px solid #595959;
-  padding-left: 1em;
+  padding-left: 0.5em;
   padding-bottom: 0.3em;
   margin: 1em 0;
 }
