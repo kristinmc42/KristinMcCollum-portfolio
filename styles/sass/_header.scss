@@ -35,24 +35,28 @@ header {
 nav.hamburger { 
   position: absolute;
   display: none;
-  right: 52px;
-  z-index: 100;
-  padding: 0 1em;
+  top: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  z-index: 40;
   background-color: $secondaryColor;
   border: 2px solid $baseColor;
 
   ul{
     display: flex;
     flex-direction: column;
-    padding: 3em 1em 1em 1.5em;
+    padding: 3em;
 
     li {
-      padding: .2em;
+      padding: .5em;
       color: $baseColor;
     }
     
     li:hover,
-    li:focus {
+    li:focus,
+    li:active,
+    li:focus-within{
       background-color: $baseColorOpaque;
     }
   }
@@ -60,30 +64,36 @@ nav.hamburger {
 
 // hamburger menu button
   button.hamburger {
-    opacity: 0;
-    position: absolute;
-    right: 1000px;
+    display: none;
+    width: 56px;
+    height: 56px;
     border: none;
     background-color: $secondaryColor;
-    padding: 0 20px;
+    padding: 0 1.2em;
     i {
-      position: absolute;
+      position: relative;
       z-index: 999;
-      top: 8px;
-      left: -4px;
+      left: -0.4em;
       color: $textColor;
       font-size: 2rem;
-     
     }
-    i.fa-bars:hover{
-      color: $secondaryColor;
-      background-color: $baseColor;
-    }
-    i.fa-times:hover{
+    &:focus,
+    &:hover,
+    &:focus-within {
       background-color: $baseColorOpaque;
+      border: 1px dotted $baseColor;
+    }
+
+    i.fa-times {
+      left: 2em;
+    }
+    i.fa-times:hover,
+    i.fa-times:focus,
+    i.fa-times:focus-within{
+      background-color: $baseColorOpaque;
+      border: 1px dotted $baseColor;
     }
   }
-
 
 // intro div with header and image
 .intro {
@@ -128,18 +138,7 @@ h1 {
   margin: 0 auto;
 }
 
-// image container
-.imgContainer {
-  position: relative;
-  z-index: 8;
-  max-width: 300px;
-  margin: 6em auto;
-  transform: rotate(-45deg);
 
-  img {
-    width: 100%;
-  }
-}
 
 
 // media queries
@@ -157,15 +156,8 @@ h1 {
   }
 }
 
-// reducing size of image and background div
+// reducing size of background div margin
 @media only screen and (max-width: 535px){
-  .imgContainer{
-    max-width: 250px;
-  }
-  .background{
-    width: 300px;
-    height: 300px;
-  }
   .intro > h2 {
     margin-left: -1%;
   }
@@ -179,27 +171,26 @@ h1 {
     flex-direction: row;
   }
   // show hamburger menu
-  button.hamburger {
-    opacity: 1;
-    top: 16px;
-    right: 112px;
+  button.hamburger  {
+    display: inline-block;
     i {font-size: 1.7rem;}
   }
 
   // hide headerNav
-  .headerNav li{
-    opacity: 0;
-    position: absolute;
-    left: -100px;
+  .headerNav {
+    display: none;
   }
 }
 
-@media only screen and (max-width: 372px){
-  .headerBar {
-    p {width: 30%}
+// adjusting position of intro image background
+@media only screen and (max-width: 433px) {
+  .background{
+   margin-left: -0.8em;
   }
-  button.hamburger {
-    top: 31px;
-    right: 105px;
+}
+
+@media only screen and (max-width: 375px){
+  .background{
+   margin-left: -1.6em;
   }
 }

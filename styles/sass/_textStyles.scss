@@ -28,7 +28,6 @@ p {
 }
 
 
-
 // header text
 .headerBar p {
   font-weight: 700;
@@ -55,6 +54,11 @@ h2 {
 .intro h2 {
   font-size: clamp(3rem, 2vw, 3.4rem);
   line-height: clamp(3rem, 2vw, 3.4rem);
+}
+
+.bwImage h2 {
+  font-size: clamp(2.2rem, 5vw, 2.6rem);
+  text-shadow: 2px 2px $additionalColor;
 }
 
 

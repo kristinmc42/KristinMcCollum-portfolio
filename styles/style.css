@@ -286,6 +286,11 @@ h2 {
   line-height: clamp(3rem, 2vw, 3.4rem);
 }
 
+.bwImage h2 {
+  font-size: clamp(2.2rem, 5vw, 2.6rem);
+  text-shadow: 2px 2px #080808;
+}
+
 .about p {
   font-size: clamp(.9rem, 3vw, 1.3rem);
   line-height: clamp(1rem, 10vw, 3rem);
@@ -363,9 +368,11 @@ header {
 nav.hamburger {
   position: absolute;
   display: none;
-  right: 52px;
-  z-index: 100;
-  padding: 0 1em;
+  top: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  z-index: 40;
   background-color: #f4f0ec;
   border: 2px solid #3660df;
 }
@@ -377,39 +384,46 @@ nav.hamburger ul {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  padding: 3em 1em 1em 1.5em;
+  padding: 3em;
 }
 nav.hamburger ul li {
-  padding: 0.2em;
+  padding: 0.5em;
   color: #3660df;
 }
 nav.hamburger ul li:hover,
-nav.hamburger ul li:focus {
+nav.hamburger ul li:focus,
+nav.hamburger ul li:active,
+nav.hamburger ul li:focus-within {
   background-color: rgba(54, 96, 223, 0.2);
 }
 
 button.hamburger {
-  opacity: 0;
-  position: absolute;
-  right: 1000px;
+  display: none;
+  width: 56px;
+  height: 56px;
   border: none;
   background-color: #f4f0ec;
-  padding: 0 20px;
+  padding: 0 1.2em;
 }
 button.hamburger i {
-  position: absolute;
+  position: relative;
   z-index: 999;
-  top: 8px;
-  left: -4px;
+  left: -0.4em;
   color: #595959;
   font-size: 2rem;
 }
-button.hamburger i.fa-bars:hover {
-  color: #f4f0ec;
-  background-color: #3660df;
-}
-button.hamburger i.fa-times:hover {
+button.hamburger:focus, button.hamburger:hover, button.hamburger:focus-within {
   background-color: rgba(54, 96, 223, 0.2);
+  border: 1px dotted #3660df;
+}
+button.hamburger i.fa-times {
+  left: 2em;
+}
+button.hamburger i.fa-times:hover,
+button.hamburger i.fa-times:focus,
+button.hamburger i.fa-times:focus-within {
+  background-color: rgba(54, 96, 223, 0.2);
+  border: 1px dotted #3660df;
 }
 
 .intro {
@@ -451,18 +465,6 @@ h1 .fontChange {
   margin: 0 auto;
 }
 
-.imgContainer {
-  position: relative;
-  z-index: 8;
-  max-width: 300px;
-  margin: 6em auto;
-  -webkit-transform: rotate(-45deg);
-          transform: rotate(-45deg);
-}
-.imgContainer img {
-  width: 100%;
-}
-
 @media only screen and (max-width: 900px) {
   .headerNav ul li {
     padding: 0 0.5em;
@@ -480,15 +482,6 @@ h1 .fontChange {
   }
 }
 @media only screen and (max-width: 535px) {
-  .imgContainer {
-    max-width: 250px;
-  }
-
-  .background {
-    width: 300px;
-    height: 300px;
-  }
-
   .intro > h2 {
     margin-left: -1%;
   }
@@ -503,28 +496,24 @@ h1 .fontChange {
   }
 
   button.hamburger {
-    opacity: 1;
-    top: 16px;
-    right: 112px;
+    display: inline-block;
   }
   button.hamburger i {
     font-size: 1.7rem;
   }
 
-  .headerNav li {
-    opacity: 0;
-    position: absolute;
-    left: -100px;
+  .headerNav {
+    display: none;
   }
 }
-@media only screen and (max-width: 372px) {
-  .headerBar p {
-    width: 30%;
+@media only screen and (max-width: 433px) {
+  .background {
+    margin-left: -0.8em;
   }
-
-  button.hamburger {
-    top: 31px;
-    right: 105px;
+}
+@media only screen and (max-width: 375px) {
+  .background {
+    margin-left: -1.6em;
   }
 }
 .contactContainer {
@@ -563,13 +552,17 @@ h1 .fontChange {
 }
 .contactContainer form input,
 .contactContainer form textarea {
-  border-radius: 5px;
   width: 90%;
   padding: 0.3em;
   margin: 0 0.2em;
+  background-color: #f4f0ec;
+  border: 5px outset #3660df;
+  border-radius: 5px;
+  -webkit-box-shadow: 5px 5px rgba(54, 96, 223, 0.2);
+          box-shadow: 5px 5px rgba(54, 96, 223, 0.2);
 }
 .contactContainer form input:nth-of-type(2) {
-  margin: 0.4em 0.2em;
+  margin: 0.5em 0.2em;
 }
 .contactContainer form textarea {
   resize: none;
@@ -839,7 +832,7 @@ h1 .fontChange {
 
 .skillList {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(137px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(132px, 1fr));
   gap: 1rem;
   margin: 0 3em;
 }
@@ -868,6 +861,7 @@ h1 .fontChange {
 @media only screen and (max-width: 445px) {
   .skills.innerWrapper {
     margin: 0;
+    padding: 0 0 0 0.5em;
     width: 100%;
   }
 
@@ -948,6 +942,9 @@ input:checked + .slider:before {
 .darkMode {
   color: #f4f0ec;
 }
+.darkMode .skipLink {
+  color: #121212;
+}
 .darkMode .outerWrapper,
 .darkMode .innerWrapper {
   background-color: #121212;
@@ -967,7 +964,16 @@ input:checked + .slider:before {
 }
 .darkMode form input,
 .darkMode form textarea {
-  background-color: #f4f0ec;
+  background-color: #121212;
+  color: #f4f0ec;
+  -webkit-box-shadow: 3px 3px 8px #595959;
+          box-shadow: 3px 3px 8px #595959;
+}
+.darkMode form input:focus-within,
+.darkMode form textarea:focus-within {
+  -webkit-box-shadow: inset 0 0 8px #f4f0ec;
+          box-shadow: inset 0 0 8px #f4f0ec;
+  border: 5px outset #f4f0ec;
 }
 .darkMode form button:hover,
 .darkMode form button:focus,
@@ -997,6 +1003,103 @@ input:checked + .slider:before {
 }
 .darkMode .hamburger i.fa-times {
   color: #f4f0ec;
+}
+
+.animationContainer {
+  width: 300px;
+  height: 377px;
+  background: url(../../assets/paintingBGCroppedSmall.jpg);
+  position: relative;
+  overflow: hidden;
+  -webkit-box-shadow: 0 5px 50px rgba(0, 0, 0, 0.85);
+          box-shadow: 0 5px 50px rgba(0, 0, 0, 0.85);
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  margin-top: 5.5em;
+  margin-left: 2em;
+}
+.animationContainer:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.85);
+}
+
+.imageEffect {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.imageEffect span {
+  width: 25%;
+  height: 100%;
+  background: url(../../assets/paintingBGCroppedSmall.jpg);
+  -webkit-transition: 0.7s;
+  transition: 0.7s;
+}
+.imageEffect span:nth-child(1) {
+  background-position: 0;
+  -webkit-transition-delay: 0;
+          transition-delay: 0;
+}
+.imageEffect span:nth-child(2) {
+  background-position: 33.33333%;
+  -webkit-transition-delay: 0.1s;
+          transition-delay: 0.1s;
+}
+.imageEffect span:nth-child(3) {
+  background-position: 66.66666%;
+  -webkit-transition-delay: 0.2s;
+          transition-delay: 0.2s;
+}
+.imageEffect span:nth-child(4) {
+  background-position: 100%;
+  -webkit-transition-delay: 0.3s;
+          transition-delay: 0.3s;
+}
+
+.animationContainer:hover .imageEffect > span,
+.animationContainer.scrollActivate .imageEffect > span {
+  -webkit-transform: translateY(-100%);
+          transform: translateY(-100%);
+}
+.animationContainer:hover .bwImage,
+.animationContainer.scrollActivate .bwImage {
+  -webkit-transform: translateY(0%);
+          transform: translateY(0%);
+  -webkit-transition: 1s;
+  transition: 1s;
+  -webkit-transition-delay: 0.1s;
+          transition-delay: 0.1s;
+}
+
+.bwImage {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #f4f0ec;
+  background: url(../../assets/bwPaintingSmall.jpg);
+  width: 100%;
+  height: 100%;
+  padding: 1em;
+  -webkit-transform: translateY(100%);
+          transform: translateY(100%);
 }
 
 body {

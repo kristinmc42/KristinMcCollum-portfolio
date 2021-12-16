@@ -60,15 +60,22 @@ input:checked + .slider:before {
 // dark mode color changes
 .darkMode {
   color: $dmTextColor;
+
+  .skipLink {
+  color: $dmSecondaryColor;
+  }
+
   .outerWrapper, 
   .innerWrapper{
     background-color: $dmSecondaryColor;
   }
+
   a, i,
   .skills i,
   .languages img {
     color: $dmTextColor;
   }
+
   .aboutSocials a:hover,
   .contactSocials a:hover{
     color: $baseColor;
@@ -76,10 +83,18 @@ input:checked + .slider:before {
       color: $baseColor;
     }
   }
+  
   form {
     input,
     textarea {
-      background-color: $dmTextColor;
+      background-color: $dmSecondaryColor;
+      color: $secondaryColor;
+      box-shadow: 3px 3px 8px $textColor;
+    }
+    input:focus-within,
+    textarea:focus-within {
+      box-shadow: inset 0 0 8px $secondaryColor;
+      border: 5px outset $secondaryColor;
     }
     button:hover,
     button:focus,
