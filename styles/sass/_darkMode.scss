@@ -14,7 +14,7 @@
 }
 
 .themeSwitch input {
-  display:none;
+  opacity: 0;
 }
 
 .slider {
@@ -121,14 +121,19 @@ input:checked + .slider:before {
   }
 
   .hamburger {
-    background-color: $baseColor;
-
-    li:hover,
-    i.fa-times:hover {
-      outline: 2px solid $dmTextColor;
-    }
-    i.fa-times{
+    background-color: $dmSecondaryColor;
+    i{
       color: $dmTextColor;
     }
+    
+    li:hover,
+    li:focus-within {
+      outline: 2px solid $dmTextColor;
+    }
+  }
+
+  button.hamburger:hover,
+  button.hamburger:focus-within {
+    outline: 2px solid $dmTextColor;
   }
 }
