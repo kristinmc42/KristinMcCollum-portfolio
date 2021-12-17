@@ -2,7 +2,7 @@ const app = {};
 
 
 
-// function will listen for scroll for both showing the scroll to top button, for animating the intro image, as well as hidinh the hamburger nav
+// function will listen for scroll for both showing the scroll to top button, for animating the intro image, as well as hiding the hamburger nav
 app.listenForScroll = () => {
   // get scroll to top button
   const scrollButton = document.getElementById("scrollButton");
@@ -15,16 +15,8 @@ app.listenForScroll = () => {
 
   // get hamburger nav and hamburger button
   const navEl = document.getElementById("hamburgerNav");
-  const buttonEl = document.getElementById("hamburgerButton"); 
+  const hamburgerButton = document.getElementById("hamburgerButton");
   
-  // add event listener for to top button click
-  scrollButton.addEventListener("click", () => {
-    // function for scrolling to top
-    rootElement.scrollTo({
-      top: 0,
-      behavior: "smooth"
-    })
-  })
   
   // add event listener for scroll
   document.addEventListener("scroll", () => {
@@ -37,15 +29,10 @@ app.listenForScroll = () => {
       animationContainerDiv.classList.remove("scrollActivate");
     }
 
-    // conditions for hiding hamburger menu
+    // conditions for hiding hamburger menu and showing hamburger button
     if ((rootElement.scrollTop / scrollTotal) > 0.1){
-      console.log("nav el is blurred")
       navEl.style.display = "none";
-      console.log(buttonEl.children[0].className)
-      if (buttonEl.children[0].className === "fas fa-times"){
-        buttonEl.children[0].classList.toggle("fa-times");
-        buttonEl.children[0].classList.toggle("fa-bars");
-      }
+      hamburgerButton.style.display = "flex";
     }
 
     // conditions for scroll to top button
@@ -56,7 +43,6 @@ app.listenForScroll = () => {
       // hide scroll to top button
       scrollButton.classList.remove("showButton");
     }
-
   })
 }
 
@@ -75,91 +61,99 @@ app.formSubmit = () => {
 }
 
 
-// hamburger menu
-app.showHamburgerMenu = () => {
-  // when user clicks on hamburger menu icon, show hidden menu
-  // when user clicks on x hide menu
-  // get hamburger nav and button
-  const navEl = document.getElementById("hamburgerNav");
-  const buttonEl = document.getElementById("hamburgerButton");
-  // const hamburgerUL = document.getElementById("hamburgerUL");
+// function will listen for button click events to show or hide the hamburger menue, as well as the button to scroll to top of page
+app.listenForClickEvents = () => {
   
-  //add event listener
-  buttonEl.addEventListener("click", function(event){
-   // check that the icon was clicked
-    if (event.target.tagName === "I"){
-      if (event.target.className === "fas fa-bars"){
-        // if the icon is the bars(hamburger), show the nav
-        navEl.style.display = "block";
-      }else {
-        // if the icon is the times, hide the nav
-        navEl.style.display = "none";
-      }
-      event.target.classList.toggle("fa-bars");
-      event.target.classList.toggle("fa-times");
-    }
+  // get hamburger nav
+  const navEl = document.getElementById("hamburgerNav");
+
+  // get all button elements
+  const buttonEls = document.querySelectorAll("button");
+
+  // get hamburger button
+  const hamburgerButton = document.getElementById("hamburgerButton");
+
+  // get root of document
+  const rootElement = document.documentElement;
+  
+  //add event listener to all buttons
+  buttonEls.forEach((button) => {
+    button.addEventListener("click", function(event){
     
-    // if user exxpands window while hamburger menu still open
+        if (event.target.className === "fas fa-bars"){
+          // if the hamburger button is clicked, show the nav and hide the hamburger button
+          navEl.style.display = "block";
+          hamburgerButton.style.display = "none";
+        }else if (event.target.className === "fas fa-times") {
+          // if the close button is clicked, hide the nav and show the hamburger button
+          navEl.style.display = "none";
+          hamburgerButton.style.display = "flex";
+        }else if (event.target.className === "scroll"){
+          // if the scroll button is clicked, go to top of page
+          rootElement.scrollTo({
+            top: 0,
+            behavior: "smooth"
+          })
+        }
+    })
+  })
+}
+
+app.hideHamburgerNavOnWindowResize = () => {
+  // close hamburger menu if user expands window while hamburger menu still open
+  const navEl = document.getElementById("hamburgerNav");
+
+  const hamburgerButton = document.getElementById("hamburgerButton");
+
     window.onresize = () => {
       // get window width
       const width = window.innerWidth;
 
-      if (width > 482){
-        navEl.style.display = 'none';
+      if (width < 482 && hamburgerButton.style.display === "none"){
+        navEl.style.display = "block";
       } else {
-        if (event.target.className === 'fas fa-bars'){
-          navEl.style.display = 'none';
-        } else {
-          navEl.style.display = 'block';
+        navEl.style.display = "none";
+      }
+    }
+}
+
+
+// event listener for keyboard press to open and close hamburger button
+app.listenForKeyActivatedHamburger = () => {
+  // get hamburger nav
+  const navEl = document.getElementById("hamburgerNav");
+
+  // get hamburger button
+  const hamburgerButton = document.getElementById("hamburgerButton");
+  
+  // listen for any key press
+  document.addEventListener("keyup", (event) =>{
+    // check if it was the space bar or enter that was pressed
+    if (event.keyCode === 13 || event.keyCode === 32) {
+      // check that the hamburger icon was the target when the key press happened
+      if (event.target.classList.contains("hamburger")){
+        
+        if (event.target.children[0].className === "fas fa-bars"){
+          // if the icon is the bars(hamburger), show the nav and hide hamburger button
+          navEl.style.display = "block";
+          hamburgerButton.style.display  = "none";
+        }else {
+          // hide the hamburger nav and show hamburger button
+          navEl.style.display = "none";
+          hamburgerButton.style.display = "flex";
         }
       }
     }
   })
-}
-
-
-// event listener for keyboard press of hamburger button
-app.listenForTabActivateHamburger = () => {
-  const buttonEl = document.getElementById("hamburgerButton");
-
-  const navEl = document.getElementById("hamburgerNav");
   
-  buttonEl.addEventListener("focus", (event) => {
-  
-      console.log("button focussed", event)
-
-      document.addEventListener("keyup", (event) =>{
-        console.log("key pressed", event)
-     
-        if (event.keyCode === 13 || event.keyCode === 32) {
-          console.log('space bar or enter pressed')
-          
-          // check that the hamburger icon was clicked
-          if (event.target.className === "hamburger"){
-            console.log(event.target.children[0].className)
-            if (event.target.children[0].className === "fas fa-bars"){
-              // if the icon is the bars(hamburger), show the nav
-              navEl.style.display = "block";
-              console.log("nav is showing")
-            }else {
-              // if the icon is the times, hide the nav
-              navEl.style.display = "none";
-              console.log("nav is hidden")
-            }
-            event.target.children[0].classList.toggle("fa-bars");
-            event.target.children[0].classList.toggle("fa-times");
-          }
-        }
-      })
-  })
 }
 
 // listen for toggle from light to dark mode
 app.listenForDarkModeToggle = () => {
   const toggle = document.getElementById("checkbox");
-  // console.log(toggle)
+  
   toggle.addEventListener("change", () => {
-    // console.log("toggled")
+   
     document.body.classList.toggle("darkMode");
   })
 }
@@ -169,9 +163,10 @@ app.listenForDarkModeToggle = () => {
 app.init = () => {
   app.listenForScroll();
   app.formSubmit();
-  app.showHamburgerMenu();
+  app.listenForClickEvents();
   app.listenForDarkModeToggle();
-  app.listenForTabActivateHamburger();
+  app.listenForKeyActivatedHamburger();
+  app.hideHamburgerNavOnWindowResize();
 }
 
 app.init();

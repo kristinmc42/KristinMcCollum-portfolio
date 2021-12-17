@@ -65,6 +65,8 @@ nav.hamburger {
 // hamburger menu button
   button.hamburger {
     display: none;
+    justify-content: center;
+    align-items: center;
     width: 56px;
     height: 56px;
     border: none;
@@ -73,23 +75,12 @@ nav.hamburger {
     i {
       position: relative;
       z-index: 999;
-      left: -0.4em;
       color: $textColor;
-      font-size: 2rem;
+      font-size: 1.7rem;
     }
     &:focus,
     &:hover,
     &:focus-within {
-      background-color: $baseColorOpaque;
-      border: 1px dotted $baseColor;
-    }
-
-    i.fa-times {
-      left: 2em;
-    }
-    i.fa-times:hover,
-    i.fa-times:focus,
-    i.fa-times:focus-within{
       background-color: $baseColorOpaque;
       border: 1px dotted $baseColor;
     }
@@ -172,8 +163,7 @@ h1 {
   }
   // show hamburger menu
   button.hamburger  {
-    display: inline-block;
-    i {font-size: 1.7rem;}
+    display: flex;
   }
 
   // hide headerNav

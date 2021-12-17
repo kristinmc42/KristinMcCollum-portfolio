@@ -399,6 +399,12 @@ nav.hamburger ul li:focus-within {
 
 button.hamburger {
   display: none;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 56px;
   height: 56px;
   border: none;
@@ -408,20 +414,10 @@ button.hamburger {
 button.hamburger i {
   position: relative;
   z-index: 999;
-  left: -0.4em;
   color: #595959;
-  font-size: 2rem;
+  font-size: 1.7rem;
 }
 button.hamburger:focus, button.hamburger:hover, button.hamburger:focus-within {
-  background-color: rgba(54, 96, 223, 0.2);
-  border: 1px dotted #3660df;
-}
-button.hamburger i.fa-times {
-  left: 2em;
-}
-button.hamburger i.fa-times:hover,
-button.hamburger i.fa-times:focus,
-button.hamburger i.fa-times:focus-within {
   background-color: rgba(54, 96, 223, 0.2);
   border: 1px dotted #3660df;
 }
@@ -496,10 +492,9 @@ h1 .fontChange {
   }
 
   button.hamburger {
-    display: inline-block;
-  }
-  button.hamburger i {
-    font-size: 1.7rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
   }
 
   .headerNav {
