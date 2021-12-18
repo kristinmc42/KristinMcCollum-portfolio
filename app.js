@@ -113,6 +113,7 @@ app.hideHamburgerNavOnWindowResize = () => {
         navEl.style.display = "block";
       } else {
         navEl.style.display = "none";
+        hamburgerButton.style.display === "none"
       }
     }
 }

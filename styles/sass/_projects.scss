@@ -58,10 +58,12 @@
     transition: all .7s;
   }
   a:hover,
-  a:focus {
+  a:focus,
+  a:focus-within {
     background-color: $baseColorOpaque;
     color: $textColor;
     border: 5px double  $textColor;
+    outline: 1px solid $textColor;
   }
 
   i {
