@@ -986,11 +986,15 @@ input:checked + .slider:before {
   color: #f4f0ec;
 }
 .darkMode .aboutSocials a:hover,
-.darkMode .contactSocials a:hover {
+.darkMode .aboutSocials a:focus-within,
+.darkMode .contactSocials a:hover,
+.darkMode .contactSocials a:focus-within {
   color: #3660df;
 }
 .darkMode .aboutSocials a:hover i,
-.darkMode .contactSocials a:hover i {
+.darkMode .aboutSocials a:focus-within i,
+.darkMode .contactSocials a:hover i,
+.darkMode .contactSocials a:focus-within i {
   color: #3660df;
 }
 .darkMode form input,

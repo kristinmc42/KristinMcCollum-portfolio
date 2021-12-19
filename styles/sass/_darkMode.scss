@@ -117,7 +117,9 @@ input:checked + .slider:before {
   }
 
   .aboutSocials a:hover,
-  .contactSocials a:hover{
+  .aboutSocials a:focus-within,
+  .contactSocials a:hover,
+  .contactSocials a:focus-within{
     color: $baseColor;
     
     i{

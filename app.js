@@ -2,7 +2,7 @@ const app = {};
 
 
 
-// function will listen for scroll for both showing the scroll to top button, for animating the intro image, as well as hiding the hamburger nav
+// function will listen for scroll for both showing the scroll to top button and for animating the intro image
 app.listenForScroll = () => {
   // get scroll to top button
   const scrollButton = document.getElementById("scrollButton");
@@ -12,11 +12,6 @@ app.listenForScroll = () => {
 
   // get animation container
   const animationContainerDiv = document.querySelector(".animationContainer");
-
-  // get hamburger nav and hamburger button
-  const navEl = document.getElementById("hamburgerNav");
-  const hamburgerButton = document.getElementById("hamburgerButton");
-  
   
   // add event listener for scroll
   document.addEventListener("scroll", () => {
@@ -29,11 +24,6 @@ app.listenForScroll = () => {
       animationContainerDiv.classList.remove("scrollActivate");
     }
 
-    // conditions for hiding hamburger menu and showing hamburger button
-    if ((rootElement.scrollTop / scrollTotal) > 0.1){
-      navEl.style.display = "none";
-      hamburgerButton.style.display = "flex";
-    }
 
     // conditions for scroll to top button
     if ((rootElement.scrollTop / scrollTotal) > 0.15){
@@ -46,11 +36,26 @@ app.listenForScroll = () => {
   })
 }
 
-// form submit
+app.closeHamburgerMenuOnLiClick = () => {
+  // when user moves away form hamburger menu it closes
+  // get hamburger nav, lis and hamburger button
+  const navEl = document.getElementById("hamburgerNav");
+  const hamburgerButton = document.getElementById("hamburgerButton");
+  const hamLis = document.querySelectorAll(".hamburger li");
+
+  hamLis.forEach((listItem) => {
+    listItem.addEventListener("click", () => {
+      navEl.style.display = "none";
+      hamburgerButton.style.display = "flex";
+    })
+  })
+
+}
+
+
+// clear form on submit
+// form submitted via formspree.io
 app.formSubmit = () => {
-  // form submitted via formspree.io
-  // clear form on submit
-  
   // get form element
   const formEl = document.getElementById("commentForm");
   
@@ -62,8 +67,7 @@ app.formSubmit = () => {
 
 
 // function will listen for button click events to show or hide the hamburger menue, as well as the button to scroll to top of page
-app.listenForClickEvents = () => {
-  
+app.listenForButtonClickEvents = () => {
   // get hamburger nav
   const navEl = document.getElementById("hamburgerNav");
 
@@ -109,13 +113,15 @@ app.hideHamburgerNavOnWindowResize = () => {
       // get window width
       const width = window.innerWidth;
 
-      if (width < 482 && hamburgerButton.style.display === "none"){
-        navEl.style.display = "block";
-      } else {
-        navEl.style.display = "none";
-        hamburgerButton.style.display === "none"
+      console.log(width)
+
+      if (width > 482){
+        hamburgerButton.style.display = "none";
+      }else {
+        hamburgerButton.style.display = "flex";
       }
     }
+    
 }
 
 
@@ -164,10 +170,11 @@ app.listenForDarkModeToggle = () => {
 app.init = () => {
   app.listenForScroll();
   app.formSubmit();
-  app.listenForClickEvents();
+  app.listenForButtonClickEvents();
   app.listenForDarkModeToggle();
   app.listenForKeyActivatedHamburger();
   app.hideHamburgerNavOnWindowResize();
+  app.closeHamburgerMenuOnLiClick ();
 }
 
 app.init();
