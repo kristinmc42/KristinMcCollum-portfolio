@@ -18,22 +18,75 @@ app.listenForScroll = () => {
     const scrollTotal = rootElement.scrollHeight - rootElement.clientHeight;
   
     // conditions for animating image
-    if ((rootElement.scrollTop / scrollTotal) > 0.04){
-      animationContainerDiv.classList.add("scrollActivate");
-    }else {
-      animationContainerDiv.classList.remove("scrollActivate");
+     {
+       (rootElement.scrollTop / scrollTotal) > 0.04
+
+      ? animationContainerDiv.classList.add("scrollActivate")
+    
+      : animationContainerDiv.classList.remove("scrollActivate")
     }
 
 
     // conditions for scroll to top button
-    if ((rootElement.scrollTop / scrollTotal) > 0.15){
+    {
+      (rootElement.scrollTop / scrollTotal) > 0.15
       // show scroll to top button
-      scrollButton.classList.add("showButton");
-    }else {
+      ? scrollButton.classList.add("showButton")
+    
       // hide scroll to top button
-      scrollButton.classList.remove("showButton");
+      :scrollButton.classList.remove("showButton")
     }
   })
+}
+
+app.slideImages = () => {
+  // decreases number of times function is called on scroll
+  const debounce = (func, wait = 20, immediate = true) => {
+    let timeout;
+     return function() {
+        let context = this, args = arguments;
+        let later = function() {
+          timeout = null;
+          if (!immediate) func.apply(context, args);
+        };
+        let callNow = immediate && !timeout;
+        clearTimeout(timeout);
+        timeout = setTimeout(later, wait);
+        if (callNow) func.apply(context, args);
+      };
+  };
+  
+  // get image containers that will slide in
+  const sliderImages = document.querySelectorAll(".slideIn");
+
+  const checkslide = () => {
+  
+    sliderImages.forEach(sliderImage => {
+      // half way through the image
+      const slideInAt = (window.scrollY + window.innerHeight) - sliderImage.offsetHeight / 2;
+
+      // bottom of the image
+      const imageBottom = sliderImage.offsetTop + sliderImage.offsetHeight;
+      
+      const isHalfShown = slideInAt > sliderImage.offsetTop;
+      
+      const isNotScrolledPast = window.scrollY < imageBottom;
+      
+      // condition to add or remove class 
+      
+       if( isHalfShown && isNotScrolledPast){
+         sliderImage.classList.add("active")
+       }else {
+         sliderImage.classList.remove("active")
+       }
+      
+    })
+
+  }
+  
+  window.addEventListener("scroll", debounce(checkslide));
+  
+
 }
 
 app.closeHamburgerMenuOnLiClick = () => {
@@ -113,8 +166,6 @@ app.hideHamburgerNavOnWindowResize = () => {
       // get window width
       const width = window.innerWidth;
 
-      console.log(width)
-
       if (width > 482){
         hamburgerButton.style.display = "none";
       }else {
@@ -169,6 +220,7 @@ app.listenForDarkModeToggle = () => {
 
 app.init = () => {
   app.listenForScroll();
+  app.slideImages();
   app.formSubmit();
   app.listenForButtonClickEvents();
   app.listenForDarkModeToggle();

@@ -13,8 +13,6 @@
 
   li {
     grid-template-columns: 1fr 1fr;
-  
-    // outline: 1px dotted red;
   }
 }
 
@@ -80,6 +78,28 @@
 .siteLinks li {
   font-size: 1rem;
 }
+
+// image animations
+.slideIn {
+  opacity: 0;
+  transition: all .8s;
+}
+
+.slideIn.alignLeft {
+  transform: translateX(-50%) scale(0.95);
+}
+
+.slideIn.alignRight {
+  transform: translateX(50%) scale(0.95);
+}
+
+.slideIn.active{
+  opacity: 1;
+  transform: translateX(0%) scale(1);
+}
+
+
+
 
 // media queries
 // stack images over text containers

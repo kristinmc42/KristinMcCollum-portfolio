@@ -755,6 +755,28 @@ h1 .fontChange {
   font-size: 1rem;
 }
 
+.slideIn {
+  opacity: 0;
+  -webkit-transition: all 0.8s;
+  transition: all 0.8s;
+}
+
+.slideIn.alignLeft {
+  -webkit-transform: translateX(-50%) scale(0.95);
+          transform: translateX(-50%) scale(0.95);
+}
+
+.slideIn.alignRight {
+  -webkit-transform: translateX(50%) scale(0.95);
+          transform: translateX(50%) scale(0.95);
+}
+
+.slideIn.active {
+  opacity: 1;
+  -webkit-transform: translateX(0%) scale(1);
+          transform: translateX(0%) scale(1);
+}
+
 @media only screen and (max-width: 900px) {
   .projectList {
     gap: 40px;
