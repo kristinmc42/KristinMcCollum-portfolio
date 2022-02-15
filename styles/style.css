@@ -377,7 +377,7 @@ nav.hamburger {
   width: 100%;
   text-align: center;
   z-index: 40;
-  background-color: #f4f0ec;
+  background-color: white;
   border: 2px solid #3660df;
 }
 nav.hamburger ul {
@@ -412,7 +412,7 @@ button.hamburger {
   width: 56px;
   height: 56px;
   border: none;
-  background-color: #f4f0ec;
+  background-color: white;
   padding: 0 1.2em;
 }
 button.hamburger i {
@@ -555,7 +555,7 @@ h1 .fontChange {
   width: 90%;
   padding: 0.3em;
   margin: 0 0.2em;
-  background-color: #f4f0ec;
+  background-color: white;
   border: 5px outset #3660df;
   border-radius: 5px;
   -webkit-box-shadow: 5px 5px rgba(54, 96, 223, 0.2);
@@ -571,7 +571,7 @@ h1 .fontChange {
   width: 25%;
   letter-spacing: 2px;
   font-weight: 900;
-  color: #f4f0ec;
+  color: white;
   background-color: #3660df;
   border: 5px double rgba(244, 240, 236, 0);
   border-radius: 5px;
@@ -698,6 +698,19 @@ h1 .fontChange {
 .imageContainer {
   padding: 1em 0;
 }
+.imageContainer img {
+  border: 4px solid #3660df;
+  border-radius: 15px;
+  -webkit-box-shadow: 2px 2px 2px 3px #595959;
+          box-shadow: 2px 2px 2px 3px #595959;
+  padding: 2px;
+  -webkit-transition: transfrom 0.8s;
+  transition: transfrom 0.8s;
+}
+.imageContainer img:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
 
 .languages,
 .siteLinks {
@@ -719,7 +732,7 @@ h1 .fontChange {
 .languages a,
 .siteLinks a {
   background-color: #3660df;
-  color: #f4f0ec;
+  color: white;
   border: 5px double rgba(89, 89, 89, 0);
   border-radius: 5px;
   padding: 0.2em;
@@ -824,7 +837,7 @@ h1 .fontChange {
   border: none;
   outline: none;
   background-color: rgba(89, 89, 89, 0.6);
-  color: #f4f0ec;
+  color: white;
   cursor: pointer;
   width: 87px;
   height: 87px;
@@ -842,7 +855,7 @@ h1 .fontChange {
 .scroll:hover,
 .scroll:focus {
   background-color: #595959;
-  border: 3px solid #f4f0ec;
+  border: 3px solid white;
 }
 
 .showButton {
@@ -1022,15 +1035,15 @@ input:checked + .slider:before {
 .darkMode form input,
 .darkMode form textarea {
   background-color: #121212;
-  color: #f4f0ec;
+  color: white;
   -webkit-box-shadow: 3px 3px 8px #595959;
           box-shadow: 3px 3px 8px #595959;
 }
 .darkMode form input:focus-within,
 .darkMode form textarea:focus-within {
-  -webkit-box-shadow: inset 0 0 8px #f4f0ec;
-          box-shadow: inset 0 0 8px #f4f0ec;
-  border: 5px outset #f4f0ec;
+  -webkit-box-shadow: inset 0 0 8px white;
+          box-shadow: inset 0 0 8px white;
+  border: 5px outset white;
 }
 .darkMode form button:hover,
 .darkMode form button:focus,
@@ -1140,7 +1153,7 @@ input:checked + .slider:before {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  color: #f4f0ec;
+  color: white;
   background: url(../../assets/bwPaintingSmall.jpg);
   width: 100%;
   height: 100%;
@@ -1173,7 +1186,7 @@ h2, p, ul, li, a {
   left: -1000px;
   top: 5px;
   z-index: 999;
-  background: #f4f0ec;
+  background: white;
   color: #080808;
 }
 
@@ -1186,7 +1199,7 @@ h2, p, ul, li, a {
   max-width: 1280px;
   width: 90%;
   margin: 0 auto;
-  background-color: #f4f0ec;
+  background-color: white;
 }
 
 main {
@@ -1278,7 +1291,7 @@ footer {
       -ms-flex-align: center;
           align-items: center;
   height: 6vh;
-  color: #f4f0ec;
+  color: white;
 }
 footer p:nth-of-type(2) {
   margin-top: 0.4em;
