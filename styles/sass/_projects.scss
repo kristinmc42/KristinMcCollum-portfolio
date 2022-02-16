@@ -34,6 +34,17 @@
 
 .imageContainer {
   padding: 1em 0;
+  
+  img {
+    border: 4px solid $baseColor;
+    border-radius: 15px;
+    box-shadow: 2px 2px 2px 3px $textColor;
+    padding: 2px;
+    transition: transfrom .8s;
+  }
+  img:hover{
+    transform:scale(1.1);
+  }
 }
 
 .languages,
@@ -53,6 +64,7 @@
     border-radius: 5px;
     padding: .2em;
     margin: .7em .5em;
+    text-align: center;
     transition: all .7s;
   }
   a:hover,

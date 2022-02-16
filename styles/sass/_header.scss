@@ -10,7 +10,7 @@ header {
   display: flex;
   justify-content: space-between;
   padding-top: 1em;
-  p {
+  h2 {
     padding-top: .3em;
   }
 }
@@ -98,22 +98,23 @@ nav.hamburger {
 
 h1 {
   max-width: 800px;
-  margin-left: 1em;
+  margin-left: 0;
 
   .fontChange {
    position: relative;
    display: block;
-   top: 38px;
-   left: -10%;
+   top: -65px;
+   left: -12%;
    z-index: 11;
+   margin-top: 1.67em;
   }
 }
 
 .intro > h2 {
   position: relative;
   z-index: 12;
-  margin-left: 32%;
-  top: 1em;
+  margin-left: 50%;
+  top: -2em;
     span {
       display: block;
     
@@ -127,6 +128,7 @@ h1 {
 .background {
   position: relative;
   z-index: 5;
+  top: -100px;
   width: 400px;
   height: 400px;
   background-color: $baseColor;
@@ -138,6 +140,32 @@ h1 {
 
 
 // media queries
+// laptops
+@media screen 
+  and (min-device-width: 1200px) 
+  and (max-device-width: 1600px) 
+  and (-webkit-min-device-pixel-ratio: 1) { 
+    .background {
+      top: -145px;
+    }
+    .intro {
+      margin-bottom: 0;
+    }
+    .intro > h2 {
+      top: -4em;
+    }
+    h1 {
+      margin-left: -1em;
+      .fontChange {
+        top: 22px;
+        margin-top: 0;
+      }
+    }
+}
+
+
+
+// less padding in header
 @media only screen and (max-width: 900px){
   .headerNav ul li {
     padding: 0 .4em;
@@ -145,15 +173,25 @@ h1 {
 }
 
 // stack name and nav in header
-@media only screen and (max-width: 752px){
+// adjust spacing of background 
+@media only screen and (max-width: 810px){
   .headerBar {
     flex-direction: column;
     align-items: center;
+  }
+  .background {
+    top: -70px;
+  }
+  .intro > h2 {
+    top: 0;
   }
 }
 
 // reducing size of background div margin
 @media only screen and (max-width: 535px){
+  h1 {
+    margin-left: 40px;
+  }
   .intro > h2 {
     margin-left: -1%;
   }

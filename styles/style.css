@@ -296,7 +296,7 @@ h2 {
   line-height: clamp(1rem, 10vw, 3rem);
 }
 .about .fontChange {
-  font-size: clamp(1.1rem, 3vw, 1.6rem);
+  font-size: clamp(1.1rem, 3vw, 1.5rem);
 }
 
 .aboutSocials span,
@@ -344,7 +344,7 @@ header {
           justify-content: space-between;
   padding-top: 1em;
 }
-.headerBar p {
+.headerBar h2 {
   padding-top: 0.3em;
 }
 
@@ -377,7 +377,7 @@ nav.hamburger {
   width: 100%;
   text-align: center;
   z-index: 40;
-  background-color: #f4f0ec;
+  background-color: white;
   border: 2px solid #3660df;
 }
 nav.hamburger ul {
@@ -412,7 +412,7 @@ button.hamburger {
   width: 56px;
   height: 56px;
   border: none;
-  background-color: #f4f0ec;
+  background-color: white;
   padding: 0 1.2em;
 }
 button.hamburger i {
@@ -433,21 +433,22 @@ button.hamburger:focus, button.hamburger:hover, button.hamburger:focus-within {
 
 h1 {
   max-width: 800px;
-  margin-left: 1em;
+  margin-left: 0;
 }
 h1 .fontChange {
   position: relative;
   display: block;
-  top: 38px;
-  left: -10%;
+  top: -65px;
+  left: -12%;
   z-index: 11;
+  margin-top: 1.67em;
 }
 
 .intro > h2 {
   position: relative;
   z-index: 12;
-  margin-left: 32%;
-  top: 1em;
+  margin-left: 50%;
+  top: -2em;
 }
 .intro > h2 span {
   display: block;
@@ -458,6 +459,7 @@ h1 .fontChange {
 .background {
   position: relative;
   z-index: 5;
+  top: -100px;
   width: 400px;
   height: 400px;
   background-color: #3660df;
@@ -466,12 +468,33 @@ h1 .fontChange {
   margin: 0 auto;
 }
 
+@media screen and (min-device-width: 1200px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 1) {
+  .background {
+    top: -145px;
+  }
+
+  .intro {
+    margin-bottom: 0;
+  }
+
+  .intro > h2 {
+    top: -4em;
+  }
+
+  h1 {
+    margin-left: -1em;
+  }
+  h1 .fontChange {
+    top: 22px;
+    margin-top: 0;
+  }
+}
 @media only screen and (max-width: 900px) {
   .headerNav ul li {
     padding: 0 0.4em;
   }
 }
-@media only screen and (max-width: 752px) {
+@media only screen and (max-width: 810px) {
   .headerBar {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -481,8 +504,20 @@ h1 .fontChange {
         -ms-flex-align: center;
             align-items: center;
   }
+
+  .background {
+    top: -70px;
+  }
+
+  .intro > h2 {
+    top: 0;
+  }
 }
 @media only screen and (max-width: 535px) {
+  h1 {
+    margin-left: 40px;
+  }
+
   .intro > h2 {
     margin-left: -1%;
   }
@@ -555,7 +590,7 @@ h1 .fontChange {
   width: 90%;
   padding: 0.3em;
   margin: 0 0.2em;
-  background-color: #f4f0ec;
+  background-color: white;
   border: 5px outset #3660df;
   border-radius: 5px;
   -webkit-box-shadow: 5px 5px rgba(54, 96, 223, 0.2);
@@ -571,7 +606,7 @@ h1 .fontChange {
   width: 25%;
   letter-spacing: 2px;
   font-weight: 900;
-  color: #f4f0ec;
+  color: white;
   background-color: #3660df;
   border: 5px double rgba(244, 240, 236, 0);
   border-radius: 5px;
@@ -698,6 +733,19 @@ h1 .fontChange {
 .imageContainer {
   padding: 1em 0;
 }
+.imageContainer img {
+  border: 4px solid #3660df;
+  border-radius: 15px;
+  -webkit-box-shadow: 2px 2px 2px 3px #595959;
+          box-shadow: 2px 2px 2px 3px #595959;
+  padding: 2px;
+  -webkit-transition: transfrom 0.8s;
+  transition: transfrom 0.8s;
+}
+.imageContainer img:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
 
 .languages,
 .siteLinks {
@@ -719,11 +767,12 @@ h1 .fontChange {
 .languages a,
 .siteLinks a {
   background-color: #3660df;
-  color: #f4f0ec;
+  color: white;
   border: 5px double rgba(89, 89, 89, 0);
   border-radius: 5px;
   padding: 0.2em;
   margin: 0.7em 0.5em;
+  text-align: center;
   -webkit-transition: all 0.7s;
   transition: all 0.7s;
 }
@@ -824,7 +873,7 @@ h1 .fontChange {
   border: none;
   outline: none;
   background-color: rgba(89, 89, 89, 0.6);
-  color: #f4f0ec;
+  color: white;
   cursor: pointer;
   width: 87px;
   height: 87px;
@@ -842,7 +891,7 @@ h1 .fontChange {
 .scroll:hover,
 .scroll:focus {
   background-color: #595959;
-  border: 3px solid #f4f0ec;
+  border: 3px solid white;
 }
 
 .showButton {
@@ -852,7 +901,7 @@ h1 .fontChange {
 }
 
 .skills.innerWrapper {
-  margin: 3em 0 5em 0;
+  margin: 2em 0 1em 0;
 }
 
 .skillList {
@@ -871,7 +920,7 @@ h1 .fontChange {
 
 @media only screen and (max-width: 900px) {
   .skills.innerWrapper {
-    margin: 1em 0 3em 0;
+    margin: 1em 0;
   }
 
   .skillList {
@@ -1022,15 +1071,15 @@ input:checked + .slider:before {
 .darkMode form input,
 .darkMode form textarea {
   background-color: #121212;
-  color: #f4f0ec;
+  color: white;
   -webkit-box-shadow: 3px 3px 8px #595959;
           box-shadow: 3px 3px 8px #595959;
 }
 .darkMode form input:focus-within,
 .darkMode form textarea:focus-within {
-  -webkit-box-shadow: inset 0 0 8px #f4f0ec;
-          box-shadow: inset 0 0 8px #f4f0ec;
-  border: 5px outset #f4f0ec;
+  -webkit-box-shadow: inset 0 0 8px white;
+          box-shadow: inset 0 0 8px white;
+  border: 5px outset white;
 }
 .darkMode form button:hover,
 .darkMode form button:focus,
@@ -1140,7 +1189,7 @@ input:checked + .slider:before {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  color: #f4f0ec;
+  color: white;
   background: url(../../assets/bwPaintingSmall.jpg);
   width: 100%;
   height: 100%;
@@ -1173,7 +1222,7 @@ h2, p, ul, li, a {
   left: -1000px;
   top: 5px;
   z-index: 999;
-  background: #f4f0ec;
+  background: white;
   color: #080808;
 }
 
@@ -1186,7 +1235,7 @@ h2, p, ul, li, a {
   max-width: 1280px;
   width: 90%;
   margin: 0 auto;
-  background-color: #f4f0ec;
+  background-color: white;
 }
 
 main {
@@ -1229,9 +1278,6 @@ main {
   padding: 0.5em 2em;
   text-align: left;
   width: 80%;
-}
-.about p:nth-of-type(1) {
-  padding-top: 1.8em;
 }
 .about p:nth-of-type(2) {
   text-align: right;
@@ -1278,7 +1324,7 @@ footer {
       -ms-flex-align: center;
           align-items: center;
   height: 6vh;
-  color: #f4f0ec;
+  color: white;
 }
 footer p:nth-of-type(2) {
   margin-top: 0.4em;

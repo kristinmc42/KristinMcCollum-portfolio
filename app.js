@@ -19,7 +19,7 @@ app.listenForScroll = () => {
   
     // conditions for animating image
      {
-       (rootElement.scrollTop / scrollTotal) > 0.04
+       (rootElement.scrollTop / scrollTotal) > 0.02
 
       ? animationContainerDiv.classList.add("scrollActivate")
     
