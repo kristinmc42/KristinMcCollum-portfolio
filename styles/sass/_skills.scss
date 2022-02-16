@@ -1,7 +1,7 @@
 // skills styles
 
 .skills.innerWrapper {
-  margin: 3em 0 5em 0;
+  margin: 2em 0 1em 0;
 }
 
 .skillList {
@@ -24,7 +24,7 @@
 // media queries
 @media only screen and (max-width: 900px) {
   .skills.innerWrapper {
-    margin: 1em 0 3em 0;
+    margin: 1em 0;
   }
   .skillList {
     margin: 0 1.6em;
