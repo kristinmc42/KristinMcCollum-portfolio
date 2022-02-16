@@ -93,34 +93,33 @@ nav.hamburger {
 
 // intro div with header and image
 .intro {
-  margin: 3em 0;
+  margin: 3em 0 0 0;
 }
 
+// "Front end web developer" text
 h1 {
   max-width: 800px;
-  margin-left: 0;
+  margin-left: -1em;
 
   .fontChange {
    position: relative;
    display: block;
-   top: -65px;
+   top: 22px;
    left: -12%;
    z-index: 11;
-   margin-top: 1.67em;
+   margin-top: 0;
   }
 }
-
+// "based in Toronto" text
 .intro > h2 {
   position: relative;
   z-index: 12;
   margin-left: 50%;
-  top: -2em;
+  top: -3em;
     span {
       display: block;
-    
       padding-top: 0.5em;
       margin-left: 70px;
-     
     }
 }
 
@@ -128,7 +127,7 @@ h1 {
 .background {
   position: relative;
   z-index: 5;
-  top: -100px;
+  top: -115px;
   width: 400px;
   height: 400px;
   background-color: $baseColor;
@@ -163,10 +162,32 @@ h1 {
     }
 }
 
+// adjusting spacing of intro div in header
+@media only screen and (min-width: 810px) and (max-width:1200px){
+  .background {
+    top: -44px;
+  }
+  .intro {
+    margin-top: 2em;
+  }
+  .intro > h2{
+    margin-left: 60%;
+    top: -1em;
+  }
 
+  h1 {
+    margin-top: -0.33em;
+    .fontChange {
+      top: 7px;
+      left: -15%;
+    }
+  }
+    
+
+}
 
 // less padding in header
-@media only screen and (max-width: 900px){
+@media only screen and (max-width: 930px){
   .headerNav ul li {
     padding: 0 .4em;
   }
@@ -180,7 +201,10 @@ h1 {
     align-items: center;
   }
   .background {
-    top: -70px;
+    top: -15px;
+  }
+  .intro {
+    margin-top: 2em;
   }
   .intro > h2 {
     top: 0;
