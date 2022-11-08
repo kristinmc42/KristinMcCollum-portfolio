@@ -122,6 +122,12 @@
       grid-template-columns: 1fr;
     }
   }
+  // make images smaller
+  .imageContainer{
+    max-width: 75%;
+    margin: 0 auto;
+  }
+
   .imageContainer:nth-of-type(even) {
     order: -1;
   }
