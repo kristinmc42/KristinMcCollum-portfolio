@@ -440,6 +440,7 @@ button.hamburger:focus, button.hamburger:hover, button.hamburger:focus-within {
   line-height: 1.5em;
   text-align: left;
   padding: 3em 0.5em;
+  margin-left: 2em;
   width: 300px;
 }
 .introTextContainer .newLine {
@@ -559,6 +560,7 @@ button.hamburger:focus, button.hamburger:hover, button.hamburger:focus-within {
 @media only screen and (max-width: 433px) {
   .introImageContainer {
     width: 330px;
+    overflow-x: hidden;
   }
 }
 .contactContainer {
@@ -700,6 +702,7 @@ button.hamburger:focus, button.hamburger:hover, button.hamburger:focus-within {
 .projects.innerWrapper {
   margin-top: 1em;
   margin-bottom: 2em;
+  overflow: hidden;
 }
 
 .projectList,
@@ -877,7 +880,7 @@ button.hamburger:focus, button.hamburger:hover, button.hamburger:focus-within {
 .scroll {
   position: fixed;
   bottom: 30px;
-  right: 6em;
+  right: 1em;
   z-index: 99;
   opacity: 0;
   border: none;
@@ -910,12 +913,6 @@ button.hamburger:focus, button.hamburger:hover, button.hamburger:focus-within {
           transform: translateY(0);
 }
 
-@media only screen and (min-device-width: 330px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: portrait) {
-  .scroll {
-    right: 2.5em;
-    bottom: 75px;
-  }
-}
 .skills.innerWrapper {
   margin: 2em 0 1em 0;
 }
@@ -1122,6 +1119,17 @@ input:checked + .slider:before {
   text-shadow: 0 0.015em #e3dbdb, 0 -0.015em #e3dbdb, 0.01em 0 #e3dbdb, -0.01em 0 #e3dbdb;
 }
 
+@media only screen and (max-width: 433px) {
+  .themeSwitch {
+    width: 50px;
+    height: 35px;
+  }
+  .themeSwitch .slider.round:before {
+    width: 22px;
+    height: 22px;
+    left: 0;
+  }
+}
 .animationContainer {
   width: 300px;
   height: 377px;
@@ -1349,6 +1357,7 @@ footer {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  max-width: 90%;
   height: 6vh;
   color: rgb(255, 255, 255);
   font-weight: 500;

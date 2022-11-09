@@ -44,7 +44,6 @@
 @import "imageAnimation";
 
 
-
 // general styles
 body {
   text-align: center;
@@ -141,6 +140,7 @@ footer {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  max-width: 90%;
   height: 6vh;
   color: $whiteTextColor;
   font-weight: 500;
