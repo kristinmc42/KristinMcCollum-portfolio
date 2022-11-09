@@ -374,8 +374,8 @@ nav.hamburger {
   width: 100%;
   text-align: center;
   z-index: 40;
-  background-color: rgb(255, 255, 255);
-  border: 2px solid rgb(54, 96, 223);
+  background-color: rgb(232, 232, 232);
+  border: 2px solid rgb(5, 40, 215);
 }
 nav.hamburger ul {
   display: -webkit-box;
@@ -389,7 +389,7 @@ nav.hamburger ul {
 }
 nav.hamburger ul li {
   padding: 0.5em;
-  color: rgb(54, 96, 223);
+  color: rgb(5, 40, 215);
 }
 nav.hamburger ul li:hover,
 nav.hamburger ul li:focus,
@@ -409,7 +409,7 @@ button.hamburger {
   width: 56px;
   height: 56px;
   border: none;
-  background-color: rgb(255, 255, 255);
+  background-color: rgb(232, 232, 232);
   padding: 0 1.2em;
 }
 button.hamburger i {
@@ -420,7 +420,7 @@ button.hamburger i {
 }
 button.hamburger:focus, button.hamburger:hover, button.hamburger:focus-within {
   background-color: rgba(54, 96, 223, 0.2);
-  border: 1px dotted rgb(54, 96, 223);
+  border: 1px dotted rgb(5, 40, 215);
   border-radius: 15px;
 }
 
@@ -428,19 +428,18 @@ button.hamburger:focus, button.hamburger:hover, button.hamburger:focus-within {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   width: 100%;
   margin: 3em 0 0 0;
 }
 
 .introTextContainer {
-  margin-left: 3em;
   font-size: 2em;
   line-height: 1.5em;
-  margin-top: 2em;
-  margin-right: 1em;
+  text-align: left;
+  padding: 3em 0.5em;
   width: 300px;
 }
 .introTextContainer .newLine {
@@ -464,7 +463,7 @@ button.hamburger:focus, button.hamburger:hover, button.hamburger:focus-within {
 .introImageContainer .background9 {
   width: 300px;
   height: 377px;
-  border: 2px solid rgb(54, 96, 223);
+  border: 2px solid rgb(0, 23, 100);
   position: absolute;
   top: 5em;
   left: 2em;
@@ -534,6 +533,7 @@ button.hamburger:focus, button.hamburger:hover, button.hamburger:focus-within {
   }
   .intro .introTextContainer {
     font-size: 1.8em;
+    text-align: center;
     width: 90%;
     margin: 2.4em auto;
     min-height: 160px;
@@ -600,8 +600,8 @@ button.hamburger:focus, button.hamburger:hover, button.hamburger:focus-within {
   width: 90%;
   padding: 0.3em;
   margin: 0 0.2em;
-  background-color: rgb(255, 255, 255);
-  border: 5px outset rgb(54, 96, 223);
+  background-color: rgb(232, 232, 232);
+  border: 5px outset rgb(5, 40, 215);
   border-radius: 5px;
   -webkit-box-shadow: 5px 5px rgba(54, 96, 223, 0.2);
           box-shadow: 5px 5px rgba(54, 96, 223, 0.2);
@@ -616,8 +616,8 @@ button.hamburger:focus, button.hamburger:hover, button.hamburger:focus-within {
   width: 25%;
   letter-spacing: 2px;
   font-weight: 900;
-  color: rgb(255, 255, 255);
-  background-color: rgb(54, 96, 223);
+  color: rgb(232, 232, 232);
+  background-color: rgb(5, 40, 215);
   border: 5px double rgba(244, 240, 236, 0);
   border-radius: 5px;
   padding: 0.5em;
@@ -651,7 +651,7 @@ button.hamburger:focus, button.hamburger:hover, button.hamburger:focus-within {
 }
 .contactSocials li a:hover,
 .contactSocials li a:focus {
-  color: rgb(54, 96, 223);
+  color: rgb(5, 40, 215);
 }
 .contactSocials li a:hover span,
 .contactSocials li a:focus span {
@@ -744,7 +744,7 @@ button.hamburger:focus, button.hamburger:hover, button.hamburger:focus-within {
   padding: 1em 0;
 }
 .imageContainer img {
-  border: 4px solid rgb(54, 96, 223);
+  border: 4px solid rgb(5, 40, 215);
   border-radius: 15px;
   -webkit-box-shadow: 2px 2px 2px 3px rgb(89, 89, 89);
           box-shadow: 2px 2px 2px 3px rgb(89, 89, 89);
@@ -776,8 +776,8 @@ button.hamburger:focus, button.hamburger:hover, button.hamburger:focus-within {
 }
 .languages a,
 .siteLinks a {
-  background-color: rgb(54, 96, 223);
-  color: rgb(255, 255, 255);
+  background-color: rgb(5, 40, 215);
+  color: rgb(232, 232, 232);
   border: 5px double rgba(89, 89, 89, 0);
   border-radius: 5px;
   padding: 0.2em;
@@ -883,12 +883,12 @@ button.hamburger:focus, button.hamburger:hover, button.hamburger:focus-within {
   border: none;
   outline: none;
   background-color: rgba(89, 89, 89, 0.6);
-  color: rgb(255, 255, 255);
+  color: rgb(232, 232, 232);
   cursor: pointer;
   width: 87px;
   height: 87px;
   padding: 15px;
-  border: 3px solid rgb(54, 96, 223);
+  border: 3px solid rgb(5, 40, 215);
   border-radius: 50%;
   font-size: 1.1rem;
   font-weight: 900;
@@ -901,7 +901,7 @@ button.hamburger:focus, button.hamburger:hover, button.hamburger:focus-within {
 .scroll:hover,
 .scroll:focus {
   background-color: rgb(89, 89, 89);
-  border: 3px solid rgb(255, 255, 255);
+  border: 3px solid rgb(232, 232, 232);
 }
 
 .showButton {
@@ -982,7 +982,7 @@ button.hamburger:focus, button.hamburger:hover, button.hamburger:focus-within {
   border: 1px dotted rgba(89, 89, 89, 0);
 }
 .themeSwitchWrapper:hover, .themeSwitchWrapper:focus, .themeSwitchWrapper:focus-within {
-  border: 1px dotted rgb(54, 96, 223);
+  border: 1px dotted rgb(5, 40, 215);
   border-radius: 15px;
   background-color: rgba(54, 96, 223, 0.2);
 }
@@ -1081,26 +1081,26 @@ input:checked + .slider:before {
 .darkMode .aboutSocials a:focus-within,
 .darkMode .contactSocials a:hover,
 .darkMode .contactSocials a:focus-within {
-  color: rgb(54, 96, 223);
+  color: rgb(5, 40, 215);
 }
 .darkMode .aboutSocials a:hover i,
 .darkMode .aboutSocials a:focus-within i,
 .darkMode .contactSocials a:hover i,
 .darkMode .contactSocials a:focus-within i {
-  color: rgb(54, 96, 223);
+  color: rgb(5, 40, 215);
 }
 .darkMode form input,
 .darkMode form textarea {
   background-color: rgb(18, 18, 18);
-  color: rgb(255, 255, 255);
+  color: rgb(232, 232, 232);
   -webkit-box-shadow: 3px 3px 8px rgb(89, 89, 89);
           box-shadow: 3px 3px 8px rgb(89, 89, 89);
 }
 .darkMode form input:focus-within,
 .darkMode form textarea:focus-within {
-  -webkit-box-shadow: inset 0 0 8px rgb(255, 255, 255);
-          box-shadow: inset 0 0 8px rgb(255, 255, 255);
-  border: 5px outset rgb(255, 255, 255);
+  -webkit-box-shadow: inset 0 0 8px rgb(232, 232, 232);
+          box-shadow: inset 0 0 8px rgb(232, 232, 232);
+  border: 5px outset rgb(232, 232, 232);
 }
 .darkMode form button:hover,
 .darkMode form button:focus,
@@ -1130,7 +1130,7 @@ input:checked + .slider:before {
   overflow: hidden;
   -webkit-box-shadow: 0 5px 50px rgba(0, 0, 0, 0.85);
           box-shadow: 0 5px 50px rgba(0, 0, 0, 0.85);
-  border: 2px solid rgb(54, 96, 223);
+  border: 2px solid rgb(5, 40, 215);
   margin-top: 5em;
   margin-left: 2em;
 }
@@ -1209,7 +1209,7 @@ input:checked + .slider:before {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  color: rgb(255, 255, 255);
+  color: rgb(232, 232, 232);
   background: url(../../assets/bwPaintingSmall.jpg);
   width: 100%;
   height: 100%;
@@ -1225,7 +1225,8 @@ input:checked + .slider:before {
 }
 body {
   text-align: center;
-  background-color: rgb(54, 96, 223);
+  background-color: rgb(0, 23, 100);
+  background: radial-gradient(circle, rgb(5, 40, 215) 0%, rgb(12, 15, 66) 100%);
 }
 
 img {
@@ -1247,7 +1248,7 @@ h2, p, ul, li, a {
   left: -1000px;
   top: 5px;
   z-index: 999;
-  background: rgb(255, 255, 255);
+  background: rgb(232, 232, 232);
   color: rgb(8, 8, 8);
 }
 
@@ -1260,7 +1261,7 @@ h2, p, ul, li, a {
   max-width: 1280px;
   width: 90%;
   margin: 0 auto;
-  background-color: rgb(255, 255, 255);
+  background-color: rgb(232, 232, 232);
 }
 
 main {
@@ -1327,7 +1328,7 @@ main {
 }
 .aboutSocials li a:hover,
 .aboutSocials li a:focus {
-  color: rgb(54, 96, 223);
+  color: rgb(5, 40, 215);
 }
 .aboutSocials li a:hover span,
 .aboutSocials li a:focus span {
@@ -1350,6 +1351,7 @@ footer {
           align-items: center;
   height: 6vh;
   color: rgb(255, 255, 255);
+  font-weight: 500;
 }
 footer p:nth-of-type(2) {
   margin-top: 0.4em;

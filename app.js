@@ -4,11 +4,11 @@ const app = {};
 app.typing = () => {
   const typed = new Typed('#typed', {
     stringsElement: '#typedStrings',
-    typeSpeed: 90,
+    typeSpeed: 80,
     smartBackspace: true,
-    backDelay: 300,
+    // backDelay: 20,
     showCursor: false,
-    backSpeed: 90,
+    backSpeed: 80,
   });
 }
 

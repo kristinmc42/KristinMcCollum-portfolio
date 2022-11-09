@@ -1,7 +1,11 @@
-$baseColor: rgb(54, 96, 223);
+$backgroundColor: rgb(0, 23, 100);
+$baseColor: rgba(5,40,215,1);
+// $baseColor: rgb(3, 48, 183);
+$blueTextColor: rgb(54, 96, 223);
 $baseColorSemiOpaque: rgba(54, 96, 223, .6);
 $baseColorOpaque: rgba(54, 96, 223, .2);
-$secondaryColor: rgb(255, 255, 255);
+$secondaryColor: rgb(232, 232, 232);
+$whiteTextColor: rgb(255, 255, 255);
 $secondaryColorOpaque: rgba(244, 240, 236, 0);
 $textColor: rgb(89, 89, 89);
 $textColorSemiOpaque: rgba(89, 89, 89, .6);
