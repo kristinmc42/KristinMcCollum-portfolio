@@ -10,6 +10,8 @@ I also enjoy JavaScript as it appeals to my logic and puzzle-solving brain.
 
 The design was inspired by a site by Sharuk Rahman Shawon that I found on Behance. https://www.behance.net/shawonrahman3
 
+The typing effect is from typed.js http://www.mattboldt.com/
+
 Please let me know if you have any questions about anything you see here.
 
 Kristin McCollum
