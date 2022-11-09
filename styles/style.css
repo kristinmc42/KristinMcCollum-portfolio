@@ -558,8 +558,12 @@ button.hamburger:focus, button.hamburger:hover, button.hamburger:focus-within {
   }
 }
 @media only screen and (max-width: 433px) {
+  .headerBar h2 {
+    font-size: 110%;
+    min-width: 50%;
+  }
   .introImageContainer {
-    width: 330px;
+    width: 300px;
     overflow-x: hidden;
   }
 }
