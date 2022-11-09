@@ -7,8 +7,8 @@
   position: relative;
   overflow: hidden;
   box-shadow: 0 5px 50px $imageShadow;
-  transform: rotate(-45deg);
-  margin-top: 5.5em;
+  border: 2px solid $baseColor;
+  margin-top: 5em;
   margin-left: 2em;
 
   &:before {
@@ -81,3 +81,8 @@
   transform: translateY(100%);
 }
 
+@media only screen and (max-width: 433px){
+  .animationContainer {
+    margin: 5em auto 1em auto;
+  }
+}

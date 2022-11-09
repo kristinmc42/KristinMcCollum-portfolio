@@ -1,347 +1,618 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- import google fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Playfair+Display:wght@400;600;700&display=swap"
-    rel="stylesheet">
-  <!-- fontawesome kit -->
-  <script src="https://kit.fontawesome.com/7bfd8027d9.js" crossorigin="anonymous"></script>
-  <!-- Devicon kit -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
-  <!-- favicon -->
-  <link rel="icon" type="image/x-icon" href="./assets/sitting-cat-silhouette-236415/favicon.ico">
-  <!-- stylesheet -->
-  <link rel="stylesheet" href="./styles/style.css">
-  <title>Kristin McCollum 🔹</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- import google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Playfair+Display:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- fontawesome kit -->
+    <script
+      src="https://kit.fontawesome.com/7bfd8027d9.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Devicon kit -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css"
+    />
+    <!-- favicon -->
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="./assets/sitting-cat-silhouette-236415/favicon.ico"
+    />
+    <!-- typed.js http://www.mattboldt.com/-->
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
 
-  
-</head>
-<body>
-  <a href="#mainContent" class="skipLink" >Skip to main content.</a>
-  <div class="outerWrapper">
-
-    <!-- header -->
-    <header>
-      <div class="headerBar innerWrapper" id="topOfPage">
-        <h2>Kristin McCollum</h2>
-        <div class="navContainer">
-          <!-- main nav -->
-          <nav class="headerNav">
-            <ul>
-              <li><a href="#about">About me</a></li>
-              <li><a href="#projects">Projects</a></li>
-              <li><a href="#contact">Contact</a></li>
-            </ul>
-          </nav>
-          
-          <!-- hamburger menu -->
-          <button class="hamburger open" id="hamburgerButton" aria-label="show navigation menu" >
-            <i class="fas fa-bars" aria-hidden="true" ></i>
-          </button>
-          <nav id="hamburgerNav" class="hamburger" aria-labelledby="hamburgerButton" >
-            <ul class="hamburger" id ="hamburgerUL">
-              <button class="hamburger close" id="closeButton" aria-label="hide navigation menu">
-                <i class="fas fa-times" aria-hidden="true"></i>
-              </button>
-              <li><a href="#about">About me</a></li>
-              <li><a href="#projects">Projects</a></li>
-              <li><a href="#contact">Contact</a></li>
-            </ul>
-          </nav>
-
-          <!-- switch for dark and light mode -->
-         <form class="themeSwitchWrapper">
-           <label class="themeSwitch" for="checkbox"> 
-             <input type="checkbox" id="checkbox" aria-label="toggle between light and dark mode"/>
-             <div class="slider round"></div>
-           </label>
-          </form>
-        </div>
-      </div>
-      <!-- intro with image and title -->
-      <div class="intro">
-        <h1>Front End <span class="fontChange">Web Developer </span></h1>
-        <div class="background">
-          <div class="animationContainer">
-            <div class="imageEffect">
-              <span></span>
-              <span></span>
-              <span></span>
-              <span></span>
-            </div>
-            <div class="bwImage">
-              <h2>Kristin McCollum</h2>
-            </div>
-          </div>
-        </div>
-        <h2>based in <span class="fontChange">Toronto</span></h2>
-      </div>
-    </header>
-
-    <!-- start of main content -->
-    <main id="mainContent">
-      <!-- about section -->
-      <section class="about innerWrapper" id="about">
-        <h2 class="heading">About</h2>
-        <div class="paragraphContainer">
-          <p>Hello! I am Kristin McCollum a front end developer that enjoys writing clean code and solving problems. Finding creative and effective solutions while I delve into the functionality of a website is my passion.</p>
-          <p>My background as a stage manager in theatre and opera honed my enthusiasm for working collaboratively. Whether coordinating all of the moving pieces in a live production or building all of the components to bring an app to life, I bring an empathetic approach to my work, along with a keen eye for detail.</p>
-          <p>When I'm not building responsive and accessible websites, I like to lose myself in a good book, play board games or go for long walks while listening to a favourite playlist.</p>
-
-
-
-
-          <!-- <p><span class="fontChange">Hello!</span>  I
-          am <span class="fontChange">Kristin McCollum</span>, a front end developer that enjoys writing <span class="fontChange">clean code</span>  and <span class="fontChange">solving problems</span>. 
-          My background as a stage manager in theatre and opera honed my enthusiasm for <span class="fontChange">working collaboratively</span>. </p>
-          <p>Whether coordinating all of the moving pieces in a live production or building all of the components to bring an app to life, I bring an <span class="fontChange">empathetic</span>  approach to my work, along with a <span class="fontChange">keen eye for detail.</span> </p>
-          <p>When I'm not building <span class="fontChange">responsive and accessible websites</span>, I like to lose myself in a <span class="fontChange">good book</span>, play board games or go for long walks while listening to a favourite playlist.</p> -->
-        </div>
-
-        <!-- nav with socials icons -->
-        <nav>
-          <ul class="aboutSocials">
-            <li><a href="https://github.com/kristinmc42" target="_blank"><i class="fa-brands fa-github"></i><span>GitHub</span> </a></li>
-            <li><a href="https://www.linkedin.com/in/kristin-mccollum-dev" target="_blank"><i
-                  class="fa-brands fa-linkedin-in"></i><span>Linkedin</span></a></li>
-            <li><a href="https://twitter.com/KristinMc42" target="_blank"><i class="fa-brands fa-twitter"></i><span>Twitter</span></a></li>
-          </ul>
-        </nav>
-      </section>
-
-      <!-- skills section -->
-      <section class="skills innerWrapper">
-        <h2 class="heading">Skills</h2>
-        <ul class="skillList">
-          <li><i class="fab fa-html5"></i>HTML5</li>
-          <li><i class="fab fa-css3-alt"></i>CSS3</li>
-          <li><i class="fab fa-sass"></i>Sass</li>
-          <li><i class="fab fa-js"></i>JavaScript</li>
-          <li><i class="fab fa-react"></i>React</li>
-          <li><i class="devicon-typescript-plain"></i>Typescript</li>
-          <li><i class="devicon-jquery-plain"></i>JQuery</li>
-          <li><i class="fa-solid fa-gear"></i>REST API</li>
-          <li><i class="devicon-firebase-plain"></i>Firebase</li>
-          <li><i class="fab fa-github"></i>GitHub</li>
-          <li><i class="devicon-vscode-plain"></i>VSCode</li>
-          <li><i class="fas fa-universal-access"></i>Accessiblity</li>
-          <li><i class="fa-solid fa-laptop-code"></i>Responsive Design</li>
-        </ul>
-      </section>
-
-      <!-- projects section -->
-      <section id="projects" class="projects innerWrapper">
-        <h2 class="heading">Projects</h2>
-        <ul class="projectList">
-          <!-- one -->
-          <li>
-            <div class="imageContainer slideIn alignLeft">
-              <img src="./assets/planItMockup.png" alt="young man working on desktop with website for Plan-it on the screen">
-            </div>
-            <div class="textContainer">
-              <h3>Plan-it</h3>
-              <p>An online scheduling tool to help reduce the mental load of students trying to find time to meet with their group. Built
-              in an agile practice with a cross-functional team. Based on high-fidelity mock-ups created in Figma. Frontend built with React with Typescript, using MongoDB for the database and Node and Express in the backend.</p>
-              <ul class="languages">
-                <li><i class="fab fa-react"></i></li>
-                <li><i class="devicon-typescript-plain"></i></li>
-                <li><i class="fab fa-css3-alt"></i></li>
-                <li><i class="fab fa-html5"></i></li>
-              </ul>
-              <ul class="siteLinks">
-                <li><a href="https://team-plan-it.netlify.app/" target="_blank">Live Site</a></li>
-                <li><a href="https://github.com/Team-Plan-It/planit_frontend" target="_blank">GitHub</a></li>
-                <li><a href="https://www.joincolab.io/projects/plan-it" target="_blank">Product Pack</a></li>
-              </ul>
-            </div>
-          </li>
-          <!-- two -->
-          <li>
-            <div class="textContainer">
-              <h3>Book Keeper</h3>
-              <p>A personal passion project as an avid reader. Keeps track of the books you have read, are currently reading or want to read. Built with React and SCSS, utilizing Firebase and with data taken from the Google Books API. A mobile first design.</p>
-              <ul class="languages">
-                <li><i class="fab fa-react"></i></li>
-                <li><i class="fab fa-sass"></i></li>
-                <li><i class="fab fa-html5"></i></li>
-                <li><i class="devicon-firebase-plain"></i></li>
-                <li><i class="fa-solid fa-gear"></i></li>
-              </ul>
-              <ul class="siteLinks">
-                <li><a href="https://book-keeper42.netlify.app/" target="_blank">Live Site</a></li>
-                <li><a href="https://github.com/kristinmc42/bookKeeper" target="_blank">GitHub</a></li>
-              </ul>
-            </div>
-            <div class="imageContainer slideIn alignRight">
-              <img src="./assets/bookKeeperMockup.png"
-                alt="laptop with Book Keeper app, next to it is a coffee cup sitting on top of two books">
-            </div>
-          </li>
-          <!-- three -->
-          <li>
-            <div class="imageContainer slideIn alignLeft">
-              <img src="./assets/ybsMockupCompressed.jpg" alt="laptop open on a white desk in a white room, with YBS Galactic Tours website on the screen">
-            </div>
-            <div class="textContainer">
-              <h3>YBS Galactic Tours</h3>
-              <p>Book a faster than light speed travel package from one of YBS's upcoming line of space tours. NASA's APIs make sure your launch date is asteroid free! A React based group project using React Router, built with <a href="https://melissarichards.ca/" target="_blank">Melissa Richards</a> , <a href="https://isabellawang.dev/" target="_blank">Isabella Wang</a>  and <a href="https://seansipus.com/" target="_blank">Sean Sipus</a>.</p>
-              <ul class="languages">
-                <li><i class="fab fa-react"></i></li>
-                <li><i class="fab fa-css3-alt"></i></li>
-                <li><i class="fab fa-html5"></i></li>
-                <li><i class="fa-solid fa-gear"></i></li>
-              </ul>
-              <ul class="siteLinks">
-                <li><a href="https://ybs-galactic-tours.netlify.app/" target="_blank">Live Site</a></li>
-                <li><a href="https://github.com/Yeeting-Billionaires-Into-Space/YBSGalacticTours" target="_blank">GitHub</a></li>
-                <li><a href="https://www.loom.com/share/1dbcc4de3bdc4cd6b672c0d301e71e97"target="_blank">Loom Video</a></li>
-              </ul>
-            </div>
-          </li>
-          <!-- four -->
-          <li>
-            <div class="textContainer">
-              <h3>Song Selector</h3>
-              <p>Wanting to switch up your playlist? Let this app find  some hits by your favourite artists and introduce you to some new ones. Built with React, it utilizes data from the Last.fm API.  </p>
-              <ul class="languages">
-                <li><i class="fab fa-react"></i></li>
-                <li><i class="fab fa-css3-alt"></i></li>
-                <li><i class="fab fa-html5"></i></li>
-                <li><i class="fa-solid fa-gear"></i></li>
-              </ul>
-              <ul class="siteLinks">
-                <li><a href="https://song-selector.netlify.app/" target="_blank">Live Site</a></li>
-                <li><a href="https://github.com/kristinmc42/kristin-mccollum-project3" target="_blank">GitHub</a></li>
-                <li><a href="https://www.loom.com/share/af5caa0e154a4192bf263c84c17526ce"target="_blank">Loom Video</a></li>
-              </ul>
-            </div>
-            <div class="imageContainer slideIn alignRight">
-              <img src="./assets/songSelectorMockupCompressed.jpg" alt="the hands of a couple in a restaurant, holding two phones with Song Selector app on the screen ">
-            </div>
-          </li>
-          <!-- five -->
-          <li>
-            <div class="imageContainer slideIn alignLeft">
-              <img src="./assets/battleBoatsMockup.png" alt="latop screen with Battle Boats app on it, a hand on the keyboard and a blurred outdoor background at night">
-            </div>
-            <div class="textContainer">
-              <h3>Battle Boats</h3>
-              <p>Go head to head against the computer to see who will be the naval champion. Built with jQuery and JavaScript.</p>
-              <ul class="languages">
-                <li><i class="fab fa-css3-alt"></i></li>
-                <li><i class="fab fa-html5"></i></li>
-                <li><i class="fab fa-js"></i></li>
-                <li><i class="devicon-jquery-plain"></i></li>
-              </ul>
-              <ul class="siteLinks">
-                <li><a href="https://kristinmc42.github.io/Battleboats/" target="_blank">Live Site</a></li>
-                <li><a href="https://github.com/kristinmc42/Battleboats" target="_blank">GitHub</a></li>
-              </ul>
-            </div>
-          </li>
-          <!-- six -->
-          <li>
-            <div class="textContainer">
-              <h3>Imperial Glamour</h3>
-              <p>Glam it up. Search by product type, category, price or brand to discover your next must have beauty product. A pair programming project which uses the Makeup API. Built with <a href="https://ryan-vandeneeckhout.netlify.app/" target="_blank">Ryan Van den Eeckhout</a></p>
-              <ul class="languages">
-                <li><i class="fab fa-sass"></i></li>
-                <li><i class="fab fa-css3-alt"></i></li>
-                <li><i class="fab fa-html5"></i></li>
-                <li><i class="fab fa-js"></i></li>
-                <li><i class="fa-solid fa-gear"></i></li>
-              </ul>
-              <ul class="siteLinks">
-                <li><a href="https://imperial-glamour.netlify.app/" target="_blank">Live Site</a></li>
-                <li><a href="https://github.com/projectGlamour/kristinMcRyanVdeProject2" target="_blank">GitHub</a></li>
-              </ul>
-            </div>
-            <div class="imageContainer slideIn alignRight">
-              <img src="./assets/imperialGlamourMockupCompressed.jpg" alt="woman in a vintage store looking at an iMac with the Imperial Glamour website on the screen ">
-            </div>
-          </li>
-          <!-- seven -->
-          <li>
-            <div class="imageContainer slideIn alignLeft">
-              <img src="./assets/sophieMockupCompressed.jpg" alt="person sitting at wooden table, holding a tablet with All About Sophie website on the screen">
-            </div>
-            <div class="textContainer">
-              <h3>All About Sophie</h3>
-              <p>Who is Sophie? Read her blog to find out! A pixel-perfect multi-page, functional and responsive  website converted from a PSD.</p>
-              <ul class="languages">
-                <li><i class="fab fa-sass"></i></li>
-                <li><i class="fab fa-css3-alt"></i></li>
-                <li><i class="fab fa-html5"></i></li>
-                <li><i class="fab fa-js"></i></li>
-              </ul>
-              <ul class="siteLinks">
-                <li><a href="https://sophie-psd.netlify.app/" target="_blank">Live Site</a></li>
-                <li><a href="https://github.com/kristinmc42/kristin-mccollum-project-one" target="_blank">GitHub</a></li>
-              </ul>
-            </div>
-          </li>
-        </ul>
-      </section>
-
-      <!-- contact section -->
-      <section class="contact innerWrapper" id="contact">
-        <h2 class="heading">Contact</h2>
-        <div class="contactContainer">
-
-          <!-- text container -->
-          <div class="contactTextContainer">
-            <p>If you have any questions about me or my projects, or if you would like to tell me what book you're reading right now, please <a href="mailto:mccollum.k.j@gmail.com" class="fontChange">drop me a line <span
-                class="colorChange">here!</span></a></p>
-                
-            <!-- <p>If you have <span class="fontChange">any questions</span>  about me or <span class="fontChange">my projects</span>, or if you would like to tell me <span class="fontChange">what book you're reading</span> right now, please <a href="mailto:mccollum.k.j@gmail.com" class="fontChange">drop me a line <span class="colorChange">here!</span></a></p>  -->
-            
-
-            <!-- nav with contact socials -->
-            <nav>
-              <ul class="contactSocials">
-                <li><a href="https://github.com/kristinmc42" target="_blank"><i class="fa-brands fa-github"></i><span>GitHub</span> </a>
-                </li>
-                <li><a href="https://www.linkedin.com/in/kristin-mccollum-dev" target="_blank"><i
-                      class="fa-brands fa-linkedin-in"></i><span>Linkedin</span></a></li>
-                <li><a href="https://twitter.com/KristinMc42" target="_blank"><i
-                      class="fa-brands fa-twitter"></i><span>Twitter</span></a></li>
+    <!-- stylesheet -->
+    <link rel="stylesheet" href="./styles/style.css" />
+    <title>Kristin McCollum 🔹</title>
+  </head>
+  <body class="darkMode">
+    <a href="#mainContent" class="skipLink">Skip to main content.</a>
+    <div class="outerWrapper">
+      <!-- header -->
+      <header>
+        <div class="headerBar innerWrapper" id="topOfPage">
+          <h2>Kristin McCollum</h2>
+          <div class="navContainer">
+            <!-- main nav -->
+            <nav class="headerNav">
+              <ul>
+                <li><a href="#about">About me</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
               </ul>
             </nav>
+
+            <!-- hamburger menu -->
+            <button
+              class="hamburger open"
+              id="hamburgerButton"
+              aria-label="show navigation menu"
+            >
+              <i class="fas fa-bars" aria-hidden="true"></i>
+            </button>
+            <nav
+              id="hamburgerNav"
+              class="hamburger"
+              aria-labelledby="hamburgerButton"
+            >
+              <ul class="hamburger" id="hamburgerUL">
+                <button
+                  class="hamburger close"
+                  id="closeButton"
+                  aria-label="hide navigation menu"
+                >
+                  <i class="fas fa-times" aria-hidden="true"></i>
+                </button>
+                <li><a href="#about">About me</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+              </ul>
+            </nav>
+
+            <!-- switch for dark and light mode -->
+            <form class="themeSwitchWrapper">
+              <label class="themeSwitch" for="checkbox">
+                <input
+                  type="checkbox"
+                  id="checkbox"
+                  aria-label="toggle between light and dark mode"
+                />
+                <div class="slider round"></div>
+              </label>
+            </form>
+          </div>
+        </div>
+        <!-- intro with image and title -->
+        <div class="intro">
+          <div class="introImageContainer">
+            <div class="animationContainer">
+              <div class="imageEffect">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+              <div class="bwImage">
+                <h2>Kristin McCollum</h2>
+              </div>
+            </div>
+            <div class="background1"></div>
+            <div class="background2"></div>
+            <div class="background3"></div>
+            <div class="background4"></div>
+            <div class="background5"></div>
+            <div class="background6"></div>
+            <div class="background7"></div>
+            <div class="background8"></div>
+            <div class="background9"></div>
           </div>
 
-          <!-- contact form -->
-          <form action="https://formspree.io/f/meqnqeak" method="POST" id="commentForm">
-            <label for="name" class="srOnly">Please enter your name</label>
-            <input type="text" name="name" id="name" placeholder="Your name *" required>
-            <label for="email" class="srOnly">Please enter your email address</label>
-            <input type="email" name="email" id ="email" placeholder="Your email *" required>
-            <label for="message" class="srOnly">Please leave me a message</label>
-            <textarea name="message" name="message" id="message" cols="30" rows="10" placeholder="Hi Kristin! Let's grab a tea and chat about web development or our favourite books!"></textarea>
-            <button type="submit">Send</button>
-          </form>
+          <div class="introTextContainer" id="typedStrings">
+            <h1>
+              Hi! I'm <strong>Kristin McCollum</strong>.<span class="newLine">A Front-end Developer based in Toronto.</span>
+            </h1>
+          </div>
+          <span id="typed" class="introTextContainer"></span>
         </div>
-      </section>
+      </header>
 
-      <!-- scroll to top button -->
-      <button class="scroll" id="scrollButton" title="Go to top" onclick="window.location.href='#topOfPage'">Top ⬆</button>
-    </main>
-  </div>
+      <!-- start of main content -->
+      <main id="mainContent">
+        <!-- about section -->
+        <section class="about innerWrapper" id="about">
+          <h2 class="heading">About</h2>
+          <div class="paragraphContainer">
+            <p>
+              Hi! I'm Kristin McCollum, a front-end developer that enjoys
+              writing clean code and solving problems. Finding creative and
+              effective solutions while I delve into the functionality of a
+              website is my passion.
+            </p>
+            <p>
+              My background as a stage manager in theatre and opera honed my
+              enthusiasm for working collaboratively. Whether coordinating all
+              of the moving pieces in a live production or building all of the
+              components to bring an app to life, I bring an empathetic approach
+              to my work, along with a keen eye for detail.
+            </p>
+            <p>
+              When I'm not building responsive and accessible websites, I like
+              to lose myself in a good book, play board games or go for long
+              walks while listening to a favourite playlist.
+            </p>
 
-  <!-- footer -->
-  <footer>
-    <p>Designed by Kristin McCollum</p>
-  </footer>
+          </div>
+
+          <!-- nav with socials icons -->
+          <nav>
+            <ul class="aboutSocials">
+              <li>
+                <a href="https://github.com/kristinmc42" target="_blank"
+                  ><i class="fa-brands fa-github"></i><span>GitHub</span>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://www.linkedin.com/in/kristin-mccollum-dev"
+                  target="_blank"
+                  ><i class="fa-brands fa-linkedin-in"></i
+                  ><span>Linkedin</span></a
+                >
+              </li>
+              <li>
+                <a href="https://twitter.com/KristinMc42" target="_blank"
+                  ><i class="fa-brands fa-twitter"></i><span>Twitter</span></a
+                >
+              </li>
+            </ul>
+          </nav>
+        </section>
+
+        <!-- skills section -->
+        <section class="skills innerWrapper">
+          <h2 class="heading">Skills</h2>
+          <ul class="skillList">
+            <li><i class="fab fa-html5"></i>HTML5</li>
+            <li><i class="fab fa-css3-alt"></i>CSS3</li>
+            <li><i class="fab fa-sass"></i>Sass</li>
+            <li><i class="fab fa-js"></i>JavaScript</li>
+            <li><i class="fab fa-react"></i>React</li>
+            <li><i class="devicon-typescript-plain"></i>Typescript</li>
+            <li><i class="devicon-jquery-plain"></i>JQuery</li>
+            <li><i class="fa-solid fa-gear"></i>REST API</li>
+            <li><i class="devicon-firebase-plain"></i>Firebase</li>
+            <li><i class="fab fa-github"></i>GitHub</li>
+            <li><i class="devicon-vscode-plain"></i>VSCode</li>
+            <li><i class="fas fa-universal-access"></i>Accessiblity</li>
+            <li><i class="fa-solid fa-laptop-code"></i>Responsive Design</li>
+            <li><p>And growing...</p></li>
+          </ul>
+        </section>
+
+        <!-- projects section -->
+        <section id="projects" class="projects innerWrapper">
+          <h2 class="heading">Projects</h2>
+          <ul class="projectList">
+            <!-- one -->
+            <li>
+              <div class="imageContainer slideIn alignLeft">
+                <img
+                  src="./assets/planItMockup.png"
+                  alt="young man working on desktop with website for Plan-it on the screen"
+                />
+              </div>
+              <div class="textContainer">
+                <h3>Plan-it</h3>
+                <p>
+                  An online scheduling tool to help reduce the mental load of
+                  students trying to find time to meet with their group. Built
+                  in an agile practice with a cross-functional team. Based on
+                  high-fidelity mock-ups created in Figma. Front end built with
+                  React with Typescript, using MongoDB for the database and Node
+                  and Express in the back end.
+                </p>
+                <ul class="languages">
+                  <li><i class="fab fa-react"></i></li>
+                  <li><i class="devicon-typescript-plain"></i></li>
+                  <li><i class="fab fa-css3-alt"></i></li>
+                  <li><i class="fab fa-html5"></i></li>
+                </ul>
+                <ul class="siteLinks">
+                  <li>
+                    <a href="https://team-plan-it.netlify.app/" target="_blank"
+                      >Live Site</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="https://github.com/Team-Plan-It/planit_frontend"
+                      target="_blank"
+                      >GitHub</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="https://www.joincolab.io/projects/plan-it"
+                      target="_blank"
+                      >Product Pack</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <!-- two -->
+            <li>
+              <div class="textContainer">
+                <h3>Book Keeper</h3>
+                <p>
+                  A personal passion project as an avid reader. Keeps track of
+                  the books you have read, are currently reading or want to
+                  read. Built with React and SCSS, utilizing Firebase and with
+                  data taken from the Google Books API. A mobile first design.
+                </p>
+                <ul class="languages">
+                  <li><i class="fab fa-react"></i></li>
+                  <li><i class="fab fa-sass"></i></li>
+                  <li><i class="fab fa-html5"></i></li>
+                  <li><i class="devicon-firebase-plain"></i></li>
+                  <li><i class="fa-solid fa-gear"></i></li>
+                </ul>
+                <ul class="siteLinks">
+                  <li>
+                    <a href="https://book-keeper42.netlify.app/" target="_blank"
+                      >Live Site</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="https://github.com/kristinmc42/bookKeeper"
+                      target="_blank"
+                      >GitHub</a
+                    >
+                  </li>
+                </ul>
+              </div>
+              <div class="imageContainer slideIn alignRight">
+                <img
+                  src="./assets/bookKeeperMockup.png"
+                  alt="laptop with Book Keeper app, next to it is a coffee cup sitting on top of two books"
+                />
+              </div>
+            </li>
+            <!-- three -->
+            <li>
+              <div class="imageContainer slideIn alignLeft">
+                <img
+                  src="./assets/ybsMockupCompressed.jpg"
+                  alt="laptop open on a white desk in a white room, with YBS Galactic Tours website on the screen"
+                />
+              </div>
+              <div class="textContainer">
+                <h3>YBS Galactic Tours</h3>
+                <p>
+                  Book a faster than light speed travel package from one of
+                  YBS's upcoming line of space tours. NASA's APIs make sure your
+                  launch date is asteroid free! A React based group project
+                  using React Router, built with
+                  <a href="https://melissarichards.ca/" target="_blank"
+                    >Melissa Richards</a
+                  >
+                  ,
+                  <a href="https://isabellawang.dev/" target="_blank"
+                    >Isabella Wang</a
+                  >
+                  and
+                  <a href="https://seansipus.com/" target="_blank">Sean Sipus</a
+                  >.
+                </p>
+                <ul class="languages">
+                  <li><i class="fab fa-react"></i></li>
+                  <li><i class="fab fa-css3-alt"></i></li>
+                  <li><i class="fab fa-html5"></i></li>
+                  <li><i class="fa-solid fa-gear"></i></li>
+                </ul>
+                <ul class="siteLinks">
+                  <li>
+                    <a
+                      href="https://ybs-galactic-tours.netlify.app/"
+                      target="_blank"
+                      >Live Site</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="https://github.com/Yeeting-Billionaires-Into-Space/YBSGalacticTours"
+                      target="_blank"
+                      >GitHub</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="https://www.loom.com/share/1dbcc4de3bdc4cd6b672c0d301e71e97"
+                      target="_blank"
+                      >Loom Video</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <!-- four -->
+            <li>
+              <div class="textContainer">
+                <h3>Song Selector</h3>
+                <p>
+                  Wanting to switch up your playlist? Let this app find some
+                  hits by your favourite artists and introduce you to some new
+                  ones. Built with React, it utilizes data from the Last.fm API.
+                </p>
+                <ul class="languages">
+                  <li><i class="fab fa-react"></i></li>
+                  <li><i class="fab fa-css3-alt"></i></li>
+                  <li><i class="fab fa-html5"></i></li>
+                  <li><i class="fa-solid fa-gear"></i></li>
+                </ul>
+                <ul class="siteLinks">
+                  <li>
+                    <a href="https://song-selector.netlify.app/" target="_blank"
+                      >Live Site</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="https://github.com/kristinmc42/kristin-mccollum-project3"
+                      target="_blank"
+                      >GitHub</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="https://www.loom.com/share/af5caa0e154a4192bf263c84c17526ce"
+                      target="_blank"
+                      >Loom Video</a
+                    >
+                  </li>
+                </ul>
+              </div>
+              <div class="imageContainer slideIn alignRight">
+                <img
+                  src="./assets/songSelectorMockupCompressed.jpg"
+                  alt="the hands of a couple in a restaurant, holding two phones with Song Selector app on the screen "
+                />
+              </div>
+            </li>
+            <!-- five -->
+            <li>
+              <div class="imageContainer slideIn alignLeft">
+                <img
+                  src="./assets/battleBoatsMockup.png"
+                  alt="latop with Battle Boats on it, a hand on the keyboard and a blurred outdoor background at night"
+                />
+              </div>
+              <div class="textContainer">
+                <h3>Battle Boats</h3>
+                <p>
+                  Go head-to-head with the computer to see who will be the
+                  naval champion. Built with jQuery and JavaScript. Maximized for larger screens.
+                </p>
+                <ul class="languages">
+                  <li><i class="fab fa-css3-alt"></i></li>
+                  <li><i class="fab fa-html5"></i></li>
+                  <li><i class="fab fa-js"></i></li>
+                  <li><i class="devicon-jquery-plain"></i></li>
+                </ul>
+                <ul class="siteLinks">
+                  <li>
+                    <a
+                      href="https://kristinmc42.github.io/Battleboats/"
+                      target="_blank"
+                      >Live Site</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="https://github.com/kristinmc42/Battleboats"
+                      target="_blank"
+                      >GitHub</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <!-- six -->
+            <li>
+              <div class="textContainer">
+                <h3>Imperial Glamour</h3>
+                <p>
+                  Glam it up. Search by product type, category, price or brand
+                  to discover your next must have beauty product. A pair
+                  programming project which uses the Makeup API. Built with
+                  <a
+                    href="https://ryan-vandeneeckhout.netlify.app/"
+                    target="_blank"
+                    >Ryan Van den Eeckhout</a
+                  >
+                </p>
+                <ul class="languages">
+                  <li><i class="fab fa-sass"></i></li>
+                  <li><i class="fab fa-css3-alt"></i></li>
+                  <li><i class="fab fa-html5"></i></li>
+                  <li><i class="fab fa-js"></i></li>
+                  <li><i class="fa-solid fa-gear"></i></li>
+                </ul>
+                <ul class="siteLinks">
+                  <li>
+                    <a
+                      href="https://imperial-glamour.netlify.app/"
+                      target="_blank"
+                      >Live Site</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="https://github.com/projectGlamour/kristinMcRyanVdeProject2"
+                      target="_blank"
+                      >GitHub</a
+                    >
+                  </li>
+                </ul>
+              </div>
+              <div class="imageContainer slideIn alignRight">
+                <img
+                  src="./assets/imperialGlamourMockupCompressed.jpg"
+                  alt="woman in a vintage store looking at an iMac with the Imperial Glamour website on the screen "
+                />
+              </div>
+            </li>
+            <!-- seven -->
+            <li>
+              <div class="imageContainer slideIn alignLeft">
+                <img
+                  src="./assets/sophieMockupCompressed.jpg"
+                  alt="person sitting at wooden table, holding a tablet with All About Sophie website on the screen"
+                />
+              </div>
+              <div class="textContainer">
+                <h3>All About Sophie</h3>
+                <p>
+                  Who is Sophie? Read her blog to find out! A pixel-perfect
+                  multi-page, functional and responsive website converted from a
+                  PSD.
+                </p>
+                <ul class="languages">
+                  <li><i class="fab fa-sass"></i></li>
+                  <li><i class="fab fa-css3-alt"></i></li>
+                  <li><i class="fab fa-html5"></i></li>
+                  <li><i class="fab fa-js"></i></li>
+                </ul>
+                <ul class="siteLinks">
+                  <li>
+                    <a href="https://sophie-psd.netlify.app/" target="_blank"
+                      >Live Site</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="https://github.com/kristinmc42/kristin-mccollum-project-one"
+                      target="_blank"
+                      >GitHub</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </section>
+
+        <!-- contact section -->
+        <section class="contact innerWrapper" id="contact">
+          <h2 class="heading">Contact</h2>
+          <div class="contactContainer">
+            <!-- text container -->
+            <div class="contactTextContainer">
+              <p>
+                If you have any questions about me or my projects, or if you
+                would like to tell me what book you're reading right now, please
+                <a href="mailto:mccollum.k.j@gmail.com" class="fontChange"
+                  >drop me a line <span class="colorChange">here!</span></a
+                >
+              </p>
 
 
+              <!-- nav with contact socials -->
+              <nav>
+                <ul class="contactSocials">
+                  <li>
+                    <a href="https://github.com/kristinmc42" target="_blank"
+                      ><i class="fa-brands fa-github"></i><span>GitHub</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://www.linkedin.com/in/kristin-mccollum-dev"
+                      target="_blank"
+                      ><i class="fa-brands fa-linkedin-in"></i
+                      ><span>Linkedin</span></a
+                    >
+                  </li>
+                  <li>
+                    <a href="https://twitter.com/KristinMc42" target="_blank"
+                      ><i class="fa-brands fa-twitter"></i
+                      ><span>Twitter</span></a
+                    >
+                  </li>
+                </ul>
+              </nav>
+            </div>
 
-  <!-- js file -->
-  <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase.js"></script>
-  <script src="app.js"></script>
-</body>
+            <!-- contact form -->
+            <form
+              action="https://formspree.io/f/meqnqeak"
+              method="POST"
+              id="commentForm"
+            >
+              <label for="name" class="srOnly">Please enter your name</label>
+              <input
+                type="text"
+                name="name"
+                id="name"
+                placeholder="Your name *"
+                required
+              />
+              <label for="email" class="srOnly"
+                >Please enter your email address</label
+              >
+              <input
+                type="email"
+                name="email"
+                id="email"
+                placeholder="Your email *"
+                required
+              />
+              <label for="message" class="srOnly"
+                >Please leave me a message</label
+              >
+              <textarea
+                name="message"
+                name="message"
+                id="message"
+                cols="30"
+                rows="10"
+                placeholder="Hi Kristin! Let's grab a tea and chat about web development or our favourite books!"
+              ></textarea>
+              <button type="submit">Send</button>
+            </form>
+          </div>
+        </section>
+
+        <!-- scroll to top button -->
+        <button
+          class="scroll"
+          id="scrollButton"
+          title="Go to top"
+          onclick="window.location.href='#topOfPage'"
+        >
+          Top ⬆
+        </button>
+      </main>
+    </div>
+
+    <!-- footer -->
+    <footer>
+      <p>Designed by Kristin McCollum</p>
+    </footer>
+
+    <!-- js file -->
+    <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase.js"></script>
+
+    <script src="app.js"></script>
+  </body>
 </html>

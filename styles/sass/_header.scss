@@ -11,7 +11,7 @@ header {
   justify-content: space-between;
   padding-top: 1em;
   h2 {
-    padding-top: .3em;
+    padding-top: 0.3em;
   }
 }
 
@@ -19,12 +19,12 @@ header {
   display: flex;
 }
 .headerNav {
-  ul{
+  ul {
     display: flex;
-    padding-top: .5em;
-    margin-right: .1em;
+    padding-top: 0.5em;
+    margin-right: 0.1em;
 
-    li{
+    li {
       padding: 0 1em;
     }
 
@@ -36,7 +36,7 @@ header {
 }
 
 // hamburger nav
-nav.hamburger { 
+nav.hamburger {
   position: absolute;
   display: none;
   top: 0;
@@ -47,144 +47,130 @@ nav.hamburger {
   background-color: $secondaryColor;
   border: 2px solid $baseColor;
 
-  ul{
+  ul {
     display: flex;
     flex-direction: column;
     padding: 3em;
 
     li {
-      padding: .5em;
+      padding: 0.5em;
       color: $baseColor;
     }
-    
+
     li:hover,
     li:focus,
     li:active,
-    li:focus-within{
+    li:focus-within {
       background-color: $baseColorOpaque;
     }
   }
 }
 
 // hamburger menu button
-  button.hamburger {
-    display: none;
-    justify-content: center;
-    align-items: center;
-    width: 56px;
-    height: 56px;
-    border: none;
-    background-color: $secondaryColor;
-    padding: 0 1.2em;
-    i {
-      position: relative;
-      z-index: 999;
-      color: $textColor;
-      font-size: 1.7rem;
-    }
-    &:focus,
-    &:hover,
-    &:focus-within {
-      background-color: $baseColorOpaque;
-      border: 1px dotted $baseColor;
-      border-radius: 15px;
-    }
+button.hamburger {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  width: 56px;
+  height: 56px;
+  border: none;
+  background-color: $secondaryColor;
+  padding: 0 1.2em;
+  i {
+    position: relative;
+    z-index: 999;
+    color: $textColor;
+    font-size: 1.7rem;
   }
+  &:focus,
+  &:hover,
+  &:focus-within {
+    background-color: $baseColorOpaque;
+    border: 1px dotted $baseColor;
+    border-radius: 15px;
+  }
+}
 
 // intro div with header and image
 .intro {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
   margin: 3em 0 0 0;
 }
 
-// "Front end web developer" text
-h1 {
-  max-width: 800px;
-  margin-left: -1em;
+.introTextContainer {
+  font-size: 2em;
+  line-height: 1.5em;
+  text-align: left;
+  padding: 3em .5em;
+  // margin-top: 2em;
+  // margin-right: 1em;
+  // margin-left: 3em;
+  width: 300px;
 
-  .fontChange {
-   position: relative;
-   display: block;
-   top: 22px;
-   left: -12%;
-   z-index: 11;
-   margin-top: 0;
-  }
-}
-// "based in Toronto" text
-.intro > h2 {
-  position: relative;
-  z-index: 12;
-  margin-left: 50%;
-  top: -3em;
-    span {
+    .newLine{
       display: block;
-      padding-top: 0.5em;
-      margin-left: 70px;
     }
 }
 
 // background div behind image
-.background {
+.introImageContainer {
   position: relative;
   z-index: 5;
-  top: -115px;
   width: 400px;
-  height: 400px;
-  background-color: $baseColor;
-  transform: rotate(45deg);
-  margin: 0 auto;
+  margin-left: 2em;
+
+
+  .background1,
+  .background2,
+  .background3,
+  .background4,
+  .background5,
+  .background6,
+  .background7,
+  .background8,
+  .background9 {
+    width: 300px;
+    height: 377px;
+    border: 2px solid $backgroundColor;
+    position: absolute;
+    top: 5em;
+    left: 2em;
+    z-index: -1;
+  }
+  
+  .background1 {
+    transform: rotate(10deg);
+  }
+  .background2 {
+    transform: rotate(20deg);
+  }
+  .background3 {
+    transform: rotate(30deg);
+  }
+  .background4 {
+    transform: rotate(40deg);
+  }
+  .background5 {
+    transform: rotate(50deg);
+  }
+  .background6 {
+    transform: rotate(60deg);
+  }
+  .background7 {
+    transform: rotate(70deg);
+  }
+  .background8 {
+    transform: rotate(80deg);
+  }
+  .background9 {
+    transform: rotate(90deg);
+  }
 }
-
-
 
 
 // media queries
-// laptops
-@media screen 
-  and (min-device-width: 1200px) 
-  and (max-device-width: 1600px) 
-  and (-webkit-min-device-pixel-ratio: 1) { 
-    .background {
-      top: -145px;
-    }
-    .intro {
-      margin-bottom: 0;
-    }
-    .intro > h2 {
-      top: -4em;
-    }
-    h1 {
-      margin-left: -1em;
-      .fontChange {
-        top: 22px;
-        margin-top: 0;
-      }
-    }
-}
-
-// adjusting spacing of intro div in header
-@media only screen and (min-width: 810px) and (max-width:1200px){
-  .background {
-    top: -44px;
-  }
-  .intro {
-    margin-top: 2em;
-  }
-  .intro > h2{
-    margin-left: 60%;
-    top: -1em;
-  }
-
-  h1 {
-    margin-top: -0.33em;
-    .fontChange {
-      top: 7px;
-      left: -15%;
-    }
-  }
-    
-
-}
 
 // less padding in header
 @media only screen and (max-width: 930px){
@@ -193,36 +179,35 @@ h1 {
   }
 }
 
-// stack name and nav in header
-// adjust spacing of background 
+// // stack name and nav in header
+// // adjust spacing of background
 @media only screen and (max-width: 810px){
   .headerBar {
     flex-direction: column;
     align-items: center;
   }
-  .background {
-    top: -15px;
-  }
-  .intro {
-    margin-top: 2em;
-  }
-  .intro > h2 {
-    top: 0;
+
+  .intro{
+    flex-direction: column;
+    margin: 0;
+
+    .introImageContainer{
+      margin: 0 auto;
+    }
+    
+    .introTextContainer{
+      font-size: 1.8em;
+      text-align: center;
+      width: 90%;
+      margin: 2.4em auto;
+      min-height: 160px;
+    }
   }
 }
 
-// reducing size of background div margin
-@media only screen and (max-width: 535px){
-  h1 {
-    margin-left: 40px;
-  }
-  .intro > h2 {
-    margin-left: -1%;
-  }
-}
 
-// switch to hamburger menu
-@media only screen and (max-width: 482px){
+// // switch to hamburger menu
+@media only screen and (max-width: 482px) {
   // stack my name and shift left
   .headerBar {
     padding-left: 0;
@@ -239,15 +224,10 @@ h1 {
   }
 }
 
-// adjusting position of intro image background
+// adjusting position of intro image
 @media only screen and (max-width: 433px) {
-  .background{
-   margin-left: -0.8em;
+  .introImageContainer{
+   width:330px
   }
 }
 
-@media only screen and (max-width: 375px){
-  .background{
-   margin-left: -1.6em;
-  }
-}

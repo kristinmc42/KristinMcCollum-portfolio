@@ -3,7 +3,7 @@
 .scroll {
   position: fixed;
   bottom: 30px;
-  right: 30px;
+  right: 6em;
   z-index: 99;
   opacity: 0;
   border: none;
@@ -31,4 +31,16 @@
 .showButton {
   opacity: 1;
   transform: translateY(0);
+}
+
+// media queries
+@media only screen 
+  and (min-device-width: 330px) 
+  and (max-device-width: 812px)
+  and (-webkit-min-device-pixel-ratio: 3)
+  and (orientation:portrait) {
+    .scroll{
+      right: 2.5em;
+      bottom: 75px;
+    }
 }

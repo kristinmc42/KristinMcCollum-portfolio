@@ -1,6 +1,16 @@
 const app = {};
 
-
+// typed.js initialization for typing effect in intro
+app.typing = () => {
+  const typed = new Typed('#typed', {
+    stringsElement: '#typedStrings',
+    typeSpeed: 80,
+    smartBackspace: true,
+    // backDelay: 20,
+    showCursor: false,
+    backSpeed: 80,
+  });
+}
 
 // function will listen for scroll for both showing the scroll to top button and for animating the intro image
 app.listenForScroll = () => {
@@ -219,6 +229,7 @@ app.listenForDarkModeToggle = () => {
 
 
 app.init = () => {
+  app.typing();
   app.listenForScroll();
   app.slideImages();
   app.formSubmit();
