@@ -702,7 +702,6 @@ button.hamburger:focus, button.hamburger:hover, button.hamburger:focus-within {
 .projects.innerWrapper {
   margin-top: 1em;
   margin-bottom: 2em;
-  overflow: hidden;
 }
 
 .projectList,
@@ -1286,6 +1285,7 @@ main {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  overflow: hidden;
 }
 
 .heading {
