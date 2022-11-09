@@ -104,9 +104,7 @@ button.hamburger {
   line-height: 1.5em;
   text-align: left;
   padding: 3em .5em;
-  // margin-top: 2em;
-  // margin-right: 1em;
-  // margin-left: 3em;
+  margin-left: 2em;
   width: 300px;
 
     .newLine{
@@ -227,7 +225,8 @@ button.hamburger {
 // adjusting position of intro image
 @media only screen and (max-width: 433px) {
   .introImageContainer{
-   width:330px
+   width:330px;
+   overflow-x: hidden;
   }
 }
 

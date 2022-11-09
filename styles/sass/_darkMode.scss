@@ -165,3 +165,18 @@ input:checked + .slider:before {
 
   
 }
+
+// media queries
+
+@media only screen and (max-width: 433px) {
+.themeSwitch{
+  width: 50px;
+  height: 35px;
+
+  .slider.round:before{
+    width: 22px;
+    height: 22px;
+    left: 0;
+  } 
+}
+}
