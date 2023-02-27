@@ -653,15 +653,10 @@ button.hamburger:focus, button.hamburger:hover, button.hamburger:focus-within {
 }
 .contactSocials li span {
   display: block;
-  opacity: 0;
 }
 .contactSocials li a:hover,
 .contactSocials li a:focus {
   color: rgb(5, 40, 215);
-}
-.contactSocials li a:hover span,
-.contactSocials li a:focus span {
-  opacity: 1;
 }
 
 @media only screen and (max-width: 900px) {
@@ -692,13 +687,13 @@ button.hamburger:focus, button.hamburger:hover, button.hamburger:focus-within {
     margin: 0;
   }
   .contactContainer .contactTextContainer,
-.contactContainer form {
+  .contactContainer form {
     padding: 0.2em;
     width: 100%;
     margin: 0;
   }
   .contactContainer .contactTextContainer button,
-.contactContainer form button {
+  .contactContainer form button {
     margin: 1em 0;
     width: 37%;
   }
@@ -777,8 +772,25 @@ button.hamburger:focus, button.hamburger:hover, button.hamburger:focus-within {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   font-size: 2rem;
   gap: 10px;
+  padding: 0.1em;
+}
+.languages span,
+.siteLinks span {
+  text-align: center;
+  font-size: 0.6rem;
+  line-height: 0.7rem;
 }
 .languages a,
 .siteLinks a {
@@ -811,9 +823,19 @@ button.hamburger:focus, button.hamburger:hover, button.hamburger:focus-within {
 .siteLinks img {
   width: 85%;
 }
+.languages .iconPng,
+.siteLinks .iconPng {
+  width: 60px;
+  background-color: rgb(232, 232, 232);
+}
 
 .languages {
   padding-top: 1em;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
 }
 
 .siteLinks li {
@@ -933,6 +955,9 @@ button.hamburger:focus, button.hamburger:hover, button.hamburger:focus-within {
   font-size: 2rem;
   color: rgb(89, 89, 89);
 }
+.skillList li .iconPng {
+  width: 75px;
+}
 .skillList li > p {
   padding-top: 1.6em;
   font-size: 1rem;
@@ -966,6 +991,9 @@ button.hamburger:focus, button.hamburger:hover, button.hamburger:focus-within {
   }
   .skillList li img, .skillList li i {
     font-size: 1.5rem;
+  }
+  .skillList li .iconPng {
+    width: 60px;
   }
   .skillList li > p {
     font-size: 0.8rem;
@@ -1076,6 +1104,9 @@ input:checked + .slider:before {
 .darkMode .skills i,
 .darkMode .languages img {
   color: rgb(244, 240, 236);
+}
+.darkMode .iconPng {
+  background-color: rgb(244, 240, 236);
 }
 .darkMode .aboutSocials a:hover,
 .darkMode .aboutSocials a:focus-within,
@@ -1336,15 +1367,10 @@ main {
 }
 .aboutSocials li span {
   display: block;
-  opacity: 0;
 }
 .aboutSocials li a:hover,
 .aboutSocials li a:focus {
   color: rgb(5, 40, 215);
-}
-.aboutSocials li a:hover span,
-.aboutSocials li a:focus span {
-  opacity: 1;
 }
 
 footer {

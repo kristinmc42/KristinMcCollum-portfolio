@@ -17,15 +17,11 @@
 
     span {
       display: block;
-      opacity: 0;
     }
 
     a:hover,
     a:focus {
       color: $baseColor;
-      span{
-        opacity: 1; 
-      }
     }
   }
 

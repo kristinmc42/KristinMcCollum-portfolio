@@ -54,8 +54,17 @@
 
   li {
     display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     font-size: 2rem;
     gap: 10px;
+    padding: .1em;
+  }
+  span{
+    text-align: center;
+    font-size: .6rem;
+    line-height: .7rem;
   }
   a{
     background-color: $baseColor;
@@ -82,10 +91,17 @@
   img {
     width: 85%;
   }
+
+  .iconPng{
+    width: 60px;
+    background-color: $secondaryColor;
+  }
 }
 
 .languages {
   padding-top: 1em;
+  flex-wrap: wrap;
+  justify-content: flex-end;
 }
 .siteLinks li {
   font-size: 1rem;

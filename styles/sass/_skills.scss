@@ -18,6 +18,9 @@
       font-size: 2rem;
       color: $textColor;
     }
+    .iconPng{
+      width: 75px;;
+    }
   }
   li > p{
     padding-top: 1.6em;
@@ -57,6 +60,9 @@
       font-size: .8rem;
       img, i {
         font-size: 1.5rem;
+      }
+      .iconPng{
+        width: 60px;
       }
     }
     li > p{
