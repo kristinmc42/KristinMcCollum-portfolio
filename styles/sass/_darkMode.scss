@@ -115,6 +115,9 @@ input:checked + .slider:before {
   .languages img {
     color: $dmTextColor;
   }
+  .iconPng{
+    background-color: $dmTextColor;
+  }
 
   .aboutSocials a:hover,
   .aboutSocials a:focus-within,
