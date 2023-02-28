@@ -323,13 +323,12 @@ footer p:nth-of-type(2) {
 }
 
 header {
-  min-height: 100vh;
   overflow: hidden;
 }
 
 .headerBar {
   text-align: left;
-  border-bottom: 2px solid rgb(89, 89, 89);
+  border-bottom: 2px solid rgb(5, 40, 215);
   padding-left: 0.5em;
   padding-bottom: 0.3em;
   margin: 1em 0;
@@ -340,6 +339,7 @@ header {
       -ms-flex-pack: justify;
           justify-content: space-between;
   padding-top: 1em;
+  border: none;
 }
 .headerBar h2 {
   padding-top: 0.3em;
@@ -428,20 +428,31 @@ button.hamburger:focus, button.hamburger:hover, button.hamburger:focus-within {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
-  width: 100%;
-  margin: 3em 0 0 0;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  background-image: url("../../assets/abstractBg.png");
+  min-height: 500px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-bottom: 2em;
+  padding-right: 0.5em;
 }
 
 .introTextContainer {
   font-size: 2em;
   line-height: 1.5em;
-  text-align: left;
+  text-align: right;
   padding: 3em 0.5em;
   margin-left: 2em;
-  width: 300px;
+}
+.introTextContainer h1 {
+  margin: 0;
 }
 .introTextContainer .newLine {
   display: block;
@@ -451,60 +462,8 @@ button.hamburger:focus, button.hamburger:hover, button.hamburger:focus-within {
   position: relative;
   z-index: 5;
   width: 400px;
-  margin-left: 2em;
-}
-.introImageContainer .background1,
-.introImageContainer .background2,
-.introImageContainer .background3,
-.introImageContainer .background4,
-.introImageContainer .background5,
-.introImageContainer .background6,
-.introImageContainer .background7,
-.introImageContainer .background8,
-.introImageContainer .background9 {
-  width: 300px;
-  height: 377px;
-  border: 2px solid rgb(0, 23, 100);
-  position: absolute;
-  top: 5em;
-  left: 2em;
-  z-index: -1;
-}
-.introImageContainer .background1 {
-  -webkit-transform: rotate(10deg);
-          transform: rotate(10deg);
-}
-.introImageContainer .background2 {
-  -webkit-transform: rotate(20deg);
-          transform: rotate(20deg);
-}
-.introImageContainer .background3 {
-  -webkit-transform: rotate(30deg);
-          transform: rotate(30deg);
-}
-.introImageContainer .background4 {
-  -webkit-transform: rotate(40deg);
-          transform: rotate(40deg);
-}
-.introImageContainer .background5 {
-  -webkit-transform: rotate(50deg);
-          transform: rotate(50deg);
-}
-.introImageContainer .background6 {
-  -webkit-transform: rotate(60deg);
-          transform: rotate(60deg);
-}
-.introImageContainer .background7 {
-  -webkit-transform: rotate(70deg);
-          transform: rotate(70deg);
-}
-.introImageContainer .background8 {
-  -webkit-transform: rotate(80deg);
-          transform: rotate(80deg);
-}
-.introImageContainer .background9 {
-  -webkit-transform: rotate(90deg);
-          transform: rotate(90deg);
+  border: 30px solid rgb(12, 15, 66);
+  border-radius: 100px;
 }
 
 @media only screen and (max-width: 930px) {
@@ -522,21 +481,11 @@ button.hamburger:focus, button.hamburger:hover, button.hamburger:focus-within {
         -ms-flex-align: center;
             align-items: center;
   }
-  .intro {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    margin: 0;
-  }
   .intro .introImageContainer {
     margin: 0 auto;
   }
   .intro .introTextContainer {
-    font-size: 1.8em;
-    text-align: center;
     width: 90%;
-    margin: 2.4em auto;
     min-height: 160px;
   }
 }
@@ -562,9 +511,23 @@ button.hamburger:focus, button.hamburger:hover, button.hamburger:focus-within {
     font-size: 110%;
     min-width: 50%;
   }
+  .intro {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
   .introImageContainer {
     width: 300px;
     overflow-x: hidden;
+  }
+  .introTextContainer {
+    margin-left: 0;
+    padding: 0;
+    width: 300px;
+  }
+  .introTextContainer h1 {
+    font-size: 1.5rem;
+    text-align: end;
   }
 }
 .contactContainer {
@@ -1267,8 +1230,6 @@ input:checked + .slider:before {
 }
 body {
   text-align: center;
-  background-color: rgb(0, 23, 100);
-  background: radial-gradient(circle, rgb(5, 40, 215) 0%, rgb(12, 15, 66) 100%);
 }
 
 img {
@@ -1298,7 +1259,6 @@ h2, p, ul, li, a {
   left: 0;
 }
 
-.outerWrapper,
 .innerWrapper {
   max-width: 1280px;
   width: 90%;
@@ -1325,7 +1285,7 @@ main {
 
 .heading {
   text-align: left;
-  border-bottom: 2px solid rgb(89, 89, 89);
+  border-bottom: 2px solid rgb(5, 40, 215);
   padding-left: 0.5em;
   padding-bottom: 0.3em;
   margin: 1em 0;
@@ -1348,7 +1308,25 @@ main {
   text-align: left;
   width: 80%;
 }
-.about p:nth-of-type(2) {
+.about .middleParagraphContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.about .middleParagraphContainer .aboutImgContainer {
+  margin: 0 1.5em;
+  max-width: 275px;
+}
+.about .middleParagraphContainer .aboutImgContainer img {
+  border: 1px solid rgb(18, 18, 18);
+  border-radius: 50px 100px;
+  -webkit-box-shadow: 12px 12px 2px 1px rgb(5, 40, 215);
+          box-shadow: 12px 12px 2px 1px rgb(5, 40, 215);
+}
+.about .middleParagraphContainer p {
   text-align: right;
   -ms-flex-item-align: end;
       align-self: flex-end;
@@ -1387,9 +1365,10 @@ footer {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  max-width: 90%;
-  height: 6vh;
+  width: 100%;
+  height: 7vh;
   color: rgb(255, 255, 255);
+  background-color: rgb(5, 40, 215);
   font-weight: 500;
 }
 footer p:nth-of-type(2) {
@@ -1410,5 +1389,10 @@ footer p:nth-of-type(2) {
 @media only screen and (max-width: 700px) {
   .about p {
     width: 90%;
+  }
+  .about .aboutImgContainer {
+    opacity: 0;
+    height: 0;
+    width: 0;
   }
 }

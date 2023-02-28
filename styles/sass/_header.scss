@@ -1,6 +1,6 @@
 // header styles
 header {
-  min-height: 100vh;
+  // min-height: 100vh;
   overflow: hidden;
 }
 
@@ -10,6 +10,7 @@ header {
   display: flex;
   justify-content: space-between;
   padding-top: 1em;
+  border: none;
   h2 {
     padding-top: 0.3em;
   }
@@ -93,19 +94,39 @@ button.hamburger {
 
 // intro div with header and image
 .intro {
+  // display: flex;
+  // justify-content: space-evenly;
+  // width: 100%;
+  // margin: 3em 0 0 0;
+  // background-color: $opaqueBackground;
+
   display: flex;
-  justify-content: space-evenly;
-  width: 100%;
-  margin: 3em 0 0 0;
+  justify-content: flex-end;
+  align-items: flex-end;
+  background-image: url("../../assets/abstractBg.png");
+  min-height: 500px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-bottom: 2em;
+padding-right: .5em;
+  
+  // background: radial-gradient(circle, rgba(5,40,215,1) 0%, rgb(12, 15, 66) 100%);
+  // opacity: 0;
 }
 
 .introTextContainer {
   font-size: 2em;
   line-height: 1.5em;
-  text-align: left;
+  text-align: right;
   padding: 3em .5em;
   margin-left: 2em;
-  width: 300px;
+
+
+  h1{
+    margin: 0;
+  }
 
     .newLine{
       display: block;
@@ -117,54 +138,12 @@ button.hamburger {
   position: relative;
   z-index: 5;
   width: 400px;
-  margin-left: 2em;
-
-
-  .background1,
-  .background2,
-  .background3,
-  .background4,
-  .background5,
-  .background6,
-  .background7,
-  .background8,
-  .background9 {
-    width: 300px;
-    height: 377px;
-    border: 2px solid $backgroundColor;
-    position: absolute;
-    top: 5em;
-    left: 2em;
-    z-index: -1;
-  }
-  
-  .background1 {
-    transform: rotate(10deg);
-  }
-  .background2 {
-    transform: rotate(20deg);
-  }
-  .background3 {
-    transform: rotate(30deg);
-  }
-  .background4 {
-    transform: rotate(40deg);
-  }
-  .background5 {
-    transform: rotate(50deg);
-  }
-  .background6 {
-    transform: rotate(60deg);
-  }
-  .background7 {
-    transform: rotate(70deg);
-  }
-  .background8 {
-    transform: rotate(80deg);
-  }
-  .background9 {
-    transform: rotate(90deg);
-  }
+  // height: 490px;
+  // margin-left: 2em;
+  // margin-top: 3em;
+ 
+  border: 30px solid $opaqueBackground;
+  border-radius: 100px;
 }
 
 
@@ -186,18 +165,16 @@ button.hamburger {
   }
 
   .intro{
-    flex-direction: column;
-    margin: 0;
+    // flex-direction: column;
+    // margin: 0;
 
     .introImageContainer{
       margin: 0 auto;
     }
     
     .introTextContainer{
-      font-size: 1.8em;
-      text-align: center;
+
       width: 90%;
-      margin: 2.4em auto;
       min-height: 160px;
     }
   }
@@ -224,14 +201,29 @@ button.hamburger {
 
 // adjusting position of intro image and h2 in nav
 @media only screen and (max-width: 433px) {
+  
   .headerBar h2{
     font-size: 110%;
     min-width: 50%;
   }
+  .intro{
+    align-items: center;
+  }
+  
   .introImageContainer{
    width:300px;
    overflow-x: hidden;
 
+  }
+
+  .introTextContainer{
+    margin-left: 0;
+    padding: 0;
+    width: 300px;
+    h1{
+      font-size: 1.5rem;
+      text-align: end;
+    }
   }
 
 
