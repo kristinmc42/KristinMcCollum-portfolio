@@ -94,12 +94,6 @@ button.hamburger {
 
 // intro div with header and image
 .intro {
-  // display: flex;
-  // justify-content: space-evenly;
-  // width: 100%;
-  // margin: 3em 0 0 0;
-  // background-color: $opaqueBackground;
-
   display: flex;
   justify-content: flex-end;
   align-items: flex-end;
@@ -110,27 +104,25 @@ button.hamburger {
   background-repeat: no-repeat;
   background-size: cover;
   padding-bottom: 2em;
-padding-right: .5em;
-  
-  // background: radial-gradient(circle, rgba(5,40,215,1) 0%, rgb(12, 15, 66) 100%);
-  // opacity: 0;
+  padding-right: 0.5em;
+
 }
 
 .introTextContainer {
   font-size: 2em;
   line-height: 1.5em;
   text-align: right;
-  padding: 3em .5em;
+  padding: 3em 0.5em;
   margin-left: 2em;
-  
-  h1{
+
+  h1 {
     color: $secondaryColor;
     margin: 0;
   }
 
-    .newLine{
-      display: block;
-    }
+  .newLine {
+    display: block;
+  }
 }
 
 // background div behind image
@@ -138,48 +130,44 @@ padding-right: .5em;
   position: relative;
   z-index: 5;
   width: 400px;
-  // height: 490px;
-  // margin-left: 2em;
-  // margin-top: 3em;
- 
   border: 30px solid $opaqueBackground;
   border-radius: 100px;
 }
 
-
 // media queries
-
+@media only screen and (max-width: 1100px){
+  .intro{
+    background-attachment: scroll;
+  }
+}
 // less padding in header
-@media only screen and (max-width: 930px){
+@media only screen and (max-width: 930px) {
   .headerNav ul li {
-    padding: 0 .4em;
+    padding: 0 0.4em;
   }
 }
 
 // // stack name and nav in header
 // // adjust spacing of background
-@media only screen and (max-width: 810px){
+@media only screen and (max-width: 810px) {
   .headerBar {
     flex-direction: column;
     align-items: center;
   }
 
-  .intro{
-    // flex-direction: column;
-    // margin: 0;
+  .intro {
+    background-image: url("../../assets/abstractBgSmall.png");
 
-    .introImageContainer{
+    .introImageContainer {
       margin: 0 auto;
     }
-    
-    .introTextContainer{
 
+    .introTextContainer {
       width: 90%;
       min-height: 160px;
     }
   }
 }
-
 
 // // switch to hamburger menu
 @media only screen and (max-width: 482px) {
@@ -189,7 +177,7 @@ padding-right: .5em;
     flex-direction: row;
   }
   // show hamburger menu
-  button.hamburger  {
+  button.hamburger {
     display: flex;
   }
 
@@ -201,31 +189,26 @@ padding-right: .5em;
 
 // adjusting position of intro image and h2 in nav
 @media only screen and (max-width: 433px) {
-  
-  .headerBar h2{
+  .headerBar h2 {
     font-size: 110%;
     min-width: 50%;
   }
-  .intro{
+  .intro {
     align-items: center;
   }
-  
-  .introImageContainer{
-   width:300px;
-   overflow-x: hidden;
 
+  .introImageContainer {
+    width: 300px;
+    overflow-x: hidden;
   }
 
-  .introTextContainer{
+  .introTextContainer {
     margin-left: 0;
     padding: 0;
     width: 300px;
-    h1{
+    h1 {
       font-size: 1.5rem;
       text-align: end;
     }
   }
-
-
-  }
-
+}

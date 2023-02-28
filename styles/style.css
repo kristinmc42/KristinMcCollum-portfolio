@@ -467,6 +467,11 @@ button.hamburger:focus, button.hamburger:hover, button.hamburger:focus-within {
   border-radius: 100px;
 }
 
+@media only screen and (max-width: 1100px) {
+  .intro {
+    background-attachment: scroll;
+  }
+}
 @media only screen and (max-width: 930px) {
   .headerNav ul li {
     padding: 0 0.4em;
@@ -481,6 +486,9 @@ button.hamburger:focus, button.hamburger:hover, button.hamburger:focus-within {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+  }
+  .intro {
+    background-image: url("../../assets/abstractBgSmall.png");
   }
   .intro .introImageContainer {
     margin: 0 auto;
