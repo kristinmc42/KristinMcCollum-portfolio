@@ -40,7 +40,7 @@
     border-radius: 15px;
     box-shadow: 2px 2px 2px 3px $textColor;
     padding: 2px;
-    transition: transfrom .8s;
+    transition: transfrom 1.5s;
   }
   img:hover{
     transform:scale(1.1);
@@ -74,7 +74,7 @@
     padding: .2em;
     margin: .7em .5em;
     text-align: center;
-    transition: all .7s;
+    transition: all 1.4s;
   }
   a:hover,
   a:focus,
@@ -110,7 +110,7 @@
 // image animations
 .slideIn {
   opacity: 0;
-  transition: all .8s;
+  transition: all 1.5s;
 }
 
 .slideIn.alignLeft {
@@ -161,13 +161,32 @@
   .textContainer {
     padding: 0 0 0 .3em;
   }
-  .languages i{
+  .languages {
+    justify-content: flex-start;
+    i{
     margin: 0 0.1em;
+  }
   }
   .siteLinks {
     margin-top: .2em;
     a {
       font-size: .8rem;
     }
+  }
+}
+@media only screen and (max-width: 374px){
+  .siteLinks li{
+    align-items: center;
+}
+}
+
+@media (prefers-reduced-motion: reduce){
+  .slideIn,
+  .imageContainer img {
+    transition: all 1.9s;
+  }
+
+  .siteLinks a{
+    transition: all 2.6s;
   }
 }

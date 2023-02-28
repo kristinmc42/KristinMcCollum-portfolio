@@ -2,7 +2,7 @@
 
 .scroll {
   position: fixed;
-  bottom: 30px;
+  bottom: 4em;
   right: 1em;
   z-index: 99;
   opacity: 0;
@@ -11,11 +11,11 @@
   background-color: $textColorSemiOpaque;
   color: $secondaryColor;
   cursor: pointer;
-  width: 87px;
+  width: 70px;
   height: 87px;
   padding: 15px;
   border: 3px solid $baseColor;
-  border-radius: 50%;
+  border-radius: 10px;
   font-size: 1.1rem;
   font-weight: 900;
   transform: translateY(100px);

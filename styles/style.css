@@ -452,6 +452,7 @@ button.hamburger:focus, button.hamburger:hover, button.hamburger:focus-within {
   margin-left: 2em;
 }
 .introTextContainer h1 {
+  color: rgb(232, 232, 232);
   margin: 0;
 }
 .introTextContainer .newLine {
@@ -569,7 +570,6 @@ button.hamburger:focus, button.hamburger:hover, button.hamburger:focus-within {
   width: 90%;
   padding: 0.3em;
   margin: 0 0.2em;
-  background-color: rgb(232, 232, 232);
   border: 5px outset rgb(5, 40, 215);
   border-radius: 5px;
   -webkit-box-shadow: 5px 5px rgba(54, 96, 223, 0.2);
@@ -713,8 +713,8 @@ button.hamburger:focus, button.hamburger:hover, button.hamburger:focus-within {
   -webkit-box-shadow: 2px 2px 2px 3px rgb(89, 89, 89);
           box-shadow: 2px 2px 2px 3px rgb(89, 89, 89);
   padding: 2px;
-  -webkit-transition: transfrom 0.8s;
-  transition: transfrom 0.8s;
+  -webkit-transition: transfrom 1.5s;
+  transition: transfrom 1.5s;
 }
 .imageContainer img:hover {
   -webkit-transform: scale(1.1);
@@ -764,8 +764,8 @@ button.hamburger:focus, button.hamburger:hover, button.hamburger:focus-within {
   padding: 0.2em;
   margin: 0.7em 0.5em;
   text-align: center;
-  -webkit-transition: all 0.7s;
-  transition: all 0.7s;
+  -webkit-transition: all 1.4s;
+  transition: all 1.4s;
 }
 .languages a:hover,
 .languages a:focus,
@@ -807,8 +807,8 @@ button.hamburger:focus, button.hamburger:hover, button.hamburger:focus-within {
 
 .slideIn {
   opacity: 0;
-  -webkit-transition: all 0.8s;
-  transition: all 0.8s;
+  -webkit-transition: all 1.5s;
+  transition: all 1.5s;
 }
 
 .slideIn.alignLeft {
@@ -855,6 +855,11 @@ button.hamburger:focus, button.hamburger:hover, button.hamburger:focus-within {
   .textContainer {
     padding: 0 0 0 0.3em;
   }
+  .languages {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
   .languages i {
     margin: 0 0.1em;
   }
@@ -865,9 +870,27 @@ button.hamburger:focus, button.hamburger:hover, button.hamburger:focus-within {
     font-size: 0.8rem;
   }
 }
+@media only screen and (max-width: 374px) {
+  .siteLinks li {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .slideIn,
+  .imageContainer img {
+    -webkit-transition: all 1.9s;
+    transition: all 1.9s;
+  }
+  .siteLinks a {
+    -webkit-transition: all 2.6s;
+    transition: all 2.6s;
+  }
+}
 .scroll {
   position: fixed;
-  bottom: 30px;
+  bottom: 4em;
   right: 1em;
   z-index: 99;
   opacity: 0;
@@ -876,11 +899,11 @@ button.hamburger:focus, button.hamburger:hover, button.hamburger:focus-within {
   background-color: rgba(89, 89, 89, 0.6);
   color: rgb(232, 232, 232);
   cursor: pointer;
-  width: 87px;
+  width: 70px;
   height: 87px;
   padding: 15px;
   border: 3px solid rgb(5, 40, 215);
-  border-radius: 50%;
+  border-radius: 10px;
   font-size: 1.1rem;
   font-weight: 900;
   -webkit-transform: translateY(100px);
@@ -1263,7 +1286,6 @@ h2, p, ul, li, a {
   max-width: 1280px;
   width: 90%;
   margin: 0 auto;
-  background-color: rgb(232, 232, 232);
 }
 
 main {
