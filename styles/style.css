@@ -1086,7 +1086,8 @@ input:checked + .slider:before {
 .darkMode .themeSwitchWrapper:hover, .darkMode .themeSwitchWrapper:focus, .darkMode .themeSwitchWrapper:focus-within {
   outline: 2px solid rgb(244, 240, 236);
 }
-.darkMode a, .darkMode i,
+.darkMode a,
+.darkMode i,
 .darkMode .skills i,
 .darkMode .languages img {
   color: rgb(244, 240, 236);
